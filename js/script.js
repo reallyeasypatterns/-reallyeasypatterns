@@ -872,5 +872,7 @@ $(document).ready(function() {
         timerLabel.innerText = `제한시간 ${timeLeft}초`;
     }
 
-    loadGameData();
+    if (window.location.pathname.indexOf('../03word_game/game.html') !== -1) {
+        loadGameData();
+    }   
 });
