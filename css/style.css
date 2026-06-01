@@ -10,7 +10,7 @@ input[type=text],
 input[type=password],
 textarea
 {
-    -webkit-box-sizing :border-box;‌​
+    -webkit-box-sizing :border-box;
     -moz-box-sizing :border-box;
     box-sizing :border-box;
 	line-height:auto;
@@ -179,7 +179,7 @@ body { background: #000a14; }
 .m_cards li.active .box { transform: translateX(10px) translateY(10px); }
 .m_cards li::before { top: 10px; left: 10px; border-radius: 15px 15px 0 15px; }
 .m_cards li dt { font-size: 30px; margin-bottom: 12px; }
-.m_cards li .ill { margin: 0; position: absolute; right: 0; bottom: 0; }
+.m_cards li .ill { margin: 0; position: absolute; right: 0; bottom: 0; display: none; }
 .m_cards li .ill img { width: 150px; }
 }
 @media screen and (max-width:768px) {
