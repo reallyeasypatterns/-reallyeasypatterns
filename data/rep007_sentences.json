@@ -1,0 +1,142 @@
+{
+  "pattern_en": "Do you want to",
+  "pattern_kr": "~하고 싶어? / ~할래?",
+  "pattern_highlight": "Do you want to",
+  "sentences": [
+    { "en": "Do you want to go?", "kr": "가고 싶어?", "pron": "두 유 원 투 고" },
+    { "en": "Do you want to go out?", "kr": "나가고 싶어?", "pron": "두 유 원 투 고 아웃" },
+    { "en": "Do you want to go out for a walk?", "kr": "산책하러 나가고 싶어?", "pron": "두 유 원 투 고 아웃 포어 어 워크" },
+
+    { "en": "Do you want to eat?", "kr": "먹고 싶어?", "pron": "두 유 원 투 잇" },
+    { "en": "Do you want to eat pizza?", "kr": "피자 먹고 싶어?", "pron": "두 유 원 투 잇 피자" },
+    { "en": "Do you want to eat pizza for lunch today?", "kr": "오늘 점심으로 피자 먹고 싶어?", "pron": "두 유 원 투 잇 피자 포어 런치 투데이" },
+
+    { "en": "Do you want to drink?", "kr": "마시고 싶어?", "pron": "두 유 원 투 드링크" },
+    { "en": "Do you want to drink coffee?", "kr": "커피 마시고 싶어?", "pron": "두 유 원 투 드링크 커피" },
+    { "en": "Do you want to drink coffee with me tonight?", "kr": "오늘 밤에 나랑 커피 마시고 싶어?", "pron": "두 유 원 투 드링크 커피 위드 미 투나잇" },
+
+    { "en": "Do you want to see?", "kr": "보고 싶어?", "pron": "두 유 원 투 씨" },
+    { "en": "Do you want to see a movie?", "kr": "영화 보고 싶어?", "pron": "두 유 원 투 씨 어 무비" },
+    { "en": "Do you want to see a movie this weekend?", "kr": "이번 주말에 영화 보고 싶어?", "pron": "두 유 원 투 씨 어 무비 디스 위켄드" },
+
+    { "en": "Do you want to watch?", "kr": "보고 싶어?", "pron": "두 유 원 투 와치" },
+    { "en": "Do you want to watch TV?", "kr": "TV 보고 싶어?", "pron": "두 유 원 투 와치 티비" },
+    { "en": "Do you want to watch TV in the living room?", "kr": "거실에서 TV 보고 싶어?", "pron": "두 유 원 투 와치 티비 인 더 리빙 룸" },
+
+    { "en": "Do you want to buy?", "kr": "사고 싶어?", "pron": "두 유 원 투 바이" },
+    { "en": "Do you want to buy shoes?", "kr": "신발 사고 싶어?", "pron": "두 유 원 투 바이 슈즈" },
+    { "en": "Do you want to buy shoes from the online shop?", "kr": "온라인 쇼핑몰에서 신발 사고 싶어?", "pron": "두 유 원 투 바이 슈즈 프롬 디 온라인 숍" },
+
+    { "en": "Do you want to meet?", "kr": "만나고 싶어?", "pron": "두 유 원 투 미트" },
+    { "en": "Do you want to meet my friend?", "kr": "내 친구 만나고 싶어?", "pron": "두 유 원 투 미트 마이 프렌드" },
+    { "en": "Do you want to meet my friend at the cafe?", "kr": "카페에서 내 친구 만나고 싶어?", "pron": "두 유 원 투 미트 마이 프렌드 앳 더 카페" },
+
+    { "en": "Do you want to play?", "kr": "놀래?", "pron": "두 유 원 투 플레이" },
+    { "en": "Do you want to play games?", "kr": "게임할래?", "pron": "두 유 원 투 플레이 게임즈" },
+    { "en": "Do you want to play games on the computer?", "kr": "컴퓨터로 게임할래?", "pron": "두 유 원 투 플레이 게임즈 온 더 컴퓨터" },
+
+    { "en": "Do you want to take?", "kr": "탈래?", "pron": "두 유 원 투 테이크" },
+    { "en": "Do you want to take a taxi?", "kr": "택시 탈래?", "pron": "두 유 원 투 테이크 어 택시" },
+    { "en": "Do you want to take a taxi to the subway station?", "kr": "지하철역까지 택시 타고 갈래?", "pron": "두 유 원 투 테이크 어 택시 투 더 서브웨이 스테이션" },
+
+    { "en": "Do you want to come?", "kr": "올래?", "pron": "두 유 원 투 컴" },
+    { "en": "Do you want to come over?", "kr": "놀러 올래?", "pron": "두 유 원 투 컴 오버" },
+    { "en": "Do you want to come over to my house tonight?", "kr": "오늘 밤에 우리 집에 놀러 올래?", "pron": "두 유 원 투 컴 오버 투 마이 하우스 투나잇" },
+
+    { "en": "Do you want to try?", "kr": "해볼래?", "pron": "두 유 원 투 트라이" },
+    { "en": "Do you want to try this food?", "kr": "이 음식 먹어볼래?", "pron": "두 유 원 투 트라이 디스 푸드" },
+    { "en": "Do you want to try this food for the first time today?", "kr": "오늘 이 음식 처음으로 먹어볼래?", "pron": "두 유 원 투 트라이 디스 푸드 포어 더 퍼스트 타임 투데이" },
+
+    { "en": "Do you want to learn?", "kr": "배우고 싶어?", "pron": "두 유 원 투 러언" },
+    { "en": "Do you want to learn English?", "kr": "영어 배우고 싶어?", "pron": "두 유 원 투 러언 잉글리시" },
+    { "en": "Do you want to learn English from a native speaker?", "kr": "원어민에게 영어 배우고 싶어?", "pron": "두 유 원 투 러언 잉글리시 프롬 어 네이티브 스피커" },
+
+    { "en": "Do you want to know?", "kr": "알고 싶어?", "pron": "두 유 원 투 노우" },
+    { "en": "Do you want to know the truth?", "kr": "진실을 알고 싶어?", "pron": "두 유 원 투 노우 더 트루스" },
+    { "en": "Do you want to know the truth about this?", "kr": "이것에 대한 진실을 알고 싶어?", "pron": "두 유 원 투 노우 더 트루스 어바웃 디스" },
+
+    { "en": "Do you want to join?", "kr": "함께할래?", "pron": "두 유 원 투 조인" },
+    { "en": "Do you want to join us?", "kr": "우리와 함께할래?", "pron": "두 유 원 투 조인 어스" },
+    { "en": "Do you want to join us for dinner tonight?", "kr": "오늘 저녁에 우리와 함께할래?", "pron": "두 유 원 투 조인 어스 포어 디너 투나잇" },
+
+    { "en": "Do you want to talk?", "kr": "이야기하고 싶어?", "pron": "두 유 원 투 토크" },
+    { "en": "Do you want to talk to me?", "kr": "나랑 이야기하고 싶어?", "pron": "두 유 원 투 토크 투 미" },
+    { "en": "Do you want to talk to me about the plan?", "kr": "그 계획에 대해 나랑 이야기하고 싶어?", "pron": "두 유 원 투 토크 투 미 어바웃 더 플랜" },
+
+    { "en": "Do you want to sit?", "kr": "앉고 싶어?", "pron": "두 유 원 투 싯" },
+    { "en": "Do you want to sit here?", "kr": "여기 앉고 싶어?", "pron": "두 유 원 투 싯 히어" },
+    { "en": "Do you want to sit here next to the window?", "kr": "여기 창가 자리에 앉고 싶어?", "pron": "두 유 원 투 싯 히어 넥스트 투 더 윈도우" },
+
+    { "en": "Do you want to read?", "kr": "읽고 싶어?", "pron": "두 유 원 투 리드" },
+    { "en": "Do you want to read this book?", "kr": "이 책 읽고 싶어?", "pron": "두 유 원 투 리드 디스 북" },
+    { "en": "Do you want to read this book before sleeping?", "kr": "자기 전에 이 책 읽고 싶어?", "pron": "두 유 원 투 리드 디스 북 비포어 슬리핑" },
+
+    { "en": "Do you want to call?", "kr": "전화하고 싶어?", "pron": "두 유 원 투 콜" },
+    { "en": "Do you want to call him?", "kr": "그에게 전화하고 싶어?", "pron": "두 유 원 투 콜 힘" },
+    { "en": "Do you want to call him right now?", "kr": "지금 당장 그에게 전화하고 싶어?", "pron": "두 유 원 투 콜 힘 라이트 나우" },
+
+    { "en": "Do you want to stay?", "kr": "머물고 싶어?", "pron": "두 유 원 투 스테이" },
+    { "en": "Do you want to stay here?", "kr": "여기 있을래?", "pron": "두 유 원 투 스테이 히어" },
+    { "en": "Do you want to stay here a little longer?", "kr": "여기 조금만 더 있을래?", "pron": "두 유 원 투 스테이 히어 어 리틀 롱거" },
+
+    { "en": "Do you want to leave?", "kr": "떠나고 싶어?", "pron": "두 유 원 투 리브" },
+    { "en": "Do you want to leave the party?", "kr": "파티에서 나가고 싶어?", "pron": "두 유 원 투 리브 더 파티" },
+    { "en": "Do you want to leave the party early with me?", "kr": "나랑 같이 파티를 일찍 떠날래?", "pron": "두 유 원 투 리브 더 파티 얼리 위드 미" },
+
+    { "en": "Do you want to listen?", "kr": "들을래?", "pron": "두 유 원 투 리슨" },
+    { "en": "Do you want to listen to music?", "kr": "음악 들을래?", "pron": "두 유 원 투 리슨 투 뮤직" },
+    { "en": "Do you want to listen to music with headphones?", "kr": "헤드폰으로 음악 들을래?", "pron": "두 유 원 투 리슨 투 뮤직 위드 헤드폰즈" },
+
+    { "en": "Do you want to check?", "kr": "확인해 볼래?", "pron": "두 유 원 투 체크" },
+    { "en": "Do you want to check the menu?", "kr": "메뉴판 확인해 볼래?", "pron": "두 유 원 투 체크 더 메뉴" },
+    { "en": "Do you want to check the menu before ordering?", "kr": "주문하기 전에 메뉴판 확인해 볼래?", "pron": "두 유 원 투 체크 더 메뉴 비포어 오더링" },
+
+    { "en": "Do you want to order?", "kr": "주문할래?", "pron": "두 유 원 투 오더" },
+    { "en": "Do you want to order food?", "kr": "음식 주문할래?", "pron": "두 유 원 투 오더 푸드" },
+    { "en": "Do you want to order food through the app?", "kr": "앱으로 음식 주문할래?", "pron": "두 유 원 투 오더 푸드 쓰루 디 앱" },
+
+    { "en": "Do you want to change?", "kr": "바꾸고 싶어?", "pron": "두 유 원 투 체인지" },
+    { "en": "Do you want to change your mind?", "kr": "마음을 바꾸고 싶어?", "pron": "두 유 원 투 체인지 유어 마인드" },
+    { "en": "Do you want to change your mind about the decision?", "kr": "그 결정에 대해 마음을 바꾸고 싶어?", "pron": "두 유 원 투 체인지 유어 마인드 어바웃 더 디시전" },
+
+    { "en": "Do you want to help?", "kr": "돕고 싶어?", "pron": "두 유 원 투 헬프" },
+    { "en": "Do you want to help them?", "kr": "그들을 돕고 싶어?", "pron": "두 유 원 투 헬프 뎀" },
+    { "en": "Do you want to help them with the project?", "kr": "그 프로젝트를 도와주고 싶어?", "pron": "두 유 원 투 헬프 뎀 위드 더 프로젝트" },
+
+    { "en": "Do you want to get?", "kr": "받을래?", "pron": "두 유 원 투 겟" },
+    { "en": "Do you want to get a drink?", "kr": "음료수 한잔할래?", "pron": "두 유 원 투 겟 어 드링크" },
+    { "en": "Do you want to get a drink at the coffee shop?", "kr": "커피숍에서 음료수 한잔할래?", "pron": "두 유 원 투 겟 어 드링크 앳 더 커피 숍" },
+
+    { "en": "Do you want to share?", "kr": "나눌래?", "pron": "두 유 원 투 쉐어" },
+    { "en": "Do you want to share the dessert?", "kr": "디저트 나눠 먹을래?", "pron": "두 유 원 투 쉐어 더 디저트" },
+    { "en": "Do you want to share the dessert with your friends?", "kr": "친구들과 디저트 나눠 먹을래?", "pron": "두 유 원 투 쉐어 더 디저트 위드 유어 프렌즈" },
+
+    { "en": "Do you want to start?", "kr": "시작할래?", "pron": "두 유 원 투 스타트" },
+    { "en": "Do you want to start the meeting?", "kr": "회의를 시작할래?", "pron": "두 유 원 투 스타트 더 미팅" },
+    { "en": "Do you want to start the meeting right away?", "kr": "지금 바로 회의를 시작할래?", "pron": "두 유 원 투 스타트 더 미팅 라이트 어웨이" },
+
+    { "en": "Do you want to cancel?", "kr": "취소하고 싶어?", "pron": "두 유 원 투 캔슬" },
+    { "en": "Do you want to cancel the reservation?", "kr": "예약을 취소하고 싶어?", "pron": "두 유 원 투 캔슬 더 레저베이션" },
+    { "en": "Do you want to cancel the reservation for tomorrow?", "kr": "내일 예약을 취소하고 싶어?", "pron": "두 유 원 투 캔슬 더 레저베이션 포어 투모로우" },
+
+    { "en": "Do you want to clean?", "kr": "청소할래?", "pron": "두 유 원 투 클린" },
+    { "en": "Do you want to clean the room?", "kr": "방 청소할래?", "pron": "두 유 원 투 클린 더 룸" },
+    { "en": "Do you want to clean the room together this afternoon?", "kr": "오늘 오후에 같이 방 청소할래?", "pron": "두 유 원 투 클린 더 룸 투게더 디스 애프터눈" },
+
+    { "en": "Do you want to ask?", "kr": "물어보고 싶어?", "pron": "두 유 원 투 애스크" },
+    { "en": "Do you want to ask a question?", "kr": "질문하고 싶어?", "pron": "두 유 원 투 애스크 어 퀘스천" },
+    { "en": "Do you want to ask the manager a question?", "kr": "매니저에게 질문하고 싶어?", "pron": "두 유 원 투 애스크 더 매니저 어 퀘스천" },
+
+    { "en": "Do you want to wash?", "kr": "씻을래?", "pron": "두 유 원 투 워시" },
+    { "en": "Do you want to wash your hands?", "kr": "손 씻을래?", "pron": "두 유 원 투 워시 유어 핸즈" },
+    { "en": "Do you want to wash your hands before eating dinner?", "kr": "저녁 먹기 전에 손 씻을래?", "pron": "두 유 원 투 워시 유어 핸즈 비포어 잇팅 디너" },
+
+    { "en": "Do you want to walk?", "kr": "걸을래?", "pron": "두 유 원 투 워크" },
+    { "en": "Do you want to walk in the park?", "kr": "공원에서 걸을래?", "pron": "두 유 원 투 워크 인 더 파크" },
+    { "en": "Do you want to walk in the park to get some fresh air?", "kr": "바람 좀 쐬러 공원에서 걸을래?", "pron": "두 유 원 투 워크 인 더 파크 투 겟 썸 프레시 에어" },
+
+    { "en": "Do you want to stop?", "kr": "멈추고 싶어?", "pron": "두 유 원 투 스탑" },
+    { "en": "Do you want to stop working?", "kr": "일하는 거 그만할래?", "pron": "두 유 원 투 스탑 워킹" },
+    { "en": "Do you want to stop working and take a break?", "kr": "일하는 거 그만하고 좀 쉴래?", "pron": "두 유 원 투 스탑 워킹 앤 테이크 어 브레이크" }
+  ]
+}

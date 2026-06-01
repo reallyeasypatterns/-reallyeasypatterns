@@ -1,0 +1,142 @@
+{
+  "pattern_en": "I need to",
+  "pattern_kr": "나 ~해야 해 / ~할 필요가 있어",
+  "pattern_highlight": "I need to",
+  "sentences": [
+    { "en": "I need to rest", "kr": "나 쉬어야 해", "pron": "아이 니드 투 레스트" },
+    { "en": "I need to rest for a while", "kr": "나 잠시 쉬어야 해", "pron": "아이 니드 투 레스트 포어 어 와일" },
+    { "en": "I need to rest for a while after work", "kr": "나 퇴근 후에 잠시 쉬어야 해", "pron": "아이 니드 투 레스트 포어 어 와일 애프터 워크" },
+
+    { "en": "I need to drink", "kr": "나 마셔야 해", "pron": "아이 니드 투 드링크" },
+    { "en": "I need to drink water", "kr": "나 물을 마셔야 해", "pron": "아이 니드 투 드링크 워터" },
+    { "en": "I need to drink some warm water now", "kr": "나 지금 따뜻한 물을 좀 마셔야 해", "pron": "아이 니드 투 드링크 썸 웜 워터 나우" },
+
+    { "en": "I need to sleep", "kr": "나 자야 해", "pron": "아이 니드 투 슬립" },
+    { "en": "I need to sleep early", "kr": "나 일찍 자야 해", "pron": "아이 니드 투 슬립 얼리" },
+    { "en": "I need to sleep early for tomorrow's trip", "kr": "나 내일 여행을 위해 일찍 자야 해", "pron": "아이 니드 투 슬립 얼리 포어 투모로우즈 트립" },
+
+    { "en": "I need to buy", "kr": "나 사야 해", "pron": "아이 니드 투 바이" },
+    { "en": "I need to buy a jacket", "kr": "나 재킷을 사야 해", "pron": "아이 니드 투 바이 어 재킷" },
+    { "en": "I need to buy a new jacket for winter", "kr": "나 겨울용 새 재킷을 사야 해", "pron": "아이 니드 투 바이 어 뉴 재킷 포어 윈터" },
+
+    { "en": "I need to see", "kr": "나 봐야 해", "pron": "아이 니드 투 씨" },
+    { "en": "I need to see a doctor", "kr": "나 진찰받아야 해", "pron": "아이 니드 투 씨 어 닥터" },
+    { "en": "I need to see a doctor for my cold", "kr": "나 감기 때문에 진찰을 받아야 해", "pron": "아이 니드 투 씨 어 닥터 포어 마이 콜드" },
+
+    { "en": "I need to talk", "kr": "나 얘기해야 해", "pron": "아이 니드 투 토크" },
+    { "en": "I need to talk to you", "kr": "나 너랑 얘기해야 해", "pron": "아이 니드 투 토크 투 유" },
+    { "en": "I need to talk to you about the project", "kr": "나 너랑 그 프로젝트에 대해 얘기해야 해", "pron": "아이 니드 투 토크 투 유 어바웃 더 프로젝트" },
+
+    { "en": "I need to learn", "kr": "나 배워야 해", "pron": "아이 니드 투 러언" },
+    { "en": "I need to learn how to drive", "kr": "나 운전하는 법을 배워야 해", "pron": "아이 니드 투 러언 하우 투 드라이브" },
+    { "en": "I need to learn how to drive this month", "kr": "나 이번 달에 운전하는 법을 배워야 해", "pron": "아이 니드 투 러언 하우 투 드라이브 디스 먼스" },
+
+    { "en": "I need to pack", "kr": "나 짐을 싸야 해", "pron": "아이 니드 투 팩" },
+    { "en": "I need to pack my bag", "kr": "나 가방을 싸야 해", "pron": "아이 니드 투 팩 마이 백" },
+    { "en": "I need to pack my bag before the flight", "kr": "나 비행기 타기 전에 가방을 싸야 해", "pron": "아이 니드 투 팩 마이 백 비포어 더 플라이트" },
+
+    { "en": "I need to lose", "kr": "나 빼야 해", "pron": "아이 니드 투 루즈" },
+    { "en": "I need to lose some weight", "kr": "나 살을 좀 빼야 해", "pron": "아이 니드 투 루즈 썸 웨이트" },
+    { "en": "I need to lose some weight before summer vacation", "kr": "나 여름휴가 전에 살을 좀 빼야 해", "pron": "아이 니드 투 루즈 썸 웨이트 비포어 썸머 베이케이션" },
+
+    { "en": "I need to wash", "kr": "나 빨아야 해", "pron": "아이 니드 투 워시" },
+    { "en": "I need to wash my clothes", "kr": "나 옷을 빨아야 해", "pron": "아이 니드 투 워시 마이 클로즈" },
+    { "en": "I need to wash my clothes this afternoon", "kr": "나 오늘 오후에 옷을 빨아야 해", "pron": "아이 니드 투 워시 마이 클로즈 디스 애프터눈" },
+
+    { "en": "I need to charge", "kr": "나 충전해야 해", "pron": "아이 니드 투 차지" },
+    { "en": "I need to charge my phone", "kr": "나 내 폰 충전해야 해", "pron": "아이 니드 투 차지 마이 폰" },
+    { "en": "I need to charge my phone right away", "kr": "나 지금 당장 내 폰 충전해야 해", "pron": "아이 니드 투 차지 마이 폰 라이트 어웨이" },
+
+    { "en": "I need to get", "kr": "나 받아야 해", "pron": "아이 니드 투 겟" },
+    { "en": "I need to get some fresh air", "kr": "나 바람 좀 쐬어야 해", "pron": "아이 니드 투 겟 썸 프레시 에어" },
+    { "en": "I need to get some fresh air outside the building", "kr": "나 건물 밖에서 바람 좀 쐬어야 해", "pron": "아이 니드 투 겟 썸 프레시 에어 아웃사이드 더 빌딩" },
+
+    { "en": "I need to book", "kr": "나 예약해야 해", "pron": "아이 니드 투 북" },
+    { "en": "I need to book a flight ticket", "kr": "나 비행기 표를 예약해야 해", "pron": "아이 니드 투 북 어 플라이트 티켓" },
+    { "en": "I need to book a flight ticket to New York", "kr": "나 뉴욕행 비행기 표를 예약해야 해", "pron": "아이 니드 투 북 어 플라이트 티켓 투 뉴욕" },
+
+    { "en": "I need to renew", "kr": "나 갱신해야 해", "pron": "아이 니드 투 리뉴" },
+    { "en": "I need to renew my passport", "kr": "나 여권을 갱신해야 해", "pron": "아이 니드 투 리뉴 마이 패스포트" },
+    { "en": "I need to renew my passport before next week", "kr": "나 다음 주 전에 여권을 갱신해야 해", "pron": "아이 니드 투 리뉴 마이 패스포트 비포어 넥스트 위크" },
+
+    { "en": "I need to check", "kr": "나 확인해야 해", "pron": "아이 니드 투 체크" },
+    { "en": "I need to check the price", "kr": "나 가격을 확인해야 해", "pron": "아이 니드 투 체크 더 프라이스" },
+    { "en": "I need to check the price on the website", "kr": "나 웹사이트에서 가격을 확인해야 해", "pron": "아이 니드 투 체크 더 프라이스 온 더 웹사이트" },
+
+    { "en": "I need to make", "kr": "나 해야 해(만들어야 해)", "pron": "아이 니드 투 메이크" },
+    { "en": "I need to make a reservation", "kr": "나 예약해야 해", "pron": "아이 니드 투 메이크 어 레저베이션" },
+    { "en": "I need to make a reservation for a restaurant tonight", "kr": "나 오늘 밤 레스토랑을 예약해야 해", "pron": "아이 니드 투 메이크 어 레저베이션 포어 어 레스토랑 투나잇" },
+
+    { "en": "I need to clean", "kr": "나 치워야 해", "pron": "아이 니드 투 클린" },
+    { "en": "I need to clean the desk", "kr": "나 책상을 치워야 해", "pron": "아이 니드 투 클린 더 데스크" },
+    { "en": "I need to clean the messy desk before studying", "kr": "나 공부하기 전에 지저분한 책상을 치워야 해", "pron": "아이 니드 투 클린 더 메시 데스크 비포어 스터디잉" },
+
+    { "en": "I need to find", "kr": "나 찾아야 해", "pron": "아이 니드 투 파인드" },
+    { "en": "I need to find a new job", "kr": "나 새 직장을 찾아야 해", "pron": "아이 니드 투 파인드 어 뉴 잡" },
+    { "en": "I need to find a new job by the end of this year", "kr": "나 올해 말까지 새 직장을 찾아야 해", "pron": "아이 니드 투 파인드 어 뉴 잡 바이 디 엔드 오브 디스 이어" },
+
+    { "en": "I need to cancel", "kr": "나 취소해야 해", "pron": "아이 니드 투 캔슬" },
+    { "en": "I need to cancel my order", "kr": "나 주문을 취소해야 해", "pron": "아이 니드 투 캔슬 마이 오더" },
+    { "en": "I need to cancel my order as soon as possible", "kr": "나 가능한 한 빨리 주문을 취소해야 해", "pron": "아이 니드 투 캔슬 마이 오더 애즈 순 애즈 파서블" },
+
+    { "en": "I need to update", "kr": "나 업데이트해야 해", "pron": "아이 니드 투 업데이트" },
+    { "en": "I need to update the application", "kr": "나 애플리케이션을 업데이트해야 해", "pron": "아이 니드 투 업데이트 디 애플리케이션" },
+    { "en": "I need to update the application to the latest version", "kr": "나 애플리케이션을 최신 버전으로 업데이트해야 해", "pron": "아이 니드 투 업데이트 디 애플리케이션 투 더 레이티스트 버전" },
+
+    { "en": "I need to prepare", "kr": "나 준비해야 해", "pron": "아이 니드 투 프리페어" },
+    { "en": "I need to prepare for the interview", "kr": "나 면접 준비를 해야 해", "pron": "아이 니드 투 프리페어 포어 디 인터뷰" },
+    { "en": "I need to prepare for the job interview tomorrow", "kr": "나 내일 취업 면접 준비를 해야 해", "pron": "아이 니드 투 프리페어 포어 더 잡 인터뷰 투모로우" },
+
+    { "en": "I need to fix", "kr": "나 고쳐야 해", "pron": "아이 니드 투 픽스" },
+    { "en": "I need to fix the screen", "kr": "나 화면을 고쳐야 해", "pron": "아이 니드 투 픽스 더 스크린" },
+    { "en": "I need to fix my broken phone screen today", "kr": "나 오늘 깨진 핸드폰 화면을 고쳐야 해", "pron": "아이 니드 투 픽스 마이 브로큰 폰 스크린 투데이" },
+
+    { "en": "I need to meet", "kr": "나 만나야 해", "pron": "아이 니드 투 미트" },
+    { "en": "I need to meet the manager", "kr": "나 매니저를 만나야 해", "pron": "아이 니드 투 미트 더 매니저" },
+    { "en": "I need to meet the manager to discuss the issue", "kr": "나 문제를 논의하기 위해 매니저를 만나야 해", "pron": "아이 니드 투 미트 더 매니저 투 디스커스 디 이슈" },
+
+    { "en": "I need to practice", "kr": "나 연습해야 해", "pron": "아이 니드 투 프랙티스" },
+    { "en": "I need to practice speaking English", "kr": "나 영어 말하기를 연습해야 해", "pron": "아이 니드 투 프랙티스 스피킹 잉글리시" },
+    { "en": "I need to practice speaking English for ten minutes every day", "kr": "나 매일 10분씩 영어 말하기를 연습해야 해", "pron": "아이 니드 투 프랙티스 스피킹 잉글리시 포어 텐 미니츠 에브리 데이" },
+
+    { "en": "I need to print", "kr": "나 인쇄해야 해", "pron": "아이 니드 투 프린트" },
+    { "en": "I need to print the ticket", "kr": "나 티켓을 인쇄해야 해", "pron": "아이 니드 투 프린트 더 티켓" },
+    { "en": "I need to print the concert ticket in advance", "kr": "나 콘서트 티켓을 미리 인쇄해야 해", "pron": "아이 니드 투 프린트 더 콘서트 티켓 인 어드밴스" },
+
+    { "en": "I need to focus", "kr": "나 집중해야 해", "pron": "아이 니드 투 포커스" },
+    { "en": "I need to focus on my work", "kr": "나 내 일에 집중해야 해", "pron": "아이 니드 투 포커스 온 마이 워크" },
+    { "en": "I need to focus on my work without distractions", "kr": "나 방해받지 않고 내 일에 집중해야 해", "pron": "아이 니드 투 포커스 온 마이 워크 위드아웃 디스트랙션즈" },
+
+    { "en": "I need to send", "kr": "나 보내야 해", "pron": "아이 니드 투 샌드" },
+    { "en": "I need to send a text message", "kr": "나 문자 메시지를 보내야 해", "pron": "아이 니드 투 샌드 어 텍스트 메시지" },
+    { "en": "I need to send a text message to my friend right now", "kr": "나 지금 당장 친구에게 문자 메시지를 보내야 해", "pron": "아이 니드 투 샌드 어 텍스트 메시지 투 마이 프렌드 라이트 나우" },
+
+    { "en": "I need to organize", "kr": "나 정리해야 해", "pron": "아이 니드 투 오거나이즈" },
+    { "en": "I need to organize my closet", "kr": "나 내 옷장을 정리해야 해", "pron": "아이 니드 투 오거나이즈 마이 클로젯" },
+    { "en": "I need to organize my closet for the new season", "kr": "나 새 시즌을 위해 내 옷장을 정리해야 해", "pron": "아이 니드 투 오거나이즈 마이 클로젯 포어 더 뉴 시즌" },
+
+    { "en": "I need to return", "kr": "나 반납해야 해", "pron": "아이 니드 투 리턴" },
+    { "en": "I need to return the shoes", "kr": "나 신발을 반품해야 해", "pron": "아이 니드 투 리턴 더 슈즈" },
+    { "en": "I need to return the shoes because they are too small", "kr": "나 신발이 너무 작아서 반품해야 해", "pron": "아이 니드 투 리턴 더 슈즈 비코즈 데이 아 투 스몰" },
+
+    { "en": "I need to stop", "kr": "나 멈춰야 해", "pron": "아이 니드 투 스탑" },
+    { "en": "I need to stop drinking coffee", "kr": "나 커피 마시는 걸 멈춰야 해", "pron": "아이 니드 투 스탑 드링킹 커피" },
+    { "en": "I need to stop drinking coffee late at night", "kr": "나 밤늦게 커피 마시는 걸 멈춰야 해", "pron": "아이 니드 투 스탑 드링킹 커피 레이트 앳 나이트" },
+
+    { "en": "I need to clear", "kr": "나 비워야 해", "pron": "아이 니드 투 클리어" },
+    { "en": "I need to clear my schedule", "kr": "나 일정을 비워야 해", "pron": "아이 니드 투 클리어 마이 스케줄" },
+    { "en": "I need to clear my schedule for the entire weekend", "kr": "나 주말 내내 일정을 비워야 해", "pron": "아이 니드 투 클리어 마이 스케줄 포어 디 엔타이어 위켄드" },
+
+    { "en": "I need to ask", "kr": "나 물어봐야 해", "pron": "아이 니드 투 애스크" },
+    { "en": "I need to ask for help", "kr": "나 도움을 요청해야 해", "pron": "아이 니드 투 애스크 포어 헬프" },
+    { "en": "I need to ask for help from a professional", "kr": "나 전문가에게 도움을 요청해야 해", "pron": "아이 니드 투 애스크 포어 헬프 프롬 어 프로페셔널" },
+
+    { "en": "I need to review", "kr": "나 검토해야 해", "pron": "아이 니드 투 리뷰" },
+    { "en": "I need to review the contract", "kr": "나 계약서를 검토해야 해", "pron": "아이 니드 투 리뷰 더 컨트랙트" },
+    { "en": "I need to review the contract thoroughly before signing", "kr": "나 서명하기 전에 계약서를 철저히 검토해야 해", "pron": "아이 니드 투 리뷰 더 컨트랙트 써로울리 비포어 싸이닝" },
+
+    { "en": "I need to post", "kr": "나 게시해야 해", "pron": "아이 니드 투 포스트" },
+    { "en": "I need to post a notice", "kr": "나 공지사항을 게시해야 해", "pron": "아이 니드 투 포스트 어 노티스" },
+    { "en": "I need to post a notice on the bulletin board", "kr": "나 게시판에 공지사항을 게시해야 해", "pron": "아이 니드 투 포스트 어 노티스 온 더 불레틴 보드" }
+  ]
+}

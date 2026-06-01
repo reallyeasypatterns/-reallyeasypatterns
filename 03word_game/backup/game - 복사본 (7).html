@@ -1,0 +1,476 @@
+<script type="text/javascript">
+    function includeTop() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/top.html', false);
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeTop();
+</script>
+<style>
+.game-container { width:100%; max-width:400px; height:90vh; background-color: var(--color_w10); border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.1); display:flex; flex-direction:column; overflow:hidden; position:relative; }
+.header { padding:20px; display:flex; flex-direction:column; gap:10px; border-bottom:2px solid #e5e5e5; }
+.title { font-size:16px; font-weight:bold; color:#888888; text-align:center; margin:0; }
+.pattern-title { font-size:20px; font-weight:bold; color:#1c1c1c; text-align:center; margin:0 0 5px 0; }
+
+/* 진행상황 및 상태창 레이아웃 수정 */
+.status-container { display:flex; flex-direction:column; gap:8px; }
+.progress-container { display:flex; align-items:center; gap:10px; }
+.progress-text { font-size:14px; font-weight:bold; color:#4b4b4b; min-width:50px; text-align:right; }
+.progress-bar-bg { flex-grow:1; height:16px; background-color:#e5e5e5; border-radius:8px; overflow:hidden; }
+.progress-bar-fill { width:0%; height:100%; background-color:#58cc02; transition:width 0.2s ease; }
+.info-row { display:flex; justify-content:space-between; align-items:center; padding:0 5px; font-size:15px; font-weight:bold; }
+.combo-text { color:#ff9600; }
+.timer-text { color:#ea2b2b; }
+
+.game-board { flex-grow:1; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(5,1fr); gap:12px; padding:20px; }
+.word-btn { background-color:#ffffff; border:2px solid #e5e5e5; border-bottom:4px solid #e5e5e5; border-radius:12px; font-size:15px; font-weight:bold; color:#4b4b4b; cursor:pointer; display:flex; justify-content:center; align-items:center; transition:all 0.1s ease; padding:10px; text-align:center; }
+.word-btn:active { border-bottom-width:2px; transform:translateY(2px); }
+.word-btn.selected { background-color:#ddf4ff; border-color:#84d8ff; border-bottom-color:#84d8ff; color:#1899d6; }
+.word-btn.correct { background-color:#d7ffb8; border-color:#58cc02; border-bottom-color:#58cc02; color:#58cc02; }
+.word-btn.dimming { animation:dimFade 3s linear forwards; pointer-events:none; }
+.word-btn.dimmed-stay { background-color:#e5e5e5 !important; border:2px solid #cccccc !important; border-bottom:2px solid #cccccc !important; color:#888888 !important; opacity:0.4 !important; pointer-events:none !important; transform:scale(0.97) !important; }
+.word-btn.completed-gray { background-color:#e5e5e5 !important; border:2px solid #cccccc !important; border-bottom:2px solid #cccccc !important; color:#aaaaaa !important; cursor:default !important; pointer-events:none !important; transform:none !important; opacity:1 !important; }
+.word-btn.wrong { background-color:#ffdfe0; border-color:#ff4b4b; border-bottom-color:#ff4b4b; color:#ea2b2b; animation:shake 0.3s ease; }
+.word-btn.fade-in { animation:fadeIn 0.2s ease forwards; }
+
+@keyframes dimFade { 0%{background-color:#d7ffb8;border-color:#58cc02;color:#58cc02;opacity:1;transform:scale(1);} 10%{background-color:#f4f4f4;border-color:#dcdcdc;color:#aaaaaa;opacity:0.8;} 100%{background-color:#e5e5e5;border-color:#cccccc;color:#888888;opacity:0.1;transform:scale(0.95);} }
+@keyframes fadeIn { 0%{opacity:0;transform:scale(0.9);} 100%{opacity:1;transform:scale(1);} }
+@keyframes shake { 0%,100%{transform:translateX(0);} 20%,60%{transform:translateX(-6px);} 40%,80%{transform:translateX(6px);} }
+
+.footer { padding:20px; text-align:center; background-color:#ffffff; border-top:2px solid #e5e5e5; display:flex; justify-content:flex-end; align-items:center; }
+.exit-btn { background-color:#fff; border:2px solid #e5e5e5; border-radius:10px; padding:6px 12px; font-size:14px; font-weight:bold; color:#777; cursor:pointer; }
+.exit-btn:hover { background-color:#f7f7f7; color:#333; }
+</style>
+
+<div id="contents">
+    <div class="wrap">
+        <div class="game-container">
+            <div class="header">
+                <h3 class="pattern-title" id="game-pattern-title">단어 매칭 게임</h3>
+                <p class="title">의미가 일치하는 단어끼리 짝을 지으세요</p>
+                
+                <div class="status-container">
+                    <div class="progress-container">
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" id="game-progress"></div>
+                        </div>
+                        <span class="progress-text" id="progress-label">0 / 0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="combo-text" id="combo-label">🔥 0 콤보</span>
+                        <span class="timer-text" id="timer-label">⏱️ 제한시간: 0초</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-board" id="game-board"></div>
+
+            <div class="footer">
+                <button class="exit-btn" onclick="location.href='./index.html'">나가기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let wordDatabase = [];
+    let currentPool = [];
+    
+    let activeKrWords = [null, null, null, null, null];
+    let activeEnWords = [null, null, null, null, null];
+
+    let completedKrSlots = [];
+    let completedEnSlots = [];
+
+    let pendingKrSlots = []; 
+    let pendingEnSlots = [];
+
+    let newlyMatchedKrSlots = [];
+    let newlyMatchedEnSlots = [];
+
+    let globalRefillTimer = null;
+
+    let selectedKrValue = null;
+    let selectedEnValue = null;
+
+    // 새로운 관리 항목들
+    let matchedCount = 0;      // 맞춘 단어 쌍 누적 카운트
+    let combo = 0;             // 현재 연속 콤보
+    let maxCombo = 0;          // 최대 달성 콤보
+    let totalTimeLimit = 0;    // 총 부여된 제한 시간 (단어수 * 1초)
+    let timeLeft = 0;          // 남은 시간
+    let timerInterval = null;  // 타이머 인터벌 객체
+
+    let isFinalFiveMode = false;
+
+    let waitingKrBuffer = [];
+    let waitingEnBuffer = [];
+
+    const board = document.getElementById("game-board");
+    const comboLabel = document.getElementById("combo-label");
+    const gameProgress = document.getElementById("game-progress");
+    const progressLabel = document.getElementById("progress-label");
+    const timerLabel = document.getElementById("timer-label");
+    const patternTitleView = document.getElementById("game-pattern-title");
+
+    function shuffle(array) {
+        return array.sort(() => Math.random() - 0.5);
+    }
+
+    async function loadGameData() {
+        const savedGame = localStorage.getItem('selected_word_game');
+        if (!savedGame) {
+            alert("선택된 게임 데이터가 없습니다. 리스트 페이지로 이동합니다.");
+            window.location.href = './index.html';
+            return;
+        }
+
+        const gameSetup = JSON.parse(savedGame);
+        patternTitleView.innerText = gameSetup.title;
+
+        try {
+            const response = await fetch(gameSetup.json_file);
+            if (!response.ok) throw new Error("네트워크 응답 오류");
+            
+            wordDatabase = await response.json();
+            
+            if (wordDatabase && wordDatabase.length >= 5) {
+                createBoardElements();
+                initGame();
+            } else {
+                alert("게임 진행을 위해 최소 5개 이상의 단어가 필요합니다.");
+            }
+        } catch (error) {
+            console.error("데이터 로드 실패:", error);
+            alert("단어 데이터를 불러오는 데 실패했습니다.\n요청 경로: " + gameSetup.json_file);
+        }
+    }
+
+    function createBoardElements() {
+        board.innerHTML = "";
+        for (let i = 0; i < 5; i++) {
+            const krBtn = document.createElement("button");
+            krBtn.className = "word-btn";
+            krBtn.dataset.type = "kr";
+            krBtn.dataset.index = i;
+            krBtn.onclick = () => handleSelect(krBtn);
+
+            const enBtn = document.createElement("button");
+            enBtn.className = "word-btn";
+            enBtn.dataset.type = "en";
+            enBtn.dataset.index = i;
+            enBtn.onclick = () => handleSelect(enBtn);
+
+            board.appendChild(krBtn);
+            board.appendChild(enBtn);
+        }
+    }
+
+    function initGame() {
+        currentPool = shuffle([...wordDatabase]);
+        let initialKr = [], initialEn = [];
+        
+        for(let i=0; i<5; i++) {
+            let word = currentPool.pop();
+            initialKr.push(word.kr);
+            initialEn.push(word.en);
+        }
+        
+        shuffle(initialKr); shuffle(initialEn);
+        activeKrWords = initialKr; activeEnWords = initialEn;
+        
+        pendingKrSlots = []; pendingEnSlots = [];
+        newlyMatchedKrSlots = []; newlyMatchedEnSlots = [];
+        completedKrSlots = []; completedEnSlots = [];
+        waitingKrBuffer = []; waitingEnBuffer = [];
+        if(globalRefillTimer) clearTimeout(globalRefillTimer);
+        globalRefillTimer = null;
+        
+        selectedKrValue = null;
+        selectedEnValue = null;
+        
+        // 변수 초기화
+        matchedCount = 0;
+        combo = 0;
+        maxCombo = 0;
+        isFinalFiveMode = false;
+
+        // 타이머 설정 (한 쌍당 1초)
+        totalTimeLimit = wordDatabase.length * 1.5;
+        timeLeft = totalTimeLimit;
+        
+        startTimer();
+        updateHUD();
+
+        const allButtons = board.querySelectorAll('.word-btn');
+        allButtons.forEach(btn => {
+            btn.className = "word-btn";
+            const idx = parseInt(btn.dataset.index);
+            if (btn.dataset.type === "kr") {
+                btn.innerText = activeKrWords[idx] || "";
+            } else {
+                btn.innerText = activeEnWords[idx] || "";
+            }
+        });
+
+        renderBoard();
+    }
+
+    // 타이머 시작 함수
+    function startTimer() {
+        if(timerInterval) clearInterval(timerInterval);
+        timerInterval = setInterval(() => {
+            timeLeft--;
+            if(timeLeft <= 0) {
+                timeLeft = 0;
+                clearInterval(timerInterval);
+                updateHUD();
+                setTimeout(() => {
+                    alert("⏰ 시간이 초과되었습니다! 게임 오버.");
+                    initGame(); // 게임 재시작
+                }, 100);
+                return;
+            }
+            updateHUD();
+        }, 1000); // 1초 단위 구동
+    }
+
+    function renderBoard() {
+        const allButtons = board.querySelectorAll('.word-btn');
+        
+        allButtons.forEach(btn => {
+            const i = parseInt(btn.dataset.index);
+            const isKr = btn.dataset.type === "kr";
+            const currentText = isKr ? activeKrWords[i] : activeEnWords[i];
+            
+            btn.innerText = currentText || "";
+            btn.className = "word-btn";
+
+            if (isKr) {
+                if (completedKrSlots.includes(i)) {
+                    btn.classList.add("completed-gray");
+                } else if (pendingKrSlots.includes(i)) {
+                    if (newlyMatchedKrSlots.includes(i)) {
+                        btn.classList.add("dimming");
+                    } else {
+                        btn.classList.add("dimmed-stay");
+                    }
+                } else if (selectedKrValue && selectedKrValue === btn.innerText) {
+                    btn.classList.add("selected");
+                }
+            } else {
+                if (completedEnSlots.includes(i)) {
+                    btn.classList.add("completed-gray");
+                } else if (pendingEnSlots.includes(i)) {
+                    if (newlyMatchedEnSlots.includes(i)) {
+                        btn.classList.add("dimming");
+                    } else {
+                        btn.classList.add("dimmed-stay");
+                    }
+                } else if (selectedEnValue && selectedEnValue === btn.innerText) {
+                    btn.classList.add("selected");
+                }
+            }
+        });
+    }
+
+    function handleSelect(btn) {
+        const idx = parseInt(btn.dataset.index);
+        if (btn.classList.contains('dimming') || btn.classList.contains('dimmed-stay') || btn.classList.contains('completed-gray') || btn.innerText === "") return;
+
+        if (btn.dataset.type === "kr") {
+            if (selectedKrValue === btn.innerText) {
+                selectedKrValue = null;
+            } else {
+                selectedKrValue = btn.innerText;
+            }
+        } else {
+            if (selectedEnValue === btn.innerText) {
+                selectedEnValue = null;
+            } else {
+                selectedEnValue = btn.innerText;
+            }
+        }
+        
+        renderBoard();
+
+        if (selectedKrValue && selectedEnValue) {
+            const krVal = selectedKrValue;
+            const enVal = selectedEnValue;
+            
+            const krIdx = activeKrWords.indexOf(krVal);
+            const enIdx = activeEnWords.indexOf(enVal);
+
+            const match = wordDatabase.find(w => w.kr === krVal && w.en === enVal);
+
+            if (match) {
+                matchedCount += 1; // 맞춘 개수 증가
+                combo += 1;        // 콤보 증가
+                if (combo > maxCombo) maxCombo = combo; // 맥스 콤보 갱신
+                
+                updateHUD();
+
+                completedKrSlots.push(krIdx);
+                completedEnSlots.push(enIdx);
+
+                const uncompletedCountOnBoard = 5 - completedKrSlots.length + pendingKrSlots.length;
+                const totalRemainingWords = currentPool.length + waitingKrBuffer.length + uncompletedCountOnBoard;
+
+                if (isFinalFiveMode || totalRemainingWords <= 5) {
+                    isFinalFiveMode = true;
+                    if(globalRefillTimer) clearTimeout(globalRefillTimer);
+                    pendingKrSlots = [];
+                    pendingEnSlots = [];
+                    waitingKrBuffer = [];
+                    waitingEnBuffer = [];
+                    newlyMatchedKrSlots = [];
+                    newlyMatchedEnSlots = [];
+                    selectedKrValue = null;
+                    selectedEnValue = null;
+
+                    renderBoard();
+                    checkGameClear();
+                } else {
+                    completedKrSlots = completedKrSlots.filter(id => id !== krIdx);
+                    completedEnSlots = completedEnSlots.filter(id => id !== enIdx);
+
+                    if(globalRefillTimer) clearTimeout(globalRefillTimer);
+
+                    if (currentPool.length > 0) {
+                        let word = currentPool.pop();
+                        waitingKrBuffer.push(word.kr);
+                        waitingEnBuffer.push(word.en);
+                    }
+
+                    selectedKrValue = null;
+                    selectedEnValue = null;
+
+                    pendingKrSlots.push(krIdx);
+                    pendingEnSlots.push(enIdx);
+                    
+                    newlyMatchedKrSlots = [krIdx];
+                    newlyMatchedEnSlots = [enIdx];
+                    
+                    if (pendingKrSlots.length >= 2) {
+                        processPushRefill();
+                    } else {
+                        renderBoard();
+                        globalRefillTimer = setTimeout(() => {
+                            if (pendingKrSlots.length > 0) {
+                                processPushRefill();
+                            }
+                        }, 3000);
+                    }
+                }
+
+            } else {
+                const allButtons = board.querySelectorAll('.word-btn');
+                let targetKrBtn, targetEnBtn;
+                allButtons.forEach(b => {
+                    if(b.dataset.type === "kr" && b.innerText === krVal) targetKrBtn = b;
+                    if(b.dataset.type === "en" && b.innerText === enVal) targetEnBtn = b;
+                });
+
+                if(targetKrBtn) targetKrBtn.classList.add("wrong");
+                if(targetEnBtn) targetEnBtn.classList.add("wrong");
+                
+                combo = 0; // 틀리면 콤보 리셋
+                updateHUD();
+
+                selectedKrValue = null;
+                selectedEnValue = null;
+
+                setTimeout(() => {
+                    renderBoard();
+                }, 300);
+            }
+        }
+    }
+
+    function processPushRefill() {
+        let targetKrIndices = [...pendingKrSlots];
+        let targetEnIndices = [...pendingEnSlots];
+
+        pendingKrSlots = [];
+        pendingEnSlots = [];
+        newlyMatchedKrSlots = [];
+        newlyMatchedEnSlots = [];
+
+        let count = targetKrIndices.length;
+        let finalKrToInsert = [];
+        let finalEnToInsert = [];
+
+        for(let i = 0; i < count; i++) {
+            if(waitingKrBuffer.length > 0) {
+                finalKrToInsert.push(waitingKrBuffer.shift());
+                finalEnToInsert.push(waitingEnBuffer.pop());
+            }
+        }
+
+        const allButtons = board.querySelectorAll('.word-btn');
+        allButtons.forEach(btn => {
+            const i = parseInt(btn.dataset.index);
+            if (btn.dataset.type === "kr" && targetKrIndices.includes(i)) btn.classList.remove('dimming');
+            if (btn.dataset.type === "en" && targetEnIndices.includes(i)) btn.classList.remove('dimming');
+        });
+
+        for(let i = 0; i < count; i++) {
+            activeKrWords[targetKrIndices[i]] = finalKrToInsert[i];
+            activeEnWords[targetEnIndices[i]] = finalEnToInsert[i];
+        }
+
+        renderBoard();
+        applyFadeIn(finalKrToInsert, finalEnToInsert);
+    }
+
+    function applyFadeIn(krList, enList) {
+        const allButtons = board.querySelectorAll('.word-btn');
+        allButtons.forEach(btn => {
+            if(krList.includes(btn.innerText) || enList.includes(btn.innerText)) {
+                if (btn.innerText !== "") btn.classList.add('fade-in');
+            }
+        });
+    }
+
+    // 5. 게임 클리어 시 통계 팝업 및 리셋 처리
+    function checkGameClear() {
+        if (completedKrSlots.length === 5 && completedEnSlots.length === 5) {
+            clearInterval(timerInterval); // 타이머 정지
+            
+            const clearTime = totalTimeLimit - timeLeft; // 걸린 시간 계산
+
+            setTimeout(() => {
+                alert(`🎉 축하합니다! 모든 단어를 매칭했습니다.\n\n⏱️ 클리어 시간: ${clearTime}초\n🔥 최대 콤보: ${maxCombo} 콤보`);
+                initGame();
+            }, 400);
+        }
+    }
+
+    // 상단 UI 요소 업데이트 (프로그래스바, 콤보, 타이머)
+    function updateHUD() {
+        // 1. 전체 진행 상황 업데이트
+        const totalWords = wordDatabase.length;
+        progressLabel.innerText = `${matchedCount} / ${totalWords}`;
+        
+        let progressPercent = totalWords > 0 ? (matchedCount / totalWords) * 100 : 0;
+        gameProgress.style.width = `${progressPercent}%`;
+
+        // 2. 콤보 텍스트 업데이트
+        comboLabel.innerText = `🔥 ${combo} 콤보`;
+
+        // 4. 타이머 텍스트 업데이트
+        timerLabel.innerText = `⏱️ 제한시간: ${timeLeft}초`;
+    }
+
+    loadGameData();
+</script>
+<script type="text/javascript">
+    function includeFooter() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/bottom.html', false);
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeFooter();
+</script>

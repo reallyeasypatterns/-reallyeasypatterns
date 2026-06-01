@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단어 매칭 게임 (Match Madness)</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .game-container {
+            width: 100%;
+            max-width: 400px;
+            height: 90vh;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #3c3c3c;
+            text-align: center;
+            margin: 0;
+        }
+
+        .combo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .combo-text {
+            font-weight: bold;
+            color: #58cc02;
+            min-width: 70px;
+        }
+
+        .progress-bar-bg {
+            flex-grow: 1;
+            height: 16px;
+            background-color: #e5e5e5;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            width: 0%;
+            height: 100%;
+            background-color: #58cc02;
+            transition: width 0.2s ease;
+        }
+
+        .game-board {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            gap: 12px;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .word-btn {
+            background-color: #ffffff;
+            border: 2px solid #e5e5e5;
+            border-bottom: 4px solid #e5e5e5;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #4b4b4b;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.1s ease;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .word-btn:active {
+            border-bottom-width: 2px;
+            transform: translateY(2px);
+        }
+
+        .word-btn.selected {
+            background-color: #ddf4ff;
+            border-color: #84d8ff;
+            border-bottom-color: #84d8ff;
+            color: #1899d6;
+        }
+
+        .word-btn.correct {
+            background-color: #d7ffb8;
+            border-color: #58cc02;
+            border-bottom-color: #58cc02;
+            color: #58cc02;
+        }
+
+        .word-btn.dimming {
+            animation: dimFade 3s linear forwards;
+            pointer-events: none;
+        }
+
+        /* 마지막 5단어 매칭 성공 시 고정될 그레이 스타일 */
+        .word-btn.completed-gray {
+            background-color: #e5e5e5 !important;
+            border: 2px solid #cccccc !important;
+            border-bottom: 2px solid #cccccc !important;
+            color: #aaaaaa !important;
+            cursor: default !important;
+            pointer-events: none !important;
+            transform: none !important;
+        }
+
+        .word-btn.wrong {
+            background-color: #ffdfe0;
+            border-color: #ff4b4b;
+            border-bottom-color: #ff4b4b;
+            color: #ea2b2b;
+            animation: shake 0.3s ease;
+        }
+
+        .word-btn.fade-in {
+            animation: fadeIn 0.2s ease forwards;
+        }
+
+        @keyframes dimFade {
+            0% { background-color: #d7ffb8; border-color: #58cc02; color: #58cc02; opacity: 1; transform: scale(1); }
+            10% { background-color: #f4f4f4; border-color: #dcdcdc; color: #aaaaaa; opacity: 0.8; }
+            100% { background-color: #e5e5e5; border-color: #cccccc; color: #888888; opacity: 0.2; transform: scale(0.95); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-6px); }
+            40%, 80% { transform: translateX(6px); }
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            border-top: 2px solid #e5e5e5;
+        }
+
+        .score-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #4b4b4b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="header">
+            <p class="title">의미가 일치하는 단어끼리 짝을 지으세요</p>
+            <div class="combo-container">
+                <span class="combo-text" id="combo-label">콤보 x0</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="combo-progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-board" id="game-board"></div>
+
+        <div class="footer">
+            <div class="score-text" id="score-label">획득 XP: 0</div>
+        </div>
+    </div>
+
+    <script>
+        const wordDatabase = [
+            { ko: "경찰", en: "police" }, { ko: "남자들", en: "men" }, { ko: "병원", en: "clinic" },
+            { ko: "알아채다", en: "notice" }, { ko: "업데이트", en: "update" }, { ko: "피아노", en: "piano" },
+            { ko: "머리", en: "hair" }, { ko: "이모", en: "aunt" }, { ko: "식탁", en: "table" },
+            { ko: "주방", en: "kitchen" }, { ko: "치과의사", en: "dentist" }, { ko: "돌고래", en: "dolphin" },
+            { ko: "교도소", en: "prison" }, { ko: "천사", en: "angel" }, { ko: "매트리스", en: "mattress" }
+        ];
+
+        let currentPool = [];
+        let activeKoWords = [null, null, null, null, null];
+        let activeEnWords = [null, null, null, null, null];
+
+        // 이미 맞추어 회색 고정(Gray) 처리된 슬롯 인덱스 저장 배열
+        let completedKoSlots = [];
+        let completedEnSlots = [];
+
+        let pendingKoSlots = []; 
+        let pendingEnSlots = [];
+
+        let koTimers = {};
+        let enTimers = {};
+
+        let selectedKoBtn = null;
+        let selectedEnBtn = null;
+        let score = 0;
+        let combo = 0;
+
+        const board = document.getElementById("game-board");
+        const comboLabel = document.getElementById("combo-label");
+        const comboProgress = document.getElementById("combo-progress");
+        const scoreLabel = document.getElementById("score-label");
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        function initGame() {
+            currentPool = shuffle([...wordDatabase]);
+            let initialKo = [], initialEn = [];
+            for(let i=0; i<5; i++) {
+                let word = currentPool.pop();
+                initialKo.push(word.ko);
+                initialEn.push(word.en);
+            }
+            shuffle(initialKo); shuffle(initialEn);
+            activeKoWords = initialKo; activeEnWords = initialEn;
+            
+            pendingKoSlots = []; pendingEnSlots = [];
+            completedKoSlots = []; completedEnSlots = [];
+            koTimers = {}; enTimers = {};
+            score = 0; combo = 0;
+            updateHUD();
+
+            renderBoard();
+        }
+
+        function renderBoard() {
+            board.innerHTML = "";
+            for (let i = 0; i < 5; i++) {
+                // 좌측 (한국어)
+                const koBtn = document.createElement("button");
+                koBtn.className = "word-btn";
+                koBtn.innerText = activeKoWords[i] || "";
+                koBtn.dataset.type = "ko";
+                koBtn.dataset.index = i;
+                
+                if (completedKoSlots.includes(i)) {
+                    koBtn.classList.add("completed-gray");
+                } else if (pendingKoSlots.includes(i)) {
+                    koBtn.classList.add("dimming");
+                }
+                koBtn.onclick = () => handleSelect(koBtn);
+
+                // 우측 (영어)
+                const enBtn = document.createElement("button");
+                enBtn.className = "word-btn";
+                enBtn.innerText = activeEnWords[i] || "";
+                enBtn.dataset.type = "en";
+                enBtn.dataset.index = i;
+                
+                if (completedEnSlots.includes(i)) {
+                    enBtn.classList.add("completed-gray");
+                } else if (pendingEnSlots.includes(i)) {
+                    enBtn.classList.add("dimming");
+                }
+                enBtn.onclick = () => handleSelect(enBtn);
+
+                board.appendChild(koBtn);
+                board.appendChild(enBtn);
+            }
+        }
+
+        function handleSelect(btn) {
+            const idx = parseInt(btn.dataset.index);
+            // 흐려지는 중이거나, 이미 회색 고정되었거나, 빈칸이면 무시
+            if (btn.classList.contains('dimming') || btn.classList.contains('completed-gray') || btn.innerText === "") return;
+
+            if (btn.dataset.type === "ko") {
+                if (selectedKoBtn) selectedKoBtn.classList.remove("selected");
+                selectedKoBtn = btn; selectedKoBtn.classList.add("selected");
+            } else {
+                if (selectedEnBtn) selectedEnBtn.classList.remove("selected");
+                selectedEnBtn = btn; selectedEnBtn.classList.add("selected");
+            }
+
+            if (selectedKoBtn && selectedEnBtn) {
+                const koVal = selectedKoBtn.innerText;
+                const enVal = selectedEnBtn.innerText;
+                const koIdx = parseInt(selectedKoBtn.dataset.index);
+                const enIdx = parseInt(selectedEnBtn.dataset.index);
+
+                const match = wordDatabase.find(w => w.ko === koVal && w.en === enVal);
+
+                if (match) {
+                    score += 10;
+                    combo += 1;
+                    updateHUD();
+
+                    // [추가된 조건 체크] 대기 보충용 단어 풀(Pool)이 완전히 빈 상태라면 (즉, 화면의 5세트가 마지막 단어들)
+                    if (currentPool.length === 0) {
+                        // 타이머 작동 없이 즉시 그 자리에 회색 고정 상태로 변경
+                        completedKoSlots.push(koIdx);
+                        completedEnSlots.push(enIdx);
+                        renderBoard();
+                        checkGameClear();
+                    } else {
+                        // 기존 리필 흐름 유지 (3초 흐려짐 대기열 등록)
+                        pendingKoSlots.push(koIdx);
+                        pendingEnSlots.push(enIdx);
+                        renderBoard();
+
+                        if (pendingKoSlots.length >= 2) {
+                            clearAllPendingTimers();
+                            triggerComboRefill();
+                        } else {
+                            startSingleTimer(koIdx, enIdx);
+                        }
+                    }
+
+                } else {
+                    selectedKoBtn.classList.add("wrong");
+                    selectedEnBtn.classList.add("wrong");
+                    combo = 0;
+                    updateHUD();
+
+                    const tKo = selectedKoBtn; const tEn = selectedEnBtn;
+                    setTimeout(() => {
+                        tKo.classList.remove("selected", "wrong");
+                        tEn.classList.remove("selected", "wrong");
+                    }, 300);
+                }
+
+                selectedKoBtn = null;
+                selectedEnBtn = null;
+            }
+        }
+
+        function startSingleTimer(koIdx, enIdx) {
+            const timerId = setTimeout(() => {
+                refillSlotAt(koIdx, enIdx);
+            }, 3000);
+
+            koTimers[koIdx] = timerId;
+            enTimers[enIdx] = timerId;
+        }
+
+        function clearAllPendingTimers() {
+            Object.values(koTimers).forEach(t => clearTimeout(t));
+            Object.values(enTimers).forEach(t => clearTimeout(t));
+            koTimers = {};
+            enTimers = {};
+        }
+
+        function refillSlotAt(koIdx, enIdx) {
+            pendingKoSlots = pendingKoSlots.filter(id => id !== koIdx);
+            pendingEnSlots = pendingEnSlots.filter(id => id !== enIdx);
+
+            let newKo = null; let newEn = null;
+            if (currentPool.length > 0) {
+                let word = currentPool.pop();
+                newKo = word.ko; newEn = word.en;
+            }
+
+            activeKoWords[koIdx] = newKo;
+            activeEnWords[enIdx] = newEn;
+
+            renderBoard();
+            applyFadeIn([newKo], [newEn]);
+        }
+
+        function triggerComboRefill() {
+            let targetKoIndices = [...pendingKoSlots];
+            let targetEnIndices = [...pendingEnSlots];
+
+            pendingKoSlots = [];
+            pendingEnSlots = [];
+
+            let newKoWords = [];
+            let newEnWords = [];
+            let count = targetKoIndices.length;
+
+            for(let i=0; i<count; i++) {
+                if(currentPool.length > 0) {
+                    let word = currentPool.pop();
+                    newKoWords.push(word.ko);
+                    newEnWords.push(word.en);
+                } else {
+                    newKoWords.push(null);
+                    newEnWords.push(null);
+                }
+            }
+
+            shuffle(newKoWords);
+            shuffle(newEnWords);
+
+            for(let i=0; i<count; i++) {
+                activeKoWords[targetKoIndices[i]] = newKoWords[i];
+                activeEnWords[targetEnIndices[i]] = newEnWords[i];
+            }
+
+            renderBoard();
+            applyFadeIn(newKoWords, newEnWords);
+        }
+
+        function applyFadeIn(koList, enList) {
+            const allButtons = board.querySelectorAll('.word-btn');
+            allButtons.forEach(btn => {
+                if(koList.includes(btn.innerText) || enList.includes(btn.innerText)) {
+                    if (btn.innerText !== "") btn.classList.add('fade-in');
+                }
+            });
+        }
+
+        // 마지막 5세트가 모두 완료(회색 고정)되었는지 판단 후 리셋
+        function checkGameClear() {
+            if (completedKoSlots.length === 5 && completedEnSlots.length === 5) {
+                setTimeout(() => {
+                    alert("축하합니다! 모든 단어를 매칭했습니다. 확인을 누르면 새 라운드가 시작됩니다.");
+                    initGame();
+                }, 400);
+            }
+        }
+
+        function updateHUD() {
+            scoreLabel.innerText = `획득 XP: ${score}`;
+            comboLabel.innerText = `콤보 x${combo}`;
+            let progressPercent = Math.min((combo / 10) * 100, 100);
+            comboProgress.style.width = `${progressPercent}%`;
+        }
+
+        initGame();
+    </script>
+</body>
+</html>

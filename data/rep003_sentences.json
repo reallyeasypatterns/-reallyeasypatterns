@@ -1,0 +1,566 @@
+{
+  "pattern_en": "Can I",
+  "pattern_kr": "~해도 돼?",
+  "pattern_highlight": "Can I",
+  "sentences": [
+    {
+      "en": "Can I sit?",
+      "kr": "앉아도 돼?",
+      "pron": "캔 아이 싯"
+    },
+    {
+      "en": "Can I sit here?",
+      "kr": "여기 앉아도 돼?",
+      "pron": "캔 아이 싯 히어"
+    },
+    {
+      "en": "Can I sit here for a minute?",
+      "kr": "여기 잠깐 앉아도 돼?",
+      "pron": "캔 아이 싯 히어 포어 어 미닛"
+    },
+
+    {
+      "en": "Can I go?",
+      "kr": "가도 돼?",
+      "pron": "캔 아이 고"
+    },
+    {
+      "en": "Can I go now?",
+      "kr": "지금 가도 돼?",
+      "pron": "캔 아이 고 나우"
+    },
+    {
+      "en": "Can I go home now?",
+      "kr": "지금 집에 가도 돼?",
+      "pron": "캔 아이 고 홈 나우"
+    },
+
+    {
+      "en": "Can I open it?",
+      "kr": "그거 열어도 돼?",
+      "pron": "캔 아이 오픈 잇"
+    },
+    {
+      "en": "Can I open the window?",
+      "kr": "창문 열어도 돼?",
+      "pron": "캔 아이 오픈 더 윈도우"
+    },
+    {
+      "en": "Can I open the window a little?",
+      "kr": "창문 조금 열어도 돼?",
+      "pron": "캔 아이 오픈 더 윈도우 어 리틀"
+    },
+
+    {
+      "en": "Can I try?",
+      "kr": "해봐도 돼?",
+      "pron": "캔 아이 트라이"
+    },
+    {
+      "en": "Can I try this?",
+      "kr": "이거 해봐도 돼?",
+      "pron": "캔 아이 트라이 디스"
+    },
+    {
+      "en": "Can I try this game later?",
+      "kr": "이 게임 나중에 해봐도 돼?",
+      "pron": "캔 아이 트라이 디스 게임 레이터"
+    },
+
+    {
+      "en": "Can I ask?",
+      "kr": "물어봐도 돼?",
+      "pron": "캔 아이 애스크"
+    },
+    {
+      "en": "Can I ask you?",
+      "kr": "너한테 물어봐도 돼?",
+      "pron": "캔 아이 애스크 유"
+    },
+    {
+      "en": "Can I ask you a question?",
+      "kr": "너한테 질문 하나 해도 돼?",
+      "pron": "캔 아이 애스크 유 어 퀘스천"
+    },
+
+    {
+      "en": "Can I watch?",
+      "kr": "봐도 돼?",
+      "pron": "캔 아이 와치"
+    },
+    {
+      "en": "Can I watch TV?",
+      "kr": "TV 봐도 돼?",
+      "pron": "캔 아이 와치 티비"
+    },
+    {
+      "en": "Can I watch TV one more hour?",
+      "kr": "TV 한 시간만 더 봐도 돼?",
+      "pron": "캔 아이 와치 티비 원 모어 아워"
+    },
+
+    {
+      "en": "Can I use it?",
+      "kr": "그거 사용해도 돼?",
+      "pron": "캔 아이 유즈 잇"
+    },
+    {
+      "en": "Can I use your phone?",
+      "kr": "네 폰 써도 돼?",
+      "pron": "캔 아이 유즈 유어 폰"
+    },
+    {
+      "en": "Can I use your phone for a while?",
+      "kr": "네 폰 잠깐 써도 돼?",
+      "pron": "캔 아이 유즈 유어 폰 포어 어 와일"
+    },
+
+    {
+      "en": "Can I call?",
+      "kr": "전화해도 돼?",
+      "pron": "캔 아이 콜"
+    },
+    {
+      "en": "Can I call you?",
+      "kr": "너한테 전화해도 돼?",
+      "pron": "캔 아이 콜 유"
+    },
+    {
+      "en": "Can I call you after work?",
+      "kr": "퇴근 후에 너한테 전화해도 돼?",
+      "pron": "캔 아이 콜 유 애프터 워크"
+    },
+
+    {
+      "en": "Can I wait?",
+      "kr": "기다려도 돼?",
+      "pron": "캔 아이 웨이트"
+    },
+    {
+      "en": "Can I wait here?",
+      "kr": "여기서 기다려도 돼?",
+      "pron": "캔 아이 웨이트 히어"
+    },
+    {
+      "en": "Can I wait here until noon?",
+      "kr": "정오까지 여기서 기다려도 돼?",
+      "pron": "캔 아이 웨이트 히어 언틸 눈"
+    },
+
+    {
+      "en": "Can I buy it?",
+      "kr": "그거 사도 돼?",
+      "pron": "캔 아이 바이 잇"
+    },
+    {
+      "en": "Can I buy this shirt?",
+      "kr": "이 셔츠 사도 돼?",
+      "pron": "캔 아이 바이 디스 셔츠"
+    },
+    {
+      "en": "Can I buy this shirt next week?",
+      "kr": "다음 주에 이 셔츠 사도 돼?",
+      "pron": "캔 아이 바이 디스 셔츠 넥스트 위크"
+    },
+
+    {
+      "en": "Can I borrow it?",
+      "kr": "빌려도 돼?",
+      "pron": "캔 아이 바로우 잇"
+    },
+    {
+      "en": "Can I borrow your pen?",
+      "kr": "네 펜 빌려도 돼?",
+      "pron": "캔 아이 바로우 유어 펜"
+    },
+    {
+      "en": "Can I borrow your pen tomorrow?",
+      "kr": "내일 네 펜 빌려도 돼?",
+      "pron": "캔 아이 바로우 유어 펜 투모로우"
+    },
+
+    {
+      "en": "Can I stay?",
+      "kr": "있어도 돼?",
+      "pron": "캔 아이 스테이"
+    },
+    {
+      "en": "Can I stay here?",
+      "kr": "여기 있어도 돼?",
+      "pron": "캔 아이 스테이 히어"
+    },
+    {
+      "en": "Can I stay here tonight?",
+      "kr": "오늘 밤 여기 있어도 돼?",
+      "pron": "캔 아이 스테이 히어 투나잇"
+    },
+
+    {
+      "en": "Can I take it?",
+      "kr": "가져가도 돼?",
+      "pron": "캔 아이 테이크 잇"
+    },
+    {
+      "en": "Can I take this seat?",
+      "kr": "이 자리 앉아도 돼?",
+      "pron": "캔 아이 테이크 디스 시트"
+    },
+    {
+      "en": "Can I take this seat by the window?",
+      "kr": "창가 쪽 이 자리 앉아도 돼?",
+      "pron": "캔 아이 테이크 디스 시트 바이 더 윈도우"
+    },
+
+    {
+      "en": "Can I bring it?",
+      "kr": "가져와도 돼?",
+      "pron": "캔 아이 브링 잇"
+    },
+    {
+      "en": "Can I bring my friend?",
+      "kr": "친구 데려와도 돼?",
+      "pron": "캔 아이 브링 마이 프렌드"
+    },
+    {
+      "en": "Can I bring my friend to the party?",
+      "kr": "파티에 친구 데려와도 돼?",
+      "pron": "캔 아이 브링 마이 프렌드 투 더 파티"
+    },
+
+    {
+      "en": "Can I see it?",
+      "kr": "봐도 돼?",
+      "pron": "캔 아이 씨 잇"
+    },
+    {
+      "en": "Can I see your laptop?",
+      "kr": "네 노트북 봐도 돼?",
+      "pron": "캔 아이 씨 유어 랩탑"
+    },
+    {
+      "en": "Can I see your new laptop later?",
+      "kr": "나중에 네 새 노트북 봐도 돼?",
+      "pron": "캔 아이 씨 유어 뉴 랩탑 레이터"
+    },
+
+    {
+      "en": "Can I park?",
+      "kr": "주차해도 돼?",
+      "pron": "캔 아이 파크"
+    },
+    {
+      "en": "Can I park here?",
+      "kr": "여기 주차해도 돼?",
+      "pron": "캔 아이 파크 히어"
+    },
+    {
+      "en": "Can I park here for two hours?",
+      "kr": "여기 두 시간 주차해도 돼?",
+      "pron": "캔 아이 파크 히어 포어 투 아워즈"
+    },
+
+    {
+      "en": "Can I pay?",
+      "kr": "계산해도 돼?",
+      "pron": "캔 아이 페이"
+    },
+    {
+      "en": "Can I pay now?",
+      "kr": "지금 계산해도 돼?",
+      "pron": "캔 아이 페이 나우"
+    },
+    {
+      "en": "Can I pay by card now?",
+      "kr": "지금 카드로 계산해도 돼?",
+      "pron": "캔 아이 페이 바이 카드 나우"
+    },
+
+    {
+      "en": "Can I study?",
+      "kr": "공부해도 돼?",
+      "pron": "캔 아이 스터디"
+    },
+    {
+      "en": "Can I study here?",
+      "kr": "여기서 공부해도 돼?",
+      "pron": "캔 아이 스터디 히어"
+    },
+    {
+      "en": "Can I study here after dinner?",
+      "kr": "저녁 먹고 여기서 공부해도 돼?",
+      "pron": "캔 아이 스터디 히어 애프터 디너"
+    },
+
+    {
+      "en": "Can I start?",
+      "kr": "시작해도 돼?",
+      "pron": "캔 아이 스타트"
+    },
+    {
+      "en": "Can I start the meeting?",
+      "kr": "회의 시작해도 돼?",
+      "pron": "캔 아이 스타트 더 미팅"
+    },
+    {
+      "en": "Can I start the meeting early?",
+      "kr": "회의 일찍 시작해도 돼?",
+      "pron": "캔 아이 스타트 더 미팅 얼리"
+    },
+
+    {
+      "en": "Can I change it?",
+      "kr": "바꿔도 돼?",
+      "pron": "캔 아이 체인지 잇"
+    },
+    {
+      "en": "Can I change my seat?",
+      "kr": "자리 바꿔도 돼?",
+      "pron": "캔 아이 체인지 마이 시트"
+    },
+    {
+      "en": "Can I change my seat tomorrow?",
+      "kr": "내일 자리 바꿔도 돼?",
+      "pron": "캔 아이 체인지 마이 시트 투모로우"
+    },
+
+    {
+      "en": "Can I order?",
+      "kr": "주문해도 돼?",
+      "pron": "캔 아이 오더"
+    },
+    {
+      "en": "Can I order coffee?",
+      "kr": "커피 주문해도 돼?",
+      "pron": "캔 아이 오더 커피"
+    },
+    {
+      "en": "Can I order coffee later?",
+      "kr": "나중에 커피 주문해도 돼?",
+      "pron": "캔 아이 오더 커피 레이터"
+    },
+
+    {
+      "en": "Can I read?",
+      "kr": "읽어도 돼?",
+      "pron": "캔 아이 리드"
+    },
+    {
+      "en": "Can I read this book?",
+      "kr": "이 책 읽어도 돼?",
+      "pron": "캔 아이 리드 디스 북"
+    },
+    {
+      "en": "Can I read this book for a minute?",
+      "kr": "이 책 잠깐 읽어봐도 돼?",
+      "pron": "캔 아이 리드 디스 북 포어 어 미닛"
+    },
+
+    {
+      "en": "Can I listen?",
+      "kr": "들어도 돼?",
+      "pron": "캔 아이 리슨"
+    },
+    {
+      "en": "Can I listen to this song?",
+      "kr": "이 노래 들어도 돼?",
+      "pron": "캔 아이 리슨 투 디스 송"
+    },
+    {
+      "en": "Can I listen to this song again?",
+      "kr": "이 노래 다시 들어도 돼?",
+      "pron": "캔 아이 리슨 투 디스 송 어게인"
+    },
+
+    {
+      "en": "Can I drink it?",
+      "kr": "마셔도 돼?",
+      "pron": "캔 아이 드링크 잇"
+    },
+    {
+      "en": "Can I drink this water?",
+      "kr": "이 물 마셔도 돼?",
+      "pron": "캔 아이 드링크 디스 워터"
+    },
+    {
+      "en": "Can I drink cold water after exercise?",
+      "kr": "운동 후에 찬물 마셔도 돼?",
+      "pron": "캔 아이 드링크 콜드 워터 애프터 엑서사이즈"
+    },
+
+    {
+      "en": "Can I touch it?",
+      "kr": "만져봐도 돼?",
+      "pron": "캔 아이 터치 잇"
+    },
+    {
+      "en": "Can I touch this?",
+      "kr": "이거 만져봐도 돼?",
+      "pron": "캔 아이 터치 디스"
+    },
+    {
+      "en": "Can I touch this cat for a moment?",
+      "kr": "이 고양이 잠깐 만져봐도 돼?",
+      "pron": "캔 아이 터치 디스 캣 포어 어 모먼트"
+    },
+
+    {
+      "en": "Can I take a break?",
+      "kr": "쉬어도 돼?",
+      "pron": "캔 아이 테이크 어 브레이크"
+    },
+    {
+      "en": "Can I take a short break?",
+      "kr": "잠깐 쉬어도 돼?",
+      "pron": "캔 아이 테이크 어 쇼트 브레이크"
+    },
+    {
+      "en": "Can I take a short break after this task?",
+      "kr": "이 일 끝나고 잠깐 쉬어도 돼?",
+      "pron": "캔 아이 테이크 어 쇼트 브레이크 애프터 디스 태스크"
+    },
+
+    {
+      "en": "Can I take a picture?",
+      "kr": "사진 찍어도 돼?",
+      "pron": "캔 아이 테이크 어 픽처"
+    },
+    {
+      "en": "Can I take a picture here?",
+      "kr": "여기서 사진 찍어도 돼?",
+      "pron": "캔 아이 테이크 어 픽처 히어"
+    },
+    {
+      "en": "Can I take a picture with you later?",
+      "kr": "나중에 너랑 사진 찍어도 돼?",
+      "pron": "캔 아이 테이크 어 픽처 위드 유 레이터"
+    },
+
+    {
+      "en": "Can I turn it on?",
+      "kr": "켜도 돼?",
+      "pron": "캔 아이 턴 잇 온"
+    },
+    {
+      "en": "Can I turn on the light?",
+      "kr": "불 켜도 돼?",
+      "pron": "캔 아이 턴 온 더 라이트"
+    },
+    {
+      "en": "Can I turn on the light now?",
+      "kr": "지금 불 켜도 돼?",
+      "pron": "캔 아이 턴 온 더 라이트 나우"
+    },
+
+    {
+      "en": "Can I write it?",
+      "kr": "적어도 돼?",
+      "pron": "캔 아이 라이트 잇"
+    },
+    {
+      "en": "Can I write your name?",
+      "kr": "네 이름 적어도 돼?",
+      "pron": "캔 아이 라이트 유어 네임"
+    },
+    {
+      "en": "Can I write your name here?",
+      "kr": "여기에 네 이름 적어도 돼?",
+      "pron": "캔 아이 라이트 유어 네임 히어"
+    },
+
+    {
+      "en": "Can I invite her?",
+      "kr": "그녀를 초대해도 돼?",
+      "pron": "캔 아이 인바이트 허"
+    },
+    {
+      "en": "Can I invite my classmates?",
+      "kr": "내 반 친구들 초대해도 돼?",
+      "pron": "캔 아이 인바이트 마이 클래스메이츠"
+    },
+    {
+      "en": "Can I invite my classmates to the party?",
+      "kr": "파티에 내 반 친구들 초대해도 돼?",
+      "pron": "캔 아이 인바이트 마이 클래스메이츠 투 더 파티"
+    },
+
+    {
+      "en": "Can I practice?",
+      "kr": "연습해도 돼?",
+      "pron": "캔 아이 프랙티스"
+    },
+    {
+      "en": "Can I practice English?",
+      "kr": "영어 연습해도 돼?",
+      "pron": "캔 아이 프랙티스 잉글리시"
+    },
+    {
+      "en": "Can I practice English with you tonight?",
+      "kr": "오늘 밤 너랑 영어 연습해도 돼?",
+      "pron": "캔 아이 프랙티스 잉글리시 위드 유 투나잇"
+    },
+
+    {
+      "en": "Can I rest?",
+      "kr": "쉬어도 돼?",
+      "pron": "캔 아이 레스트"
+    },
+    {
+      "en": "Can I rest here?",
+      "kr": "여기서 쉬어도 돼?",
+      "pron": "캔 아이 레스트 히어"
+    },
+    {
+      "en": "Can I rest here until the bus comes?",
+      "kr": "버스 올 때까지 여기서 쉬어도 돼?",
+      "pron": "캔 아이 레스트 히어 언틸 더 버스 컴즈"
+    },
+
+    {
+      "en": "Can I enter?",
+      "kr": "들어가도 돼?",
+      "pron": "캔 아이 엔터"
+    },
+    {
+      "en": "Can I enter the room?",
+      "kr": "방에 들어가도 돼?",
+      "pron": "캔 아이 엔터 더 룸"
+    },
+    {
+      "en": "Can I enter the room after lunch?",
+      "kr": "점심 후에 방에 들어가도 돼?",
+      "pron": "캔 아이 엔터 더 룸 애프터 런치"
+    },
+
+    {
+      "en": "Can I close it?",
+      "kr": "닫아도 돼?",
+      "pron": "캔 아이 클로즈 잇"
+    },
+    {
+      "en": "Can I close the window?",
+      "kr": "창문 닫아도 돼?",
+      "pron": "캔 아이 클로즈 더 윈도우"
+    },
+    {
+      "en": "Can I close the window before bedtime?",
+      "kr": "자기 전에 창문 닫아도 돼?",
+      "pron": "캔 아이 클로즈 더 윈도우 비포어 베드타임"
+    },
+
+    {
+      "en": "Can I wear it?",
+      "kr": "입어봐도 돼?",
+      "pron": "캔 아이 웨어 잇"
+    },
+    {
+      "en": "Can I wear this jacket?",
+      "kr": "이 재킷 입어봐도 돼?",
+      "pron": "캔 아이 웨어 디스 재킷"
+    },
+    {
+      "en": "Can I wear this jacket to the meeting?",
+      "kr": "회의에 이 재킷 입고 가도 돼?",
+      "pron": "캔 아이 웨어 디스 재킷 투 더 미팅"
+    }
+  ]
+}

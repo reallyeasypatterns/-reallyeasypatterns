@@ -1,0 +1,549 @@
+{
+  "pattern_en": "I want to",
+  "pattern_kr": "~하고 싶어",
+  "pattern_highlight": "I want to",
+  "sentences": [
+    {
+      "en": "I want to eat",
+      "kr": "먹고 싶어",
+      "pron": "아이 원 투 잇"
+    },
+    {
+      "en": "I want to eat some food",
+      "kr": "음식을 좀 먹고 싶어",
+      "pron": "아이 원 투 잇 섬 푸드"
+    },
+    {
+      "en": "I want to eat some food right now",
+      "kr": "지금 바로 음식을 먹고 싶어",
+      "pron": "아이 원 투 잇 섬 푸드 라잇 나우"
+    },
+
+    {
+      "en": "I want to sleep",
+      "kr": "자고 싶어",
+      "pron": "아이 원 투 슬립"
+    },
+    {
+      "en": "I want to sleep early",
+      "kr": "일찍 자고 싶어",
+      "pron": "아이 원 투 슬립 얼리"
+    },
+    {
+      "en": "I want to sleep early tonight",
+      "kr": "오늘 밤 일찍 자고 싶어",
+      "pron": "아이 원 투 슬립 얼리 투나잇"
+    },
+
+    {
+      "en": "I want to go",
+      "kr": "가고 싶어",
+      "pron": "아이 원 투 고"
+    },
+    {
+      "en": "I want to go outside",
+      "kr": "밖에 나가고 싶어",
+      "pron": "아이 원 투 고 아웃사이드"
+    },
+    {
+      "en": "I want to go outside today",
+      "kr": "오늘 밖에 나가고 싶어",
+      "pron": "아이 원 투 고 아웃사이드 투데이"
+    },
+
+    {
+      "en": "I want to rest",
+      "kr": "쉬고 싶어",
+      "pron": "아이 원 투 레스트"
+    },
+    {
+      "en": "I want to rest at home",
+      "kr": "집에서 쉬고 싶어",
+      "pron": "아이 원 투 레스트 앳 홈"
+    },
+    {
+      "en": "I want to rest at home today",
+      "kr": "오늘 집에서 쉬고 싶어",
+      "pron": "아이 원 투 레스트 앳 홈 투데이"
+    },
+
+    {
+      "en": "I want to study",
+      "kr": "공부하고 싶어",
+      "pron": "아이 원 투 스터디"
+    },
+    {
+      "en": "I want to study English",
+      "kr": "영어를 공부하고 싶어",
+      "pron": "아이 원 투 스터디 잉글리시"
+    },
+    {
+      "en": "I want to study English every day",
+      "kr": "매일 영어를 공부하고 싶어",
+      "pron": "아이 원 투 스터디 잉글리시 에브리 데이"
+    },
+
+    {
+      "en": "I want to drink",
+      "kr": "마시고 싶어",
+      "pron": "아이 원 투 드링크"
+    },
+    {
+      "en": "I want to drink coffee",
+      "kr": "커피를 마시고 싶어",
+      "pron": "아이 원 투 드링크 커피"
+    },
+    {
+      "en": "I want to drink hot coffee",
+      "kr": "따뜻한 커피를 마시고 싶어",
+      "pron": "아이 원 투 드링크 핫 커피"
+    },
+
+    {
+      "en": "I want to buy",
+      "kr": "사고 싶어",
+      "pron": "아이 원 투 바이"
+    },
+    {
+      "en": "I want to buy shoes",
+      "kr": "신발을 사고 싶어",
+      "pron": "아이 원 투 바이 슈즈"
+    },
+    {
+      "en": "I want to buy new shoes",
+      "kr": "새 신발을 사고 싶어",
+      "pron": "아이 원 투 바이 뉴 슈즈"
+    },
+
+    {
+      "en": "I want to watch",
+      "kr": "보고 싶어",
+      "pron": "아이 원 투 와치"
+    },
+    {
+      "en": "I want to watch TV",
+      "kr": "TV를 보고 싶어",
+      "pron": "아이 원 투 와치 티비"
+    },
+    {
+      "en": "I want to watch TV now",
+      "kr": "지금 TV를 보고 싶어",
+      "pron": "아이 원 투 와치 티비 나우"
+    },
+
+    {
+      "en": "I want to learn",
+      "kr": "배우고 싶어",
+      "pron": "아이 원 투 런"
+    },
+    {
+      "en": "I want to learn cooking",
+      "kr": "요리를 배우고 싶어",
+      "pron": "아이 원 투 런 쿠킹"
+    },
+    {
+      "en": "I want to learn cooking someday",
+      "kr": "언젠가 요리를 배우고 싶어",
+      "pron": "아이 원 투 런 쿠킹 섬데이"
+    },
+
+    {
+      "en": "I want to meet",
+      "kr": "만나고 싶어",
+      "pron": "아이 원 투 밋"
+    },
+    {
+      "en": "I want to meet my friend",
+      "kr": "친구를 만나고 싶어",
+      "pron": "아이 원 투 밋 마이 프렌드"
+    },
+    {
+      "en": "I want to meet my friend tomorrow",
+      "kr": "내일 친구를 만나고 싶어",
+      "pron": "아이 원 투 밋 마이 프렌드 투모로우"
+    },
+
+    {
+      "en": "I want to travel",
+      "kr": "여행 가고 싶어",
+      "pron": "아이 원 투 트래블"
+    },
+    {
+      "en": "I want to travel abroad",
+      "kr": "해외여행 가고 싶어",
+      "pron": "아이 원 투 트래블 어브로드"
+    },
+    {
+      "en": "I want to travel abroad someday",
+      "kr": "언젠가 해외여행 가고 싶어",
+      "pron": "아이 원 투 트래블 어브로드 섬데이"
+    },
+
+    {
+      "en": "I want to help",
+      "kr": "도와주고 싶어",
+      "pron": "아이 원 투 헬프"
+    },
+    {
+      "en": "I want to help you",
+      "kr": "너를 도와주고 싶어",
+      "pron": "아이 원 투 헬프 유"
+    },
+    {
+      "en": "I want to help you today",
+      "kr": "오늘 너를 도와주고 싶어",
+      "pron": "아이 원 투 헬프 유 투데이"
+    },
+
+    {
+      "en": "I want to cook",
+      "kr": "요리하고 싶어",
+      "pron": "아이 원 투 쿡"
+    },
+    {
+      "en": "I want to cook dinner",
+      "kr": "저녁을 만들고 싶어",
+      "pron": "아이 원 투 쿡 디너"
+    },
+    {
+      "en": "I want to cook dinner tonight",
+      "kr": "오늘 저녁을 만들고 싶어",
+      "pron": "아이 원 투 쿡 디너 투나잇"
+    },
+
+    {
+      "en": "I want to clean",
+      "kr": "청소하고 싶어",
+      "pron": "아이 원 투 클린"
+    },
+    {
+      "en": "I want to clean my room",
+      "kr": "내 방을 청소하고 싶어",
+      "pron": "아이 원 투 클린 마이 룸"
+    },
+    {
+      "en": "I want to clean my room today",
+      "kr": "오늘 내 방을 청소하고 싶어",
+      "pron": "아이 원 투 클린 마이 룸 투데이"
+    },
+
+    {
+      "en": "I want to call",
+      "kr": "전화하고 싶어",
+      "pron": "아이 원 투 콜"
+    },
+    {
+      "en": "I want to call my mom",
+      "kr": "엄마에게 전화하고 싶어",
+      "pron": "아이 원 투 콜 마이 맘"
+    },
+    {
+      "en": "I want to call my mom later",
+      "kr": "나중에 엄마에게 전화하고 싶어",
+      "pron": "아이 원 투 콜 마이 맘 레이터"
+    },
+
+    {
+      "en": "I want to read",
+      "kr": "읽고 싶어",
+      "pron": "아이 원 투 리드"
+    },
+    {
+      "en": "I want to read a book",
+      "kr": "책을 읽고 싶어",
+      "pron": "아이 원 투 리드 어 북"
+    },
+    {
+      "en": "I want to read a book quietly",
+      "kr": "조용히 책을 읽고 싶어",
+      "pron": "아이 원 투 리드 어 북 콰이어틀리"
+    },
+
+    {
+      "en": "I want to exercise",
+      "kr": "운동하고 싶어",
+      "pron": "아이 원 투 엑서사이즈"
+    },
+    {
+      "en": "I want to exercise more",
+      "kr": "더 운동하고 싶어",
+      "pron": "아이 원 투 엑서사이즈 모어"
+    },
+    {
+      "en": "I want to exercise every morning",
+      "kr": "매일 아침 운동하고 싶어",
+      "pron": "아이 원 투 엑서사이즈 에브리 모닝"
+    },
+
+    {
+      "en": "I want to sing",
+      "kr": "노래하고 싶어",
+      "pron": "아이 원 투 싱"
+    },
+    {
+      "en": "I want to sing a song",
+      "kr": "노래 한 곡 부르고 싶어",
+      "pron": "아이 원 투 싱 어 송"
+    },
+    {
+      "en": "I want to sing a happy song",
+      "kr": "신나는 노래를 부르고 싶어",
+      "pron": "아이 원 투 싱 어 해피 송"
+    },
+    {
+      "en": "I want to dance",
+      "kr": "춤추고 싶어",
+      "pron": "아이 원 투 댄스"
+    },
+    {
+      "en": "I want to dance with you",
+      "kr": "너와 춤추고 싶어",
+      "pron": "아이 원 투 댄스 위드 유"
+    },
+    {
+      "en": "I want to dance with you tonight",
+      "kr": "오늘 밤 너와 춤추고 싶어",
+      "pron": "아이 원 투 댄스 위드 유 투나잇"
+    },
+
+    {
+      "en": "I want to swim",
+      "kr": "수영하고 싶어",
+      "pron": "아이 원 투 스윔"
+    },
+    {
+      "en": "I want to swim in the sea",
+      "kr": "바다에서 수영하고 싶어",
+      "pron": "아이 원 투 스윔 인 더 씨"
+    },
+    {
+      "en": "I want to swim in the sea someday",
+      "kr": "언젠가 바다에서 수영하고 싶어",
+      "pron": "아이 원 투 스윔 인 더 씨 섬데이"
+    },
+
+    {
+      "en": "I want to drive",
+      "kr": "운전하고 싶어",
+      "pron": "아이 원 투 드라이브"
+    },
+    {
+      "en": "I want to drive a car",
+      "kr": "차를 운전하고 싶어",
+      "pron": "아이 원 투 드라이브 어 카"
+    },
+    {
+      "en": "I want to drive a new car",
+      "kr": "새 차를 운전하고 싶어",
+      "pron": "아이 원 투 드라이브 어 뉴 카"
+    },
+
+    {
+      "en": "I want to draw",
+      "kr": "그림 그리고 싶어",
+      "pron": "아이 원 투 드로우"
+    },
+    {
+      "en": "I want to draw a picture",
+      "kr": "그림을 그리고 싶어",
+      "pron": "아이 원 투 드로우 어 픽처"
+    },
+    {
+      "en": "I want to draw a cute picture",
+      "kr": "귀여운 그림을 그리고 싶어",
+      "pron": "아이 원 투 드로우 어 큣 픽처"
+    },
+
+    {
+      "en": "I want to open",
+      "kr": "열고 싶어",
+      "pron": "아이 원 투 오픈"
+    },
+    {
+      "en": "I want to open the window",
+      "kr": "창문을 열고 싶어",
+      "pron": "아이 원 투 오픈 더 윈도우"
+    },
+    {
+      "en": "I want to open the window now",
+      "kr": "지금 창문을 열고 싶어",
+      "pron": "아이 원 투 오픈 더 윈도우 나우"
+    },
+
+    {
+      "en": "I want to close",
+      "kr": "닫고 싶어",
+      "pron": "아이 원 투 클로우즈"
+    },
+    {
+      "en": "I want to close the door",
+      "kr": "문을 닫고 싶어",
+      "pron": "아이 원 투 클로우즈 더 도어"
+    },
+    {
+      "en": "I want to close the door quietly",
+      "kr": "조용히 문을 닫고 싶어",
+      "pron": "아이 원 투 클로우즈 더 도어 콰이어틀리"
+    },
+
+    {
+      "en": "I want to smile",
+      "kr": "웃고 싶어",
+      "pron": "아이 원 투 스마일"
+    },
+    {
+      "en": "I want to smile more",
+      "kr": "더 웃고 싶어",
+      "pron": "아이 원 투 스마일 모어"
+    },
+    {
+      "en": "I want to smile every day",
+      "kr": "매일 웃고 싶어",
+      "pron": "아이 원 투 스마일 에브리 데이"
+    },
+
+    {
+      "en": "I want to listen",
+      "kr": "듣고 싶어",
+      "pron": "아이 원 투 리슨"
+    },
+    {
+      "en": "I want to listen to music",
+      "kr": "음악을 듣고 싶어",
+      "pron": "아이 원 투 리슨 투 뮤직"
+    },
+    {
+      "en": "I want to listen to music alone",
+      "kr": "혼자 음악을 듣고 싶어",
+      "pron": "아이 원 투 리슨 투 뮤직 얼론"
+    },
+
+    {
+      "en": "I want to play",
+      "kr": "놀고 싶어",
+      "pron": "아이 원 투 플레이"
+    },
+    {
+      "en": "I want to play games",
+      "kr": "게임하고 싶어",
+      "pron": "아이 원 투 플레이 게임즈"
+    },
+    {
+      "en": "I want to play games tonight",
+      "kr": "오늘 밤 게임하고 싶어",
+      "pron": "아이 원 투 플레이 게임즈 투나잇"
+    },
+
+    {
+      "en": "I want to walk",
+      "kr": "걷고 싶어",
+      "pron": "아이 원 투 워크"
+    },
+    {
+      "en": "I want to walk outside",
+      "kr": "밖에서 걷고 싶어",
+      "pron": "아이 원 투 워크 아웃사이드"
+    },
+    {
+      "en": "I want to walk outside slowly",
+      "kr": "밖에서 천천히 걷고 싶어",
+      "pron": "아이 원 투 워크 아웃사이드 슬로울리"
+    },
+
+    {
+      "en": "I want to laugh",
+      "kr": "웃고 싶어",
+      "pron": "아이 원 투 래프"
+    },
+    {
+      "en": "I want to laugh with friends",
+      "kr": "친구들과 웃고 싶어",
+      "pron": "아이 원 투 래프 위드 프렌즈"
+    },
+    {
+      "en": "I want to laugh with friends today",
+      "kr": "오늘 친구들과 웃고 싶어",
+      "pron": "아이 원 투 래프 위드 프렌즈 투데이"
+    },
+
+    {
+      "en": "I want to paint",
+      "kr": "색칠하고 싶어",
+      "pron": "아이 원 투 페인트"
+    },
+    {
+      "en": "I want to paint the wall",
+      "kr": "벽을 칠하고 싶어",
+      "pron": "아이 원 투 페인트 더 월"
+    },
+    {
+      "en": "I want to paint the wall white",
+      "kr": "벽을 하얗게 칠하고 싶어",
+      "pron": "아이 원 투 페인트 더 월 화잇"
+    },
+
+    {
+      "en": "I want to send",
+      "kr": "보내고 싶어",
+      "pron": "아이 원 투 센드"
+    },
+    {
+      "en": "I want to send a message",
+      "kr": "메시지를 보내고 싶어",
+      "pron": "아이 원 투 센드 어 메세지"
+    },
+    {
+      "en": "I want to send a message now",
+      "kr": "지금 메시지를 보내고 싶어",
+      "pron": "아이 원 투 센드 어 메세지 나우"
+    },
+
+    {
+      "en": "I want to relax",
+      "kr": "편하게 쉬고 싶어",
+      "pron": "아이 원 투 릴랙스"
+    },
+    {
+      "en": "I want to relax at home",
+      "kr": "집에서 편하게 쉬고 싶어",
+      "pron": "아이 원 투 릴랙스 앳 홈"
+    },
+    {
+      "en": "I want to relax at home tonight",
+      "kr": "오늘 밤 집에서 편하게 쉬고 싶어",
+      "pron": "아이 원 투 릴랙스 앳 홈 투나잇"
+    },
+
+    {
+      "en": "I want to wake up",
+      "kr": "일어나고 싶어",
+      "pron": "아이 원 투 웨이컵"
+    },
+    {
+      "en": "I want to wake up early",
+      "kr": "일찍 일어나고 싶어",
+      "pron": "아이 원 투 웨이컵 얼리"
+    },
+    {
+      "en": "I want to wake up early tomorrow",
+      "kr": "내일 일찍 일어나고 싶어",
+      "pron": "아이 원 투 웨이컵 얼리 투모로우"
+    },
+
+    {
+      "en": "I want to stay",
+      "kr": "머물고 싶어",
+      "pron": "아이 원 투 스테이"
+    },
+    {
+      "en": "I want to stay here",
+      "kr": "여기에 머물고 싶어",
+      "pron": "아이 원 투 스테이 히어"
+    },
+    {
+      "en": "I want to stay here longer",
+      "kr": "여기에 더 오래 머물고 싶어",
+      "pron": "아이 원 투 스테이 히어 롱거"
+    }
+  ]
+}

@@ -1,0 +1,582 @@
+{
+  "pattern_en": "I'm going to",
+  "pattern_kr": "~할 거야",
+  "pattern_highlight": "I'm going to",
+  "sentences": [
+    {
+      "en": "I'm going to eat",
+      "kr": "먹을 거야",
+      "pron": "아임 고잉 투 잇"
+    },
+    {
+      "en": "I'm going to eat lunch",
+      "kr": "점심을 먹을 거야",
+      "pron": "아임 고잉 투 잇 런치"
+    },
+    {
+      "en": "I'm going to eat lunch with my cousin",
+      "kr": "사촌이랑 점심을 먹을 거야",
+      "pron": "아임 고잉 투 잇 런치 위드 마이 커즌"
+    },
+
+    {
+      "en": "I'm going to sleep",
+      "kr": "잘 거야",
+      "pron": "아임 고잉 투 슬립"
+    },
+    {
+      "en": "I'm going to sleep early",
+      "kr": "일찍 잘 거야",
+      "pron": "아임 고잉 투 슬립 얼리"
+    },
+    {
+      "en": "I'm going to sleep after my shower",
+      "kr": "샤워하고 잘 거야",
+      "pron": "아임 고잉 투 슬립 애프터 마이 샤워"
+    },
+
+    {
+      "en": "I'm going to study",
+      "kr": "공부할 거야",
+      "pron": "아임 고잉 투 스터디"
+    },
+    {
+      "en": "I'm going to study math",
+      "kr": "수학을 공부할 거야",
+      "pron": "아임 고잉 투 스터디 매쓰"
+    },
+    {
+      "en": "I'm going to study math at the library",
+      "kr": "도서관에서 수학을 공부할 거야",
+      "pron": "아임 고잉 투 스터디 매쓰 앳 더 라이브러리"
+    },
+
+    {
+      "en": "I'm going to drink",
+      "kr": "마실 거야",
+      "pron": "아임 고잉 투 드링크"
+    },
+    {
+      "en": "I'm going to drink tea",
+      "kr": "차를 마실 거야",
+      "pron": "아임 고잉 투 드링크 티"
+    },
+    {
+      "en": "I'm going to drink cold tea after lunch",
+      "kr": "점심 후에 차가운 차를 마실 거야",
+      "pron": "아임 고잉 투 드링크 콜드 티 애프터 런치"
+    },
+
+    {
+      "en": "I'm going to buy",
+      "kr": "살 거야",
+      "pron": "아임 고잉 투 바이"
+    },
+    {
+      "en": "I'm going to buy a bag",
+      "kr": "가방을 살 거야",
+      "pron": "아임 고잉 투 바이 어 백"
+    },
+    {
+      "en": "I'm going to buy a new bag this weekend",
+      "kr": "이번 주말에 새 가방을 살 거야",
+      "pron": "아임 고잉 투 바이 어 뉴 백 디스 위켄드"
+    },
+
+    {
+      "en": "I'm going to watch",
+      "kr": "볼 거야",
+      "pron": "아임 고잉 투 와치"
+    },
+    {
+      "en": "I'm going to watch a movie",
+      "kr": "영화를 볼 거야",
+      "pron": "아임 고잉 투 와치 어 무비"
+    },
+    {
+      "en": "I'm going to watch a movie with my brother",
+      "kr": "형이랑 영화를 볼 거야",
+      "pron": "아임 고잉 투 와치 어 무비 위드 마이 브라더"
+    },
+
+    {
+      "en": "I'm going to learn",
+      "kr": "배울 거야",
+      "pron": "아임 고잉 투 런"
+    },
+    {
+      "en": "I'm going to learn Japanese",
+      "kr": "일본어를 배울 거야",
+      "pron": "아임 고잉 투 런 재패니즈"
+    },
+    {
+      "en": "I'm going to learn Japanese online",
+      "kr": "온라인으로 일본어를 배울 거야",
+      "pron": "아임 고잉 투 런 재패니즈 온라인"
+    },
+
+    {
+      "en": "I'm going to meet",
+      "kr": "만날 거야",
+      "pron": "아임 고잉 투 밋"
+    },
+    {
+      "en": "I'm going to meet my teacher",
+      "kr": "선생님을 만날 거야",
+      "pron": "아임 고잉 투 밋 마이 티처"
+    },
+    {
+      "en": "I'm going to meet my teacher after class",
+      "kr": "수업 후에 선생님을 만날 거야",
+      "pron": "아임 고잉 투 밋 마이 티처 애프터 클래스"
+    },
+
+    {
+      "en": "I'm going to travel",
+      "kr": "여행 갈 거야",
+      "pron": "아임 고잉 투 트래블"
+    },
+    {
+      "en": "I'm going to travel to Canada",
+      "kr": "캐나다로 여행 갈 거야",
+      "pron": "아임 고잉 투 트래블 투 캐나다"
+    },
+    {
+      "en": "I'm going to travel to Canada next spring",
+      "kr": "내년 봄에 캐나다로 여행 갈 거야",
+      "pron": "아임 고잉 투 트래블 투 캐나다 넥스트 스프링"
+    },
+
+    {
+      "en": "I'm going to help",
+      "kr": "도와줄 거야",
+      "pron": "아임 고잉 투 헬프"
+    },
+    {
+      "en": "I'm going to help my dad",
+      "kr": "아빠를 도와줄 거야",
+      "pron": "아임 고잉 투 헬프 마이 대드"
+    },
+    {
+      "en": "I'm going to help my dad in the kitchen",
+      "kr": "부엌에서 아빠를 도와줄 거야",
+      "pron": "아임 고잉 투 헬프 마이 대드 인 더 키친"
+    },
+
+    {
+      "en": "I'm going to cook",
+      "kr": "요리할 거야",
+      "pron": "아임 고잉 투 쿡"
+    },
+    {
+      "en": "I'm going to cook pasta",
+      "kr": "파스타를 만들 거야",
+      "pron": "아임 고잉 투 쿡 파스타"
+    },
+    {
+      "en": "I'm going to cook pasta for my family",
+      "kr": "가족을 위해 파스타를 만들 거야",
+      "pron": "아임 고잉 투 쿡 파스타 포 마이 패밀리"
+    },
+
+    {
+      "en": "I'm going to clean",
+      "kr": "청소할 거야",
+      "pron": "아임 고잉 투 클린"
+    },
+    {
+      "en": "I'm going to clean the kitchen",
+      "kr": "부엌을 청소할 거야",
+      "pron": "아임 고잉 투 클린 더 키친"
+    },
+    {
+      "en": "I'm going to clean the kitchen before dinner",
+      "kr": "저녁 전에 부엌을 청소할 거야",
+      "pron": "아임 고잉 투 클린 더 키친 비포 디너"
+    },
+
+    {
+      "en": "I'm going to call",
+      "kr": "전화할 거야",
+      "pron": "아임 고잉 투 콜"
+    },
+    {
+      "en": "I'm going to call my friend",
+      "kr": "친구에게 전화할 거야",
+      "pron": "아임 고잉 투 콜 마이 프렌드"
+    },
+    {
+      "en": "I'm going to call my friend after work",
+      "kr": "퇴근 후에 친구에게 전화할 거야",
+      "pron": "아임 고잉 투 콜 마이 프렌드 애프터 워크"
+    },
+
+    {
+      "en": "I'm going to read",
+      "kr": "읽을 거야",
+      "pron": "아임 고잉 투 리드"
+    },
+    {
+      "en": "I'm going to read a novel",
+      "kr": "소설을 읽을 거야",
+      "pron": "아임 고잉 투 리드 어 노블"
+    },
+    {
+      "en": "I'm going to read a novel on the train",
+      "kr": "기차에서 소설을 읽을 거야",
+      "pron": "아임 고잉 투 리드 어 노블 온 더 트레인"
+    },
+
+    {
+      "en": "I'm going to exercise",
+      "kr": "운동할 거야",
+      "pron": "아임 고잉 투 엑서사이즈"
+    },
+    {
+      "en": "I'm going to exercise outside",
+      "kr": "밖에서 운동할 거야",
+      "pron": "아임 고잉 투 엑서사이즈 아웃사이드"
+    },
+    {
+      "en": "I'm going to exercise with my friend tomorrow",
+      "kr": "내일 친구와 운동할 거야",
+      "pron": "아임 고잉 투 엑서사이즈 위드 마이 프렌드 투모로우"
+    },
+
+    {
+      "en": "I'm going to sing",
+      "kr": "노래할 거야",
+      "pron": "아임 고잉 투 싱"
+    },
+    {
+      "en": "I'm going to sing loudly",
+      "kr": "크게 노래할 거야",
+      "pron": "아임 고잉 투 싱 라우들리"
+    },
+    {
+      "en": "I'm going to sing my favorite song at karaoke",
+      "kr": "노래방에서 내가 좋아하는 노래를 부를 거야",
+      "pron": "아임 고잉 투 싱 마이 페이버릿 송 앳 가라오케"
+    },
+
+    {
+      "en": "I'm going to dance",
+      "kr": "춤출 거야",
+      "pron": "아임 고잉 투 댄스"
+    },
+    {
+      "en": "I'm going to dance with my friends",
+      "kr": "친구들과 춤출 거야",
+      "pron": "아임 고잉 투 댄스 위드 마이 프렌즈"
+    },
+    {
+      "en": "I'm going to dance at the festival tomorrow",
+      "kr": "내일 축제에서 춤출 거야",
+      "pron": "아임 고잉 투 댄스 앳 더 페스티벌 투모로우"
+    },
+
+    {
+      "en": "I'm going to swim",
+      "kr": "수영할 거야",
+      "pron": "아임 고잉 투 스윔"
+    },
+    {
+      "en": "I'm going to swim in the pool",
+      "kr": "수영장에서 수영할 거야",
+      "pron": "아임 고잉 투 스윔 인 더 풀"
+    },
+    {
+      "en": "I'm going to swim in the pool this afternoon",
+      "kr": "오늘 오후에 수영장에서 수영할 거야",
+      "pron": "아임 고잉 투 스윔 인 더 풀 디스 애프터눈"
+    },
+
+    {
+      "en": "I'm going to drive",
+      "kr": "운전할 거야",
+      "pron": "아임 고잉 투 드라이브"
+    },
+    {
+      "en": "I'm going to drive my car",
+      "kr": "내 차를 운전할 거야",
+      "pron": "아임 고잉 투 드라이브 마이 카"
+    },
+    {
+      "en": "I'm going to drive my car to the beach",
+      "kr": "해변까지 내 차를 운전할 거야",
+      "pron": "아임 고잉 투 드라이브 마이 카 투 더 비치"
+    },
+
+    {
+      "en": "I'm going to draw",
+      "kr": "그릴 거야",
+      "pron": "아임 고잉 투 드로우"
+    },
+    {
+      "en": "I'm going to draw animals",
+      "kr": "동물을 그릴 거야",
+      "pron": "아임 고잉 투 드로우 애니멀즈"
+    },
+    {
+      "en": "I'm going to draw animals in my notebook",
+      "kr": "공책에 동물을 그릴 거야",
+      "pron": "아임 고잉 투 드로우 애니멀즈 인 마이 노트북"
+    },
+
+    {
+      "en": "I'm going to open",
+      "kr": "열 거야",
+      "pron": "아임 고잉 투 오픈"
+    },
+    {
+      "en": "I'm going to open the window",
+      "kr": "창문을 열 거야",
+      "pron": "아임 고잉 투 오픈 더 윈도우"
+    },
+    {
+      "en": "I'm going to open the window for fresh air",
+      "kr": "환기를 위해 창문을 열 거야",
+      "pron": "아임 고잉 투 오픈 더 윈도우 포 프레쉬 에어"
+    },
+
+    {
+      "en": "I'm going to close",
+      "kr": "닫을 거야",
+      "pron": "아임 고잉 투 클로즈"
+    },
+    {
+      "en": "I'm going to close the shop",
+      "kr": "가게 문을 닫을 거야",
+      "pron": "아임 고잉 투 클로즈 더 샵"
+    },
+    {
+      "en": "I'm going to close the shop before midnight",
+      "kr": "자정 전에 가게 문을 닫을 거야",
+      "pron": "아임 고잉 투 클로즈 더 샵 비포 미드나잇"
+    },
+
+    {
+      "en": "I'm going to smile",
+      "kr": "웃을 거야",
+      "pron": "아임 고잉 투 스마일"
+    },
+    {
+      "en": "I'm going to smile more",
+      "kr": "더 많이 웃을 거야",
+      "pron": "아임 고잉 투 스마일 모어"
+    },
+    {
+      "en": "I'm going to smile more during work",
+      "kr": "일하는 동안 더 많이 웃을 거야",
+      "pron": "아임 고잉 투 스마일 모어 듀링 워크"
+    },
+
+    {
+      "en": "I'm going to listen",
+      "kr": "들을 거야",
+      "pron": "아임 고잉 투 리슨"
+    },
+    {
+      "en": "I'm going to listen to music",
+      "kr": "음악을 들을 거야",
+      "pron": "아임 고잉 투 리슨 투 뮤직"
+    },
+    {
+      "en": "I'm going to listen to music on the bus",
+      "kr": "버스에서 음악을 들을 거야",
+      "pron": "아임 고잉 투 리슨 투 뮤직 온 더 버스"
+    },
+
+    {
+      "en": "I'm going to play",
+      "kr": "놀 거야",
+      "pron": "아임 고잉 투 플레이"
+    },
+    {
+      "en": "I'm going to play soccer",
+      "kr": "축구할 거야",
+      "pron": "아임 고잉 투 플레이 사커"
+    },
+    {
+      "en": "I'm going to play soccer with my classmates",
+      "kr": "반 친구들과 축구할 거야",
+      "pron": "아임 고잉 투 플레이 사커 위드 마이 클래스메이츠"
+    },
+
+    {
+      "en": "I'm going to walk",
+      "kr": "걸을 거야",
+      "pron": "아임 고잉 투 워크"
+    },
+    {
+      "en": "I'm going to walk downtown",
+      "kr": "시내를 걸을 거야",
+      "pron": "아임 고잉 투 워크 다운타운"
+    },
+    {
+      "en": "I'm going to walk downtown after breakfast",
+      "kr": "아침 먹고 시내를 걸을 거야",
+      "pron": "아임 고잉 투 워크 다운타운 애프터 브렉퍼스트"
+    },
+
+    {
+      "en": "I'm going to laugh",
+      "kr": "웃을 거야",
+      "pron": "아임 고잉 투 래프"
+    },
+    {
+      "en": "I'm going to laugh with my friends",
+      "kr": "친구들과 웃을 거야",
+      "pron": "아임 고잉 투 래프 위드 마이 프렌즈"
+    },
+    {
+      "en": "I'm going to laugh with my friends at dinner",
+      "kr": "저녁 식사 때 친구들과 웃을 거야",
+      "pron": "아임 고잉 투 래프 위드 마이 프렌즈 앳 디너"
+    },
+
+    {
+      "en": "I'm going to paint",
+      "kr": "칠할 거야",
+      "pron": "아임 고잉 투 페인트"
+    },
+    {
+      "en": "I'm going to paint the wall",
+      "kr": "벽을 칠할 거야",
+      "pron": "아임 고잉 투 페인트 더 월"
+    },
+    {
+      "en": "I'm going to paint the wall blue tomorrow",
+      "kr": "내일 벽을 파란색으로 칠할 거야",
+      "pron": "아임 고잉 투 페인트 더 월 블루 투모로우"
+    },
+
+    {
+      "en": "I'm going to send",
+      "kr": "보낼 거야",
+      "pron": "아임 고잉 투 센드"
+    },
+    {
+      "en": "I'm going to send an email",
+      "kr": "이메일을 보낼 거야",
+      "pron": "아임 고잉 투 센드 언 이메일"
+    },
+    {
+      "en": "I'm going to send an email before lunch",
+      "kr": "점심 전에 이메일을 보낼 거야",
+      "pron": "아임 고잉 투 센드 언 이메일 비포 런치"
+    },
+
+    {
+      "en": "I'm going to relax",
+      "kr": "쉴 거야",
+      "pron": "아임 고잉 투 릴랙스"
+    },
+    {
+      "en": "I'm going to relax at home",
+      "kr": "집에서 쉴 거야",
+      "pron": "아임 고잉 투 릴랙스 앳 홈"
+    },
+    {
+      "en": "I'm going to relax at home this evening",
+      "kr": "오늘 저녁에는 집에서 쉴 거야",
+      "pron": "아임 고잉 투 릴랙스 앳 홈 디스 이브닝"
+    },
+
+    {
+      "en": "I'm going to wake up",
+      "kr": "일어날 거야",
+      "pron": "아임 고잉 투 웨이크 업"
+    },
+    {
+      "en": "I'm going to wake up early",
+      "kr": "일찍 일어날 거야",
+      "pron": "아임 고잉 투 웨이크 업 얼리"
+    },
+    {
+      "en": "I'm going to wake up early for school",
+      "kr": "학교 때문에 일찍 일어날 거야",
+      "pron": "아임 고잉 투 웨이크 업 얼리 포 스쿨"
+    },
+
+    {
+      "en": "I'm going to stay",
+      "kr": "머물 거야",
+      "pron": "아임 고잉 투 스테이"
+    },
+    {
+      "en": "I'm going to stay here",
+      "kr": "여기에 머물 거야",
+      "pron": "아임 고잉 투 스테이 히어"
+    },
+    {
+      "en": "I'm going to stay here until Sunday",
+      "kr": "일요일까지 여기 머물 거야",
+      "pron": "아임 고잉 투 스테이 히어 언틸 선데이"
+    },
+
+    {
+      "en": "I'm going to work",
+      "kr": "일할 거야",
+      "pron": "아임 고잉 투 워크"
+    },
+    {
+      "en": "I'm going to work from home",
+      "kr": "재택근무할 거야",
+      "pron": "아임 고잉 투 워크 프롬 홈"
+    },
+    {
+      "en": "I'm going to work from home on Friday",
+      "kr": "금요일에 재택근무할 거야",
+      "pron": "아임 고잉 투 워크 프롬 홈 온 프라이데이"
+    },
+
+    {
+      "en": "I'm going to shop",
+      "kr": "쇼핑할 거야",
+      "pron": "아임 고잉 투 샵"
+    },
+    {
+      "en": "I'm going to shop for clothes",
+      "kr": "옷을 사러 갈 거야",
+      "pron": "아임 고잉 투 샵 포 클로즈"
+    },
+    {
+      "en": "I'm going to shop for clothes with my sister",
+      "kr": "언니와 옷을 사러 갈 거야",
+      "pron": "아임 고잉 투 샵 포 클로즈 위드 마이 시스터"
+    },
+
+    {
+      "en": "I'm going to practice",
+      "kr": "연습할 거야",
+      "pron": "아임 고잉 투 프랙티스"
+    },
+    {
+      "en": "I'm going to practice piano",
+      "kr": "피아노를 연습할 거야",
+      "pron": "아임 고잉 투 프랙티스 피아노"
+    },
+    {
+      "en": "I'm going to practice piano every weekend",
+      "kr": "매주 주말마다 피아노를 연습할 거야",
+      "pron": "아임 고잉 투 프랙티스 피아노 에브리 위켄드"
+    },
+
+    {
+      "en": "I'm going to wash",
+      "kr": "씻을 거야",
+      "pron": "아임 고잉 투 와시"
+    },
+    {
+      "en": "I'm going to wash my hands",
+      "kr": "손을 씻을 거야",
+      "pron": "아임 고잉 투 와시 마이 핸즈"
+    },
+    {
+      "en": "I'm going to wash my hands before eating",
+      "kr": "먹기 전에 손을 씻을 거야",
+      "pron": "아임 고잉 투 와시 마이 핸즈 비포 이팅"
+    }
+  ]
+}

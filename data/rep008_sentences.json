@@ -1,0 +1,142 @@
+{
+  "pattern_en": "Do you like",
+  "pattern_kr": "~를 좋아해? / ~하는 거 좋아해?",
+  "pattern_highlight": "Do you like",
+  "sentences": [
+    { "en": "Do you like apples?", "kr": "사과 좋아해?", "pron": "두 유 라이크 애플즈" },
+    { "en": "Do you like red apples?", "kr": "빨간 사과 좋아해?", "pron": "두 유 라이크 레드 애플즈" },
+    { "en": "Do you like red apples for breakfast?", "kr": "아침 식사로 빨간 사과 좋아해?", "pron": "두 유 라이크 레드 애플즈 포어 브렉퍼스트" },
+
+    { "en": "Do you like to watch?", "kr": "보는 거 좋아해?", "pron": "두 유 라이크 투 와치" },
+    { "en": "Do you like to watch movies?", "kr": "영화 보는 거 좋아해?", "pron": "두 유 라이크 투 와치 무비즈" },
+    { "en": "Do you like to watch movies at the theater?", "kr": "영화관에서 영화 보는 거 좋아해?", "pron": "두 유 라이크 투 와치 무비즈 앳 더 시어터" },
+
+    { "en": "Do you like listening?", "kr": "듣는 거 좋아해?", "pron": "두 유 라이크 리스닝" },
+    { "en": "Do you like listening to music?", "kr": "음악 듣는 거 좋아해?", "pron": "두 유 라이크 리스닝 투 뮤직" },
+    { "en": "Do you like listening to music while studying?", "kr": "공부할 때 음악 듣는 거 좋아해?", "pron": "두 유 라이크 리스닝 투 뮤직 와일 스터디잉" },
+
+    { "en": "Do you like to play?", "kr": "게임하는 거 좋아해?", "pron": "두 유 라이크 투 플레이" },
+    { "en": "Do you like to play games?", "kr": "게임하는 거 좋아해?", "pron": "두 유 라이크 투 플레이 게임즈" },
+    { "en": "Do you like to play games on your phone?", "kr": "핸드폰으로 게임하는 거 좋아해?", "pron": "두 유 라이크 투 플레이 게임즈 온 유어 폰" },
+
+    { "en": "Do you like reading?", "kr": "읽는 거 좋아해?", "pron": "두 유 라이크 리딩" },
+    { "en": "Do you like reading books?", "kr": "책 읽는 거 좋아해?", "pron": "두 유 라이크 리딩 북스" },
+    { "en": "Do you like reading books before sleeping?", "kr": "자기 전에 책 읽는 거 좋아해?", "pron": "두 유 라이크 리딩 북스 비포어 슬리핑" },
+
+    { "en": "Do you like to drink?", "kr": "마시는 거 좋아해?", "pron": "두 유 라이크 투 드링크" },
+    { "en": "Do you like to drink coffee?", "kr": "커피 마시는 거 좋아해?", "pron": "두 유 라이크 투 드링크 커피" },
+    { "en": "Do you like to drink coffee in the morning?", "kr": "아침에 커피 마시는 거 좋아해?", "pron": "두 유 라이크 투 드링크 커피 인 더 모닝" },
+
+    { "en": "Do you like cooking?", "kr": "요리하는 거 좋아해?", "pron": "두 유 라이크 쿠킹" },
+    { "en": "Do you like cooking dinner?", "kr": "저녁 요리하는 거 좋아해?", "pron": "두 유 라이크 쿠킹 디너" },
+    { "en": "Do you like cooking dinner for your family?", "kr": "가족을 위해 저녁 요리하는 거 좋아해?", "pron": "두 유 라이크 쿠킹 디너 포어 유어 패밀리" },
+
+    { "en": "Do you like to travel?", "kr": "여행하는 거 좋아해?", "pron": "두 유 라이크 투 트래블" },
+    { "en": "Do you like to travel alone?", "kr": "혼자 여행하는 거 좋아해?", "pron": "두 유 라이크 투 트래블 얼론" },
+    { "en": "Do you like to travel alone to foreign countries?", "kr": "외국으로 혼자 여행하는 거 좋아해?", "pron": "두 유 라이크 투 트래블 얼론 투 포린 카운트리즈" },
+
+    { "en": "Do you like shopping?", "kr": "쇼핑 좋아해?", "pron": "두 유 라이크 쇼핑" },
+    { "en": "Do you like shopping for clothes?", "kr": "옷 쇼핑하는 거 좋아해?", "pron": "두 유 라이크 쇼핑 포어 클로즈" },
+    { "en": "Do you like shopping for clothes at the mall?", "kr": "쇼핑몰에서 옷 쇼핑하는 거 좋아해?", "pron": "두 유 라이크 쇼핑 포어 클로즈 앳 더 몰" },
+
+    { "en": "Do you like to study?", "kr": "공부하는 거 좋아해?", "pron": "두 유 라이크 투 스터디" },
+    { "en": "Do you like to study English?", "kr": "영어 공부하는 거 좋아해?", "pron": "두 유 라이크 투 스터디 잉글리시" },
+    { "en": "Do you like to study English with your friends?", "kr": "친구들과 영어 공부하는 거 좋아해?", "pron": "두 유 라이크 투 스터디 잉글리시 위드 유어 프렌즈" },
+
+    { "en": "Do you like sports?", "kr": "스포츠 좋아해?", "pron": "두 유 라이크 스포츠" },
+    { "en": "Do you like outdoor sports?", "kr": "야외 스포츠 좋아해?", "pron": "두 유 라이크 아웃도어 스포츠" },
+    { "en": "Do you like outdoor sports like soccer?", "kr": "축구 같은 야외 스포츠 좋아해?", "pron": "두 유 라이크 아웃도어 스포츠 라이크 사커" },
+
+    { "en": "Do you like to eat?", "kr": "먹는 거 좋아해?", "pron": "두 유 라이크 투 잇" },
+    { "en": "Do you like to eat pizza?", "kr": "피자 먹는 거 좋아해?", "pron": "두 유 라이크 투 잇 피자" },
+    { "en": "Do you like to eat pizza for dinner?", "kr": "저녁으로 피자 먹는 거 좋아해?", "pron": "두 유 라이크 투 잇 피자 포어 디너" },
+
+    { "en": "Do you like music?", "kr": "음악 좋아해?", "pron": "두 유 라이크 뮤직" },
+    { "en": "Do you like pop music?", "kr": "팝송 좋아해?", "pron": "두 유 라이크 팝 뮤직" },
+    { "en": "Do you like pop music from the 90s?", "kr": "90년대 팝송 좋아해?", "pron": "두 유 라이크 팝 뮤직 프롬 더 나인티즈" },
+
+    { "en": "Do you like to take?", "kr": "찍는 거 좋아해?", "pron": "두 유 라이크 투 테이크" },
+    { "en": "Do you like to take photos?", "kr": "사진 찍는 거 좋아해?", "pron": "두 유 라이크 투 테이크 포토즈" },
+    { "en": "Do you like to take photos of nature?", "kr": "자연 사진 찍는 거 좋아해?", "pron": "두 유 라이크 투 테이크 포토즈 오브 네이처" },
+
+    { "en": "Do you like walking?", "kr": "걷는 거 좋아해?", "pron": "두 유 라이크 워킹" },
+    { "en": "Do you like walking in the park?", "kr": "공원에서 걷는 거 좋아해?", "pron": "두 유 라이크 워킹 인 더 파크" },
+    { "en": "Do you like walking in the park in the evening?", "kr": "저녁에 공원에서 걷는 거 좋아해?", "pron": "두 유 라이크 워킹 인 더 파크 인 디 이브닝" },
+
+    { "en": "Do you like to learn?", "kr": "배우는 거 좋아해?", "pron": "두 유 라이크 투 러언" },
+    { "en": "Do you like to learn languages?", "kr": "언어 배우는 거 좋아해?", "pron": "두 유 라이크 투 러언 랭귀지즈" },
+    { "en": "Do you like to learn languages online?", "kr": "온라인으로 언어 배우는 거 좋아해?", "pron": "두 유 라이크 투 러언 랭귀지즈 온라인" },
+
+    { "en": "Do you like animals?", "kr": "동물 좋아해?", "pron": "두 유 라이크 애니멀즈" },
+    { "en": "Do you like small animals?", "kr": "작은 동물 좋아해?", "pron": "두 유 라이크 스몰 애니멀즈" },
+    { "en": "Do you like small animals like puppies?", "kr": "강아지 같은 작은 동물 좋아해?", "pron": "두 유 라이크 스몰 애니멀즈 라이크 퍼피즈" },
+
+    { "en": "Do you like to meet?", "kr": "만나는 거 좋아해?", "pron": "두 유 라이크 투 미트" },
+    { "en": "Do you like to meet new people?", "kr": "새로운 사람들을 만나는 거 좋아해?", "pron": "두 유 라이크 투 미트 뉴 피플" },
+    { "en": "Do you like to meet new people at parties?", "kr": "파티에서 새로운 사람들을 만나는 거 좋아해?", "pron": "두 유 라이크 투 미트 뉴 피플 앳 파티즈" },
+
+    { "en": "Do you like winter?", "kr": "겨울 좋아해?", "pron": "두 유 라이크 윈터" },
+    { "en": "Do you like snowy winters?", "kr": "눈 오는 겨울 좋아해?", "pron": "두 유 라이크 스노위 윈털즈" },
+    { "en": "Do you like snowy winters in December?", "kr": "12월의 눈 오는 겨울 좋아해?", "pron": "두 유 라이크 스노위 윈털즈 인 디셈버" },
+
+    { "en": "Do you like to live?", "kr": "사는 거 좋아해?", "pron": "두 유 라이크 투 리브" },
+    { "en": "Do you like to live here?", "kr": "여기 사는 거 좋아해?", "pron": "두 유 라이크 투 리브 히어" },
+    { "en": "Do you like to live here in this city?", "kr": "이 도시에서 여기 사는 거 좋아해?", "pron": "두 유 라이크 투 리브 히어 인 디스 시티" },
+
+    { "en": "Do you like art?", "kr": "미술 좋아해?", "pron": "두 유 라이크 아트" },
+    { "en": "Do you like modern art?", "kr": "현대 미술 좋아해?", "pron": "두 유 라이크 모던 아트" },
+    { "en": "Do you like modern art in museums?", "kr": "박물관에 있는 현대 미술 좋아해?", "pron": "두 유 라이크 모던 아트 인 뮤지엄즈" },
+
+    { "en": "Do you like to drive?", "kr": "운전하는 거 좋아해?", "pron": "두 유 라이크 투 드라이브" },
+    { "en": "Do you like to drive cars?", "kr": "자동차 운전하는 거 좋아해?", "pron": "두 유 라이크 투 드라이브 카즈" },
+    { "en": "Do you like to drive cars on the highway?", "kr": "고속도로에서 자동차 운전하는 거 좋아해?", "pron": "두 유 라이크 투 드라이브 카즈 온 더 하이웨이" },
+
+    { "en": "Do you like vegetables?", "kr": "채소 좋아해?", "pron": "두 유 라이크 베지터블즈" },
+    { "en": "Do you like fresh vegetables?", "kr": "신선한 채소 좋아해?", "pron": "두 유 라이크 프레시 베지터블즈" },
+    { "en": "Do you like fresh vegetables in your salad?", "kr": "샐러드에 넣은 신선한 채소 좋아해?", "pron": "두 유 라이크 프레시 베지터블즈 인 유어 샐러드" },
+
+    { "en": "Do you like to work?", "kr": "일하는 거 좋아해?", "pron": "두 유 라이크 투 워크" },
+    { "en": "Do you like to work here?", "kr": "여기서 일하는 거 좋아해?", "pron": "두 유 라이크 투 워크 히어" },
+    { "en": "Do you like to work here with this team?", "kr": "이 팀과 함께 여기서 일하는 거 좋아해?", "pron": "두 유 라이크 투 워크 히어 위드 디스 팀" },
+
+    { "en": "Do you like sea?", "kr": "바다 좋아해?", "pron": "두 유 라이크 씨" },
+    { "en": "Do you like the blue sea?", "kr": "푸른 바다 좋아해?", "pron": "두 유 라이크 더 블루 씨" },
+    { "en": "Do you like the blue sea in summer?", "kr": "여름의 푸른 바다 좋아해?", "pron": "두 유 라이크 더 블루 씨 인 서머" },
+
+    { "en": "Do you like to help?", "kr": "돕는 거 좋아해?", "pron": "두 유 라이크 투 헬프" },
+    { "en": "Do you like to help people?", "kr": "사람들을 돕는 거 좋아해?", "pron": "두 유 라이크 투 헬프 피플" },
+    { "en": "Do you like to help people in need?", "kr": "어려움에 처한 사람들을 돕는 거 좋아해?", "pron": "두 유 라이크 투 헬프 피플 인 니드" },
+
+    { "en": "Do you like movies?", "kr": "영화 좋아해?", "pron": "두 유 라이크 무비즈" },
+    { "en": "Do you like action movies?", "kr": "액션 영화 좋아해?", "pron": "두 유 라이크 액션 무비즈" },
+    { "en": "Do you like action movies with special effects?", "kr": "특수 효과가 들어간 액션 영화 좋아해?", "pron": "두 유 라이크 액션 무비즈 위드 스페셜 이펙츠" },
+
+    { "en": "Do you like to talk?", "kr": "대화하는 거 좋아해?", "pron": "두 유 라이크 투 토크" },
+    { "en": "Do you like to talk to him?", "kr": "그와 대화하는 거 좋아해?", "pron": "두 유 라이크 투 토크 투 힘" },
+    { "en": "Do you like to talk to him on the phone?", "kr": "전화로 그와 대화하는 거 좋아해?", "pron": "두 유 라이크 투 토크 투 힘 온 더 폰" },
+
+    { "en": "Do you like books?", "kr": "책 좋아해?", "pron": "두 유 라이크 북스" },
+    { "en": "Do you like comic books?", "kr": "만화책 좋아해?", "pron": "두 유 라이크 코믹 북스" },
+    { "en": "Do you like comic books from Japan?", "kr": "일본 만화책 좋아해?", "pron": "두 유 라이크 코믹 북스 프롬 재팬" },
+
+    { "en": "Do you like spending?", "kr": "보내는 거 좋아해?", "pron": "두 유 라이크 스펜딩" },
+    { "en": "Do you like spending time?", "kr": "시간 보내는 거 좋아해?", "pron": "두 유 라이크 스펜딩 타임" },
+    { "en": "Do you like spending time with your family?", "kr": "가족들과 시간 보내는 거 좋아해?", "pron": "두 유 라이크 스펜딩 타임 위드 유어 패밀리" },
+
+    { "en": "Do you like cats?", "kr": "고양이 좋아해?", "pron": "두 유 라이크 캣츠" },
+    { "en": "Do you like black cats?", "kr": "검은 고양이 좋아해?", "pron": "두 유 라이크 블랙 캣츠" },
+    { "en": "Do you like black cats with green eyes?", "kr": "초록색 눈을 가진 검은 고양이 좋아해?", "pron": "두 유 라이크 블랙 캣츠 위드 그린 아이즈" },
+
+    { "en": "Do you like singing?", "kr": "노래하는 거 좋아해?", "pron": "두 유 라이크 씽잉" },
+    { "en": "Do you like singing songs?", "kr": "노래 부르는 거 좋아해?", "pron": "두 유 라이크 씽잉 송즈" },
+    { "en": "Do you like singing songs on the stage?", "kr": "무대 위에서 노래 부르는 거 좋아해?", "pron": "두 유 라이크 씽잉 송즈 온 더 스테이지" },
+
+    { "en": "Do you like flowers?", "kr": "꽃 좋아해?", "pron": "두 유 라이크 플라워즈" },
+    { "en": "Do you like yellow flowers?", "kr": "노란 꽃 좋아해?", "pron": "두 유 라이크 옐로우 플라워즈" },
+    { "en": "Do you like yellow flowers in spring?", "kr": "봄에 피는 노란 꽃 좋아해?", "pron": "두 유 라이크 옐로우 플라워즈 인 스프링" },
+
+    { "en": "Do you like to listen?", "kr": "듣는 거 좋아해?", "pron": "두 유 라이크 투 리슨" },
+    { "en": "Do you like to listen to stories?", "kr": "이야기 듣는 거 좋아해?", "pron": "두 유 라이크 투 리슨 투 스토리즈" },
+    { "en": "Do you like to listen to stories from the past?", "kr": "과거의 이야기들을 듣는 거 좋아해?", "pron": "두 유 라이크 투 리슨 투 스토리즈 프롬 더 패스트" }
+  ]
+}

@@ -1,0 +1,244 @@
+<script type="text/javascript">
+    function includeTop() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/top.html', false); // 동기 방식으로 로드하여 마크업이 그려진 후 본문이 오도록 제어
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeTop();    
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    var originQuizList = [];
+    var activeQuizList = [];
+    var currentIdx = 0;
+    var wrongNotes = [];
+    var isWrongReviewStage = false;
+    var firstTryCorrectCount = 0;
+
+    // 1. 데이터 로드 초기 검증
+    var savedQuizData = localStorage.getItem('current_quiz_set');
+    if (!savedQuizData) {
+        alert('조합된 퀴즈 데이터가 없습니다. 패턴 선택 화면으로 이동합니다.');
+        window.location.href = './list.html';
+        return;
+    }
+    originQuizList = JSON.parse(savedQuizData);
+
+    // 2. Sortable 정답 구역 설정
+    $('.answer_zone').sortable({
+        placeholder: 'word_card ui-sortable-placeholder',
+        tolerance: 'pointer',
+        revert: 150,
+        start: function(e, ui) { ui.placeholder.width(ui.item.outerWidth()).height(ui.item.outerHeight()); }
+    });
+
+    // 가이드 버튼 제어
+    $('#btn_guide_start').on('click', function(e) {
+        e.preventDefault();
+        $('.quiz_guide_box').hide();
+        $('.quiz_progress_bar, .quiz_sentence, .quiz_control_zone').show();
+        
+        activeQuizList = [].concat(originQuizList);
+        loadQuiz(currentIdx);
+    });
+
+    // 3. 문제 렌더링 함수
+    function loadQuiz(index) {
+        // [수정 포인트] 이전 문제 오버레이 메시지 및 버튼 토글 상태 초기화
+        $('.quiz_overlay_msg').removeClass('msg_correct msg_wrong').hide();
+        $('#btn_next').hide();
+        $('#btn_check').show();
+
+        var totalCount = activeQuizList.length;
+        var progressPercent = (index / totalCount) * 100;
+        $('.quiz_progress_ing').css('width', progressPercent + '%');
+
+        // 라운드 종료 스캔 구역
+        if (index >= totalCount) {
+            if (wrongNotes.length > 0) {
+                isWrongReviewStage = true;
+                activeQuizList = [].concat(wrongNotes);
+                wrongNotes = [];
+                currentIdx = 0;
+                
+                $('.quiz_review_mask').css('display', 'flex').hide().fadeIn(200);
+            } else {
+                showFinalResult();
+            }
+            return;
+        }
+
+        var currentQuiz = activeQuizList[index];
+        $('.quiz_sentence dt').text(currentQuiz.kr);
+        $('.answer_zone').empty();
+
+        var cleanEn = currentQuiz.en.replace(/([?.!,])/g, ' $1').trim();
+        var words = cleanEn.split(/\s+/).filter(function(el) { return el !== null && el !== ''; });
+        
+        for (var i = words.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = words[i]; words[i] = words[j]; words[j] = temp;
+        }
+
+        var listHtml = '';
+        $.each(words, function(i, word) { listHtml += '<li class="word_card">' + word + '</li>'; });
+        $('.word_list').html(listHtml);
+    }
+
+    // 4. 단어 카드 상호작용 클릭 핸들러
+    $('.word_list').on('click', '.word_card', function() {
+        var $card = $(this);
+        $card.fadeOut(150, function() {
+            var $newCard = $card.clone().appendTo('.answer_zone').hide().fadeIn(150);
+            $card.remove();
+        });
+    });
+
+    $('.answer_zone').on('click', '.word_card', function() {
+        var $card = $(this);
+        if ($card.hasClass('ui-sortable-helper')) return;
+        $card.fadeOut(150, function() {
+            $('<li class="word_card">' + $card.text() + '</li>').appendTo('.word_list').hide().fadeIn(150);
+            $card.remove();
+        });
+    });
+
+    // 5. 정답 확인하기 버튼 클릭 핸들러 (위치 고정 토글 방식)
+    $('#btn_check').on('click', function(e) {
+        e.preventDefault();
+        
+        var userAnswers = [];
+        $('.answer_zone .word_card').each(function() { userAnswers.push($(this).text()); });
+        
+        var userAnswerStr = userAnswers.join(' ').replace(/\s+([?.!,])/g, '$1');
+        var originAnswerStr = activeQuizList[currentIdx].en.trim();
+
+        var isCorrect = userAnswerStr.toLowerCase() === originAnswerStr.toLowerCase();
+        
+        if (isCorrect) {
+            if (!isWrongReviewStage) firstTryCorrectCount++;
+
+            $('.quiz_overlay_msg').addClass('msg_correct');
+            $('.overlay_status').text('정답입니다!');
+            $('.overlay_txt').html('참 잘하셨어요! 다음 문장도 도전해 보세요.');
+        } else {
+            wrongNotes.push(activeQuizList[currentIdx]);
+
+            $('.quiz_overlay_msg').addClass('msg_wrong');
+            $('.overlay_status').text('아쉽습니다!');
+            $('.overlay_txt').html('정답 예문을 확인하고 기억해 보세요.<span class="origin_text">' + originAnswerStr + '</span>');
+        }
+
+        // [수정 포인트] 퀴즈 센텐스 영역 위에 오버레이 메시지 flex 형태로 노출
+        $('.quiz_overlay_msg').css('display', 'flex');
+        
+        // [수정 포인트] 하단 제어 구역 버튼 가시성 교체 교환 (클릭 좌표 고정)
+        $('#btn_check').hide();
+        $('#btn_next').show();
+    });
+
+    // 6. 다음 문제 버튼 클릭 핸들러 (정답 확인하기와 동일 스팟 연동)
+    $('#btn_next').on('click', function(e) {
+        e.preventDefault();
+        currentIdx++;
+        loadQuiz(currentIdx);
+    });
+
+    // 오답 안내 팝업 확인창 핸들러
+    $('#btn_review_start').on('click', function(e) {
+        e.preventDefault();
+        $('.quiz_review_mask').fadeOut(150, function() {
+            loadQuiz(currentIdx);
+        });
+    });
+
+    // 7. 결과 화면 출력 보드
+    function showFinalResult() {
+        $('.quiz_progress_bar, .quiz_sentence, .quiz_control_zone').hide();
+        $('.quiz_result_score').text(firstTryCorrectCount + ' / ' + originQuizList.length);
+        $('.quiz_result_box').show();
+        $('.quiz_progress_ing').css('width', '100%');
+    }
+});
+</script>
+<div id="contents">
+    <div class="wrap">
+        <h2 class="m2">문장퀴즈</h2>
+        <p class="page_t_guide">각 레슨에서 사용된 <em>다양한 난이도의 문장</em>으로 퀴즈를 풀어보세요.</p>
+
+        <div class="quiz_progress_bar">
+            <div class="quiz_progress_ing"></div>
+        </div>
+
+        <div class="quiz_guide_box">
+            <h3>퀴즈 풀기 가이드</h3>
+            <ul>
+                <li><em>단어 조각을 클릭</em>하면 <em>정답 영역으로 이동</em>합니다.</li>
+                <li>정답 영역에서 조각을 이동하여 <em>순서를 바꿀 수</em> 있습니다.</li>
+                <li><em>10문제 모두 정답</em>을 맞출 때까지 문제를 다시 풀 수 있습니다.</li>
+            </ul>
+            <div>
+                <a href="#n" id="btn_guide_start" class="btn_start_game">퀴즈 시작하기</a>
+            </div>
+        </div>
+
+        <div class="quiz_sentence">
+            
+            <div class="quiz_overlay_msg">
+                <div class="overlay_status"></div>
+                <div class="overlay_txt"></div>
+            </div>
+
+            <dl>
+                <dt></dt>
+                <dd>
+                    <div class="answer_zone"></div>
+                    <ul class="word_list"></ul>
+                </dd>
+            </dl>
+        </div>
+        
+        <div class="quiz_control_zone">
+            <a href="#n" id="btn_check" class="btn_check_quiz">정답 확인하기</a>
+            <a href="#n" id="btn_next" class="btn_next_quiz" style="display:none;">다음 문제</a>
+        </div>
+
+        <div class="quiz_result_box" style="display:none;">
+            <h3>"퀴즈를 전부 완료하셨습니다!"</h3>
+            <p>모든 문제를 완벽하게 마스터하셨습니다.<br>한 번에 맞춘 정답 개수는 아래와 같습니다.</p>
+            <h4 style="font-size:48px; color:var(--color_green); margin-bottom:25px;" class="quiz_result_score">0 / 10</h4>
+            <p style="font-size:18px; color:#fff;">수고하셨습니다! 한 단계 더 성장하셨네요!</p>
+            <div>
+                <a href="./list.html" class="btn_home_go">다시 패턴 선택하기</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="quiz_review_mask">
+    <div class="quiz_review_pop">
+        <div class="review_status">수고하셨습니다.</div>
+        <div class="review_body">
+            <div class="review_msg">틀린 문제를 다시 풀어볼까요?</div>
+        </div>
+        <div class="review_btn_zone">
+            <a href="#n" id="btn_review_start" class="btn_review_next">확인</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function includeFooter() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/bottom.html', false);
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeFooter();
+</script>

@@ -1,0 +1,394 @@
+<script type="text/javascript">
+    function includeTop() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/top.html', false); // 동기 방식으로 로드하여 마크업이 그려진 후 본문이 오도록 제어
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeTop();
+</script>
+<style>
+.game-container { width:100%; max-width:400px; height:90vh; background-color:#ffffff; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.1); display:flex; flex-direction:column; overflow:hidden; position:relative; }
+.header { padding:20px; display:flex; flex-direction:column; gap:10px; border-bottom:2px solid #e5e5e5; }
+.title { font-size:16px; font-weight:bold; color:#888888; text-align:center; margin:0; }
+.pattern-title { font-size:20px; font-weight:bold; color:#1c1c1c; text-align:center; margin:0 0 5px 0; }
+.combo-container { display:flex; align-items:center; gap:10px; }
+.combo-text { font-weight:bold; color:#58cc02; min-width:70px; }
+.progress-bar-bg { flex-grow:1; height:16px; background-color:#e5e5e5; border-radius:8px; overflow:hidden; }
+.progress-bar-fill { width:0%; height:100%; background-color:#58cc02; transition:width 0.2s ease; }
+.game-board { flex-grow:1; display:grid; grid-template-columns:1fr 1fr; grid-template-rows:repeat(5,1fr); gap:12px; padding:20px; background-color:#f7f7f7; }
+.word-btn { background-color:#ffffff; border:2px solid #e5e5e5; border-bottom:4px solid #e5e5e5; border-radius:12px; font-size:15px; font-weight:bold; color:#4b4b4b; cursor:pointer; display:flex; justify-content:center; align-items:center; transition:all 0.1s ease; padding:10px; text-align:center; }
+.word-btn:active { border-bottom-width:2px; transform:translateY(2px); }
+.word-btn.selected { background-color:#ddf4ff; border-color:#84d8ff; border-bottom-color:#84d8ff; color:#1899d6; }
+.word-btn.correct { background-color:#d7ffb8; border-color:#58cc02; border-bottom-color:#58cc02; color:#58cc02; }
+.word-btn.dimming { animation:dimFade 3s linear forwards; pointer-events:none; }
+.word-btn.dimmed-stay { background-color:#e5e5e5 !important; border:2px solid #cccccc !important; border-bottom:2px solid #cccccc !important; color:#888888 !important; opacity:0.4 !important; pointer-events:none !important; transform:scale(0.97) !important; }
+.word-btn.completed-gray { background-color:#e5e5e5 !important; border:2px solid #cccccc !important; border-bottom:2px solid #cccccc !important; color:#aaaaaa !important; cursor:default !important; pointer-events:none !important; transform:none !important; opacity:1 !important; }
+.word-btn.wrong { background-color:#ffdfe0; border-color:#ff4b4b; border-bottom-color:#ff4b4b; color:#ea2b2b; animation:shake 0.3s ease; }
+.word-btn.fade-in { animation:fadeIn 0.2s ease forwards; }
+@keyframes dimFade { 0%{background-color:#d7ffb8;border-color:#58cc02;color:#58cc02;opacity:1;transform:scale(1);} 10%{background-color:#f4f4f4;border-color:#dcdcdc;color:#aaaaaa;opacity:0.8;} 100%{background-color:#e5e5e5;border-color:#cccccc;color:#888888;opacity:0.1;transform:scale(0.95);} }
+@keyframes fadeIn { 0%{opacity:0;transform:scale(0.9);} 100%{opacity:1;transform:scale(1);} }
+@keyframes shake { 0%,100%{transform:translateX(0);} 20%,60%{transform:translateX(-6px);} 40%,80%{transform:translateX(6px);} }
+.footer { padding:20px; text-align:center; background-color:#ffffff; border-top:2px solid #e5e5e5; display:flex; justify-content:space-between; align-items:center; }
+.score-text { font-size:16px; font-weight:bold; color:#4b4b4b; }
+.exit-btn { background-color:#fff; border:2px solid #e5e5e5; border-radius:10px; padding:6px 12px; font-size:14px; font-weight:bold; color:#777; cursor:pointer; }
+.exit-btn:hover { background-color:#f7f7f7; color:#333; }
+</style>
+
+<div id="contents">
+    <div class="wrap">
+        <h2 class="m3">단어게임</h2>
+        <div class="game-container">
+            <div class="header">
+                <h3 class="pattern-title" id="game-pattern-title">단어 매칭 게임</h3>
+                <p class="title">의미가 일치하는 단어끼리 짝을 지으세요</p>
+                <div class="combo-container">
+                    <span class="combo-text" id="combo-label">콤보 x0</span>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" id="combo-progress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="game-board" id="game-board"></div>
+
+            <div class="footer">
+                <div class="score-text" id="score-label">획득 XP: 0</div>
+                <button class="exit-btn" onclick="location.href='../index.html'">나가기</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        let wordDatabase = [];
+        let currentPool = [];
+        
+        let activeKrWords = [null, null, null, null, null];
+        let activeEnWords = [null, null, null, null, null];
+
+        let completedKrSlots = [];
+        let completedEnSlots = [];
+
+        let pendingKrSlots = []; 
+        let pendingEnSlots = [];
+
+        // [버그 해결의 핵심 변수]
+        // 방금 정답을 맞춘 "최초 진입" 상태인지, 아니면 이미 딤 처리가 진행 중인 상태인지를 판별합니다.
+        let newlyMatchedKrSlots = [];
+        let newlyMatchedEnSlots = [];
+
+        let globalRefillTimer = null;
+
+        let selectedKrValue = null;
+        let selectedEnValue = null;
+
+        let score = 0;
+        let combo = 0;
+
+        let isFinalFiveMode = false;
+
+        let waitingKrBuffer = [];
+        let waitingEnBuffer = [];
+
+        const board = document.getElementById("game-board");
+        const comboLabel = document.getElementById("combo-label");
+        const comboProgress = document.getElementById("combo-progress");
+        const scoreLabel = document.getElementById("score-label");
+        const patternTitleView = document.getElementById("game-pattern-title");
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        async function loadGameData() {
+            const savedGame = localStorage.getItem('selected_word_game');
+            if (!savedGame) {
+                alert("선택된 게임 데이터가 없습니다. 리스트 페이지로 이동합니다.");
+                window.location.href = './index.html';
+                return;
+            }
+
+            const gameSetup = JSON.parse(savedGame);
+            patternTitleView.innerText = gameSetup.title;
+
+            try {
+                const response = await fetch(gameSetup.json_file);
+                if (!response.ok) throw new Error("네트워크 응답 오류");
+                
+                wordDatabase = await response.json();
+                
+                if (wordDatabase && wordDatabase.length >= 5) {
+                    initGame();
+                } else {
+                    alert("게임 진행을 위해 최소 5개 이상의 단어가 필요합니다.");
+                }
+            } catch (error) {
+                console.error("데이터 로드 실패:", error);
+                alert("단어 데이터를 불러오는 데 실패했습니다.\n요청 경로: " + gameSetup.json_file);
+            }
+        }
+
+        function initGame() {
+            currentPool = shuffle([...wordDatabase]);
+            let initialKr = [], initialEn = [];
+            
+            for(let i=0; i<5; i++) {
+                let word = currentPool.pop();
+                initialKr.push(word.kr);
+                initialEn.push(word.en);
+            }
+            
+            shuffle(initialKr); shuffle(initialEn);
+            activeKrWords = initialKr; activeEnWords = initialEn;
+            
+            pendingKrSlots = []; pendingEnSlots = [];
+            newlyMatchedKrSlots = []; newlyMatchedEnSlots = [];
+            completedKrSlots = []; completedEnSlots = [];
+            waitingKrBuffer = []; waitingEnBuffer = [];
+            if(globalRefillTimer) clearTimeout(globalRefillTimer);
+            globalRefillTimer = null;
+            
+            selectedKrValue = null;
+            selectedEnValue = null;
+            
+            score = 0; combo = 0;
+            isFinalFiveMode = false;
+            updateHUD();
+
+            renderBoard();
+        }
+
+        function renderBoard() {
+            board.innerHTML = "";
+            for (let i = 0; i < 5; i++) {
+                // --- 한국어 버튼 생성 ---
+                const krBtn = document.createElement("button");
+                krBtn.className = "word-btn";
+                krBtn.innerText = activeKrWords[i] || "";
+                krBtn.dataset.type = "kr";
+                krBtn.dataset.index = i;
+                
+                if (completedKrSlots.includes(i)) {
+                    krBtn.classList.add("completed-gray");
+                } else if (pendingKrSlots.includes(i)) {
+                    // [수정 핵심 포인트]
+                    // 방금 막 맞춘 시점인 경우에만 연두색->흐려짐 애니메이션(dimming)을 틀어주고,
+                    // 도중에 다른 걸 클릭해서 다시 그려지는 경우에는 애니메이션을 재시작하지 않고 흐려진 정적 스타일(dimmed-stay)을 유지합니다.
+                    if (newlyMatchedKrSlots.includes(i)) {
+                        krBtn.classList.add("dimming");
+                    } else {
+                        krBtn.classList.add("dimmed-stay");
+                    }
+                } else if (selectedKrValue && selectedKrValue === krBtn.innerText) {
+                    krBtn.classList.add("selected");
+                }
+                krBtn.onclick = () => handleSelect(krBtn);
+
+                // --- 영어 버튼 생성 ---
+                const enBtn = document.createElement("button");
+                enBtn.className = "word-btn";
+                enBtn.innerText = activeEnWords[i] || "";
+                enBtn.dataset.type = "en";
+                enBtn.dataset.index = i;
+                
+                if (completedEnSlots.includes(i)) {
+                    enBtn.classList.add("completed-gray");
+                } else if (pendingEnSlots.includes(i)) {
+                    // 영어 버튼도 마찬가지로 중복 애니메이션 방지 적용
+                    if (newlyMatchedEnSlots.includes(i)) {
+                        enBtn.classList.add("dimming");
+                    } else {
+                        enBtn.classList.add("dimmed-stay");
+                    }
+                } else if (selectedEnValue && selectedEnValue === enBtn.innerText) {
+                    enBtn.classList.add("selected");
+                }
+                enBtn.onclick = () => handleSelect(enBtn);
+
+                board.appendChild(krBtn);
+                board.appendChild(enBtn);
+            }
+
+            // 한번 렌더링이 완료된 후에는 '새로 맞춘 효과 대상' 목록을 비워주어, 
+            // 다음번 일반 클릭 렌더링 때 애니메이션이 무한 반복 재생되는 현상을 원천 차단합니다.
+            newlyMatchedKrSlots = [];
+            newlyMatchedEnSlots = [];
+        }
+
+        function handleSelect(btn) {
+            const idx = parseInt(btn.dataset.index);
+            if (btn.classList.contains('dimming') || btn.classList.contains('dimmed-stay') || btn.classList.contains('completed-gray') || btn.innerText === "") return;
+
+            if (btn.dataset.type === "kr") {
+                if (selectedKrValue === btn.innerText) {
+                    selectedKrValue = null;
+                } else {
+                    selectedKrValue = btn.innerText;
+                }
+            } else {
+                if (selectedEnValue === btn.innerText) {
+                    selectedEnValue = null;
+                } else {
+                    selectedEnValue = btn.innerText;
+                }
+            }
+            
+            renderBoard();
+
+            if (selectedKrValue && selectedEnValue) {
+                const krVal = selectedKrValue;
+                const enVal = selectedEnValue;
+                
+                const krIdx = activeKrWords.indexOf(krVal);
+                const enIdx = activeEnWords.indexOf(enVal);
+
+                const match = wordDatabase.find(w => w.kr === krVal && w.en === enVal);
+
+                if (match) {
+                    score += 10;
+                    combo += 1;
+                    updateHUD();
+
+                    completedKrSlots.push(krIdx);
+                    completedEnSlots.push(enIdx);
+
+                    const uncompletedCountOnBoard = 5 - completedKrSlots.length + pendingKrSlots.length;
+                    const totalRemainingWords = currentPool.length + waitingKrBuffer.length + uncompletedCountOnBoard;
+
+                    if (isFinalFiveMode || totalRemainingWords <= 5) {
+                        isFinalFiveMode = true;
+                        if(globalRefillTimer) clearTimeout(globalRefillTimer);
+                        pendingKrSlots = [];
+                        pendingEnSlots = [];
+                        waitingKrBuffer = [];
+                        waitingEnBuffer = [];
+                        selectedKrValue = null;
+                        selectedEnValue = null;
+
+                        renderBoard();
+                        checkGameClear();
+                    } else {
+                        completedKrSlots = completedKrSlots.filter(id => id !== krIdx);
+                        completedEnSlots = completedEnSlots.filter(id => id !== enIdx);
+
+                        if (pendingKrSlots.length > 0) {
+                            processPushRefill();
+                        }
+
+                        if(globalRefillTimer) clearTimeout(globalRefillTimer);
+
+                        if (currentPool.length > 0) {
+                            let word = currentPool.pop();
+                            waitingKrBuffer.push(word.kr);
+                            waitingEnBuffer.push(word.en);
+                        }
+
+                        selectedKrValue = null;
+                        selectedEnValue = null;
+
+                        // 대기열에 추가함과 동시에 "방금 맞춘 슬롯"임을 명시하여 최초 1회만 연두색 애니메이션이 돌도록 기록합니다.
+                        pendingKrSlots.push(krIdx);
+                        pendingEnSlots.push(enIdx);
+                        newlyMatchedKrSlots.push(krIdx);
+                        newlyMatchedEnSlots.push(enIdx);
+                        
+                        renderBoard();
+
+                        globalRefillTimer = setTimeout(() => {
+                            if (pendingKrSlots.length > 0) {
+                                processPushRefill();
+                            }
+                        }, 3000);
+                    }
+
+                } else {
+                    const allButtons = board.querySelectorAll('.word-btn');
+                    let targetKrBtn, targetEnBtn;
+                    allButtons.forEach(b => {
+                        if(b.dataset.type === "kr" && b.innerText === krVal) targetKrBtn = b;
+                        if(b.dataset.type === "en" && b.innerText === enVal) targetEnBtn = b;
+                    });
+
+                    if(targetKrBtn) targetKrBtn.classList.add("wrong");
+                    if(targetEnBtn) targetEnBtn.classList.add("wrong");
+                    
+                    combo = 0;
+                    updateHUD();
+
+                    selectedKrValue = null;
+                    selectedEnValue = null;
+
+                    setTimeout(() => {
+                        renderBoard();
+                    }, 300);
+                }
+            }
+        }
+
+        function processPushRefill() {
+            let targetKrIndices = [...pendingKrSlots];
+            let targetEnIndices = [...pendingEnSlots];
+
+            pendingKrSlots = [];
+            pendingEnSlots = [];
+            newlyMatchedKrSlots = [];
+            newlyMatchedEnSlots = [];
+
+            let count = targetKrIndices.length;
+            let finalKrToInsert = [];
+            let finalEnToInsert = [];
+
+            for(let i = 0; i < count; i++) {
+                if(waitingKrBuffer.length > 0) {
+                    finalKrToInsert.push(waitingKrBuffer.shift());
+                    finalEnToInsert.push(waitingEnBuffer.pop());
+                }
+            }
+
+            for(let i = 0; i < count; i++) {
+                activeKrWords[targetKrIndices[i]] = finalKrToInsert[i];
+                activeEnWords[targetEnIndices[i]] = finalEnToInsert[i];
+            }
+
+            renderBoard();
+            applyFadeIn(finalKrToInsert, finalEnToInsert);
+        }
+
+        function applyFadeIn(krList, enList) {
+            const allButtons = board.querySelectorAll('.word-btn');
+            allButtons.forEach(btn => {
+                if(krList.includes(btn.innerText) || enList.includes(btn.innerText)) {
+                    if (btn.innerText !== "") btn.classList.add('fade-in');
+                }
+            });
+        }
+
+        function checkGameClear() {
+            if (completedKrSlots.length === 5 && completedEnSlots.length === 5) {
+                setTimeout(() => {
+                    alert("축하합니다! 모든 단어를 매칭했습니다. 확인을 누르면 새 라운드가 시작됩니다.");
+                    initGame();
+                }, 400);
+            }
+        }
+
+        function updateHUD() {
+            scoreLabel.innerText = `획득 XP: ${score}`;
+            comboLabel.innerText = `콤보 x${combo}`;
+            let progressPercent = Math.min((combo / 10) * 100, 100);
+            comboProgress.style.width = `${progressPercent}%`;
+        }
+
+        loadGameData();
+    </script>
+<script type="text/javascript">
+    function includeFooter() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/bottom.html', false);
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeFooter();
+</script>

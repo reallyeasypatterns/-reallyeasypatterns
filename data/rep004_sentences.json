@@ -1,0 +1,142 @@
+{
+  "pattern_en": "Can you",
+  "pattern_kr": "~해 줄 수 있어?",
+  "pattern_highlight": "Can you",
+  "sentences": [
+    { "en": "Can you help?", "kr": "도와줄 수 있어?", "pron": "캔 유 헬프" },
+    { "en": "Can you help me?", "kr": "나를 도와줄 수 있어?", "pron": "캔 유 헬프 미" },
+    { "en": "Can you help me for a second?", "kr": "잠깐 나를 도와줄 수 있어?", "pron": "캔 유 헬프 미 포어 어 세컨드" },
+
+    { "en": "Can you come?", "kr": "올 수 있어?", "pron": "캔 유 컴" },
+    { "en": "Can you come here?", "kr": "여기 올 수 있어?", "pron": "캔 유 컴 히어" },
+    { "en": "Can you come here right now?", "kr": "지금 당장 여기 올 수 있어?", "pron": "캔 유 컴 히어 라이트 나우" },
+
+    { "en": "Can you open?", "kr": "열어줄 수 있어?", "pron": "캔 유 오픈" },
+    { "en": "Can you open the door?", "kr": "문 좀 열어줄 수 있어?", "pron": "캔 유 오픈 더 도어" },
+    { "en": "Can you open the door for me?", "kr": "나를 위해 문 좀 열어줄 수 있어?", "pron": "캔 유 오픈 더 도어 포어 미" },
+
+    { "en": "Can you close?", "kr": "닫아줄 수 있어?", "pron": "캔 유 클로즈" },
+    { "en": "Can you close the window?", "kr": "창문 좀 닫아줄 수 있어?", "pron": "캔 유 클로즈 더 윈도우" },
+    { "en": "Can you close the window before leaving?", "kr": "나가기 전에 창문 좀 닫아줄 수 있어?", "pron": "캔 유 클로즈 더 윈도우 비포어 리빙" },
+
+    { "en": "Can you tell?", "kr": "말해줄 수 있어?", "pron": "캔 유 텔" },
+    { "en": "Can you tell her?", "kr": "그녀에게 말해줄 수 있어?", "pron": "캔 유 텔 허" },
+    { "en": "Can you tell her the story?", "kr": "그녀에게 그 이야기 좀 말해줄 수 있어?", "pron": "캔 유 텔 허 더 스토리" },
+
+    { "en": "Can you show?", "kr": "보여줄 수 있어?", "pron": "캔 유 쇼우" },
+    { "en": "Can you show me?", "kr": "나에게 보여줄 수 있어?", "pron": "캔 유 쇼우 미" },
+    { "en": "Can you show me your phone?", "kr": "나에게 네 폰 좀 보여줄 수 있어?", "pron": "캔 유 쇼우 미 유어 폰" },
+
+    { "en": "Can you give?", "kr": "줄 수 있어?", "pron": "캔 유 기브" },
+    { "en": "Can you give me?", "kr": "나에게 줄 수 있어?", "pron": "캔 유 기브 미" },
+    { "en": "Can you give me that book?", "kr": "나에게 그 책 좀 줄 수 있어?", "pron": "캔 유 기브 미 댓 북" },
+
+    { "en": "Can you bring?", "kr": "가져올 수 있어?", "pron": "캔 유 브링" },
+    { "en": "Can you bring water?", "kr": "물 좀 가져올 수 있어?", "pron": "캔 유 브링 워터" },
+    { "en": "Can you bring some water for us?", "kr": "우리에게 물 좀 가져다줄 수 있어?", "pron": "캔 유 브링 썸 워터 포어 어스" },
+
+    { "en": "Can you call?", "kr": "전화해 줄 수 있어?", "pron": "캔 유 콜" },
+    { "en": "Can you call me?", "kr": "나한테 전화해 줄 수 있어?", "pron": "캔 유 콜 미" },
+    { "en": "Can you call me after dinner?", "kr": "저녁 먹고 나한테 전화해 줄 수 있어?", "pron": "캔 유 콜 미 애프터 디너" },
+
+    { "en": "Can you wait?", "kr": "기다려줄 수 있어?", "pron": "캔 유 웨이트" },
+    { "en": "Can you wait here?", "kr": "여기서 기다려줄 수 있어?", "pron": "캔 유 웨이트 히어" },
+    { "en": "Can you wait here until five?", "kr": "5시까지 여기서 기다려줄 수 있어?", "pron": "캔 유 웨이트 히어 언틸 파이브" },
+
+    { "en": "Can you check?", "kr": "확인해 줄 수 있어?", "pron": "캔 유 체크" },
+    { "en": "Can you check this?", "kr": "이것 좀 확인해 줄 수 있어?", "pron": "캔 유 체크 디스" },
+    { "en": "Can you check this email later?", "kr": "나중에 이 이메일 좀 확인해 줄 수 있어?", "pron": "캔 유 체크 디스 이메일 레이터" },
+
+    { "en": "Can you make?", "kr": "만들어 줄 수 있어?", "pron": "캔 유 메이크" },
+    { "en": "Can you make coffee?", "kr": "커피 좀 만들어 줄 수 있어?", "pron": "캔 유 메이크 커피" },
+    { "en": "Can you make hot coffee for me?", "kr": "나를 위해 따뜻한 커피 좀 만들어 줄 수 있어?", "pron": "캔 유 메이크 핫 커피 포어 미" },
+
+    { "en": "Can you fix?", "kr": "고쳐줄 수 있어?", "pron": "캔 유 픽스" },
+    { "en": "Can you fix this?", "kr": "이것 좀 고쳐줄 수 있어?", "pron": "캔 유 픽스 디스" },
+    { "en": "Can you fix this computer tomorrow?", "kr": "내일 이 컴퓨터 좀 고쳐줄 수 있어?", "pron": "캔 유 픽스 디스 컴퓨터 투모로우" },
+
+    { "en": "Can you clean?", "kr": "청소해 줄 수 있어?", "pron": "캔 유 클린" },
+    { "en": "Can you clean your room?", "kr": "네 방 좀 청소해 줄 수 있어?", "pron": "캔 유 클린 유어 룸" },
+    { "en": "Can you clean your room before lunch?", "kr": "점심 먹기 전에 네 방 좀 청소해 줄 수 있어?", "pron": "캔 유 클린 유어 룸 비포어 런치" },
+
+    { "en": "Can you buy?", "kr": "사다 줄 수 있어?", "pron": "캔 유 바이" },
+    { "en": "Can you buy milk?", "kr": "우유 좀 사다 줄 수 있어?", "pron": "캔 유 바이 밀크" },
+    { "en": "Can you buy milk on your way home?", "kr": "집에 오는 길에 우유 좀 사다 줄 수 있어?", "pron": "캔 유 바이 밀크 온 유어 웨이 홈" },
+
+    { "en": "Can you drive?", "kr": "운전해 줄 수 있어?", "pron": "캔 유 드라이브" },
+    { "en": "Can you drive me?", "kr": "나를 태워다 줄 수 있어?", "pron": "캔 유 드라이브 미" },
+    { "en": "Can you drive me to the station?", "kr": "역까지 나를 태워다 줄 수 있어?", "pron": "캔 유 드라이브 미 투 더 스테이션" },
+
+    { "en": "Can you hold?", "kr": "잡아줄 수 있어?", "pron": "캔 유 홀드" },
+    { "en": "Can you hold this?", "kr": "이것 좀 잡아줄 수 있어?", "pron": "캔 유 홀드 디스" },
+    { "en": "Can you hold this bag for a moment?", "kr": "잠깐 이 가방 좀 잡아줄 수 있어?", "pron": "캔 유 홀드 디스 백 포어 어 모먼트" },
+
+    { "en": "Can you find?", "kr": "찾아줄 수 있어?", "pron": "캔 유 파인드" },
+    { "en": "Can you find my keys?", "kr": "내 열쇠 좀 찾아줄 수 있어?", "pron": "캔 유 파인드 마이 키즈" },
+    { "en": "Can you find my keys in the living room?", "kr": "거실에서 내 열쇠 좀 찾아줄 수 있어?", "pron": "캔 유 파인드 마이 키즈 인 더 리빙 룸" },
+
+    { "en": "Can you send?", "kr": "보내줄 수 있어?", "pron": "캔 유 샌드" },
+    { "en": "Can you send the file?", "kr": "그 파일 좀 보내줄 수 있어?", "pron": "캔 유 샌드 더 파일" },
+    { "en": "Can you send the file by tonight?", "kr": "오늘 밤까지 그 파일 좀 보내줄 수 있어?", "pron": "캔 유 샌드 더 파일 바이 투나잇" },
+
+    { "en": "Can you write?", "kr": "적어줄 수 있어?", "pron": "캔 유 라이트" },
+    { "en": "Can you write it down?", "kr": "그것 좀 받아 적어줄 수 있어?", "pron": "캔 유 라이트 잇 다운" },
+    { "en": "Can you write it down on this paper?", "kr": "이 종이에 그것 좀 받아 적어줄 수 있어?", "pron": "캔 유 라이트 잇 다운 온 디스 페이퍼" },
+
+    { "en": "Can you speak?", "kr": "말해줄 수 있어?", "pron": "캔 유 스피크" },
+    { "en": "Can you speak slowly?", "kr": "천천히 말해줄 수 있어?", "pron": "캔 유 스피크 슬로우이" },
+    { "en": "Can you speak slowly for me?", "kr": "나를 위해 천천히 말해줄 수 있어?", "pron": "캔 유 스피크 슬로우이 포어 미" },
+
+    { "en": "Can you turn down?", "kr": "줄여줄 수 있어?", "pron": "캔 유 턴 다운" },
+    { "en": "Can you turn down the TV?", "kr": "TV 소리 좀 줄여줄 수 있어?", "pron": "캔 유 턴 다운 더 티비" },
+    { "en": "Can you turn down the TV a little bit?", "kr": "TV 소리 좀 조금만 줄여줄 수 있어?", "pron": "캔 유 턴 다운 더 티비 어 리틀 비트" },
+
+    { "en": "Can you turn up?", "kr": "키워줄 수 있어?", "pron": "캔 유 턴 업" },
+    { "en": "Can you turn up the radio?", "kr": "라디오 소리 좀 키워줄 수 있어?", "pron": "캔 유 턴 업 더 라디오" },
+    { "en": "Can you turn up the radio news now?", "kr": "지금 라디오 뉴스 소리 좀 키워줄 수 있어?", "pron": "캔 유 턴 업 더 라디오 뉴스 나우" },
+
+    { "en": "Can you explain?", "kr": "설명해 줄 수 있어?", "pron": "캔 유 익스플레인" },
+    { "en": "Can you explain this?", "kr": "이것 좀 설명해 줄 수 있어?", "pron": "캔 유 익스플레인 디스" },
+    { "en": "Can you explain this rule again?", "kr": "이 규칙 좀 다시 설명해 줄 수 있어?", "pron": "캔 유 익스플레인 디스 룰 어게인" },
+
+    { "en": "Can you answer?", "kr": "답해줄 수 있어?", "pron": "캔 유 앤서" },
+    { "en": "Can you answer the phone?", "kr": "전화 좀 받아줄 수 있어?", "pron": "캔 유 앤서 더 폰" },
+    { "en": "Can you answer the phone for a second?", "kr": "잠깐 전화 좀 받아줄 수 있어?", "pron": "캔 유 앤서 더 폰 포어 어 세컨드" },
+
+    { "en": "Can you repeat?", "kr": "반복해 줄 수 있어?", "pron": "캔 유 리피트" },
+    { "en": "Can you repeat that?", "kr": "그것 좀 다시 말해줄 수 있어?", "pron": "캔 유 리피트 댓" },
+    { "en": "Can you repeat that last sentence?", "kr": "그 마지막 문장 좀 다시 말해줄 수 있어?", "pron": "캔 유 리피트 댓 라스트 센텐스" },
+
+    { "en": "Can you teach?", "kr": "가르쳐줄 수 있어?", "pron": "캔 유 티치" },
+    { "en": "Can you teach me?", "kr": "나를 가르쳐줄 수 있어?", "pron": "캔 유 티치 미" },
+    { "en": "Can you teach me how to cook?", "kr": "요리하는 법 좀 가르쳐줄 수 있어?", "pron": "캔 유 티치 미 하우 투 쿡" },
+
+    { "en": "Can you recommend?", "kr": "추천해 줄 수 있어?", "pron": "캔 유 레코멘드" },
+    { "en": "Can you recommend a movie?", "kr": "영화 하나 추천해 줄 수 있어?", "pron": "캔 유 레코멘드 어 무비" },
+    { "en": "Can you recommend a good movie for tonight?", "kr": "오늘 밤에 볼 좋은 영화 하나 추천해 줄 수 있어?", "pron": "캔 유 레코멘드 어 굿 무비 포어 투나잇" },
+
+    { "en": "Can you carry?", "kr": "옮겨줄 수 있어?", "pron": "캔 유 캐리" },
+    { "en": "Can you carry this box?", "kr": "이 상자 좀 옮겨줄 수 있어?", "pron": "캔 유 캐리 디스 박스" },
+    { "en": "Can you carry this heavy box to the car?", "kr": "차까지 이 무거운 상자 좀 옮겨줄 수 있어?", "pron": "캔 유 캐리 디스 헤비 박스 투 더 카" },
+
+    { "en": "Can you wake?", "kr": "깨워줄 수 있어?", "pron": "캔 유 웨이크" },
+    { "en": "Can you wake me up?", "kr": "나 좀 깨워줄 수 있어?", "pron": "캔 유 웨이크 미 업" },
+    { "en": "Can you wake me up at seven tomorrow?", "kr": "내일 7시에 나 좀 깨워줄 수 있어?", "pron": "캔 유 웨이크 미 업 앳 세븐 투모로우" },
+
+    { "en": "Can you share?", "kr": "공유해 줄 수 있어?", "pron": "캔 유 쉐어" },
+    { "en": "Can you share your location?", "kr": "네 위치 좀 공유해 줄 수 있어?", "pron": "캔 유 쉐어 유어 로케이션" },
+    { "en": "Can you share your location with me now?", "kr": "지금 나한테 네 위치 좀 공유해 줄 수 있어?", "pron": "캔 유 쉐어 유어 로케이션 위드 미 나우" },
+
+    { "en": "Can you save?", "kr": "남겨줄 수 있어?", "pron": "캔 유 세이브" },
+    { "en": "Can you save a seat?", "kr": "자리 좀 맡아줄 수 있어?", "pron": "캔 유 세이브 어 시트" },
+    { "en": "Can you save a seat for my friend?", "kr": "내 친구를 위해 자리 좀 맡아줄 수 있어?", "pron": "캔 유 세이브 어 시트 포어 마이 프렌드" },
+
+    { "en": "Can you keep?", "kr": "지켜줄 수 있어?", "pron": "캔 유 키프" },
+    { "en": "Can you keep a secret?", "kr": "비밀 좀 지켜줄 수 있어?", "pron": "캔 유 키프 어 시크릿" },
+    { "en": "Can you keep this secret until next week?", "kr": "다음 주까지 이 비밀 좀 지켜줄 수 있어?", "pron": "캔 유 키프 디스 시크릿 언틸 넥스트 위크" },
+
+    { "en": "Can you remind?", "kr": "상기시켜 줄 수 있어?", "pron": "캔 유 리마인드" },
+    { "en": "Can you remind me?", "kr": "나한테 상기시켜 줄 수 있어?", "pron": "캔 유 리마인드 미" },
+    { "en": "Can you remind me of the meeting later?", "kr": "나중에 나한테 회의 일정 좀 상기시켜 줄 수 있어?", "pron": "캔 유 리마인드 미 오브 더 미팅 레이터" }
+  ]
+}

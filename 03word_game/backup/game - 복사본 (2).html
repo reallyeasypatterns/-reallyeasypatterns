@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단어 매칭 게임 (Match Madness)</title>
+    <style>
+        body {
+            font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .game-container {
+            width: 100%;
+            max-width: 400px;
+            height: 90vh;
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .header {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-bottom: 2px solid #e5e5e5;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #888888;
+            text-align: center;
+            margin: 0;
+        }
+
+        .pattern-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1c1c1c;
+            text-align: center;
+            margin: 0 0 5px 0;
+        }
+
+        .combo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .combo-text {
+            font-weight: bold;
+            color: #58cc02;
+            min-width: 70px;
+        }
+
+        .progress-bar-bg {
+            flex-grow: 1;
+            height: 16px;
+            background-color: #e5e5e5;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            width: 0%;
+            height: 100%;
+            background-color: #58cc02;
+            transition: width 0.2s ease;
+        }
+
+        .game-board {
+            flex-grow: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(5, 1fr);
+            gap: 12px;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .word-btn {
+            background-color: #ffffff;
+            border: 2px solid #e5e5e5;
+            border-bottom: 4px solid #e5e5e5;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            color: #4b4b4b;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.1s ease;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .word-btn:active {
+            border-bottom-width: 2px;
+            transform: translateY(2px);
+        }
+
+        .word-btn.selected {
+            background-color: #ddf4ff;
+            border-color: #84d8ff;
+            border-bottom-color: #84d8ff;
+            color: #1899d6;
+        }
+
+        .word-btn.correct {
+            background-color: #d7ffb8;
+            border-color: #58cc02;
+            border-bottom-color: #58cc02;
+            color: #58cc02;
+        }
+
+        .word-btn.dimming {
+            animation: dimFade 3s linear forwards;
+            pointer-events: none;
+        }
+
+        .word-btn.completed-gray {
+            background-color: #e5e5e5 !important;
+            border: 2px solid #cccccc !important;
+            border-bottom: 2px solid #cccccc !important;
+            color: #aaaaaa !important;
+            cursor: default !important;
+            pointer-events: none !important;
+            transform: none !important;
+            opacity: 1 !important;
+        }
+
+        .word-btn.wrong {
+            background-color: #ffdfe0;
+            border-color: #ff4b4b;
+            border-bottom-color: #ff4b4b;
+            color: #ea2b2b;
+            animation: shake 0.3s ease;
+        }
+
+        .word-btn.fade-in {
+            animation: fadeIn 0.2s ease forwards;
+        }
+
+        @keyframes dimFade {
+            0% { background-color: #d7ffb8; border-color: #58cc02; color: #58cc02; opacity: 1; transform: scale(1); }
+            10% { background-color: #f4f4f4; border-color: #dcdcdc; color: #aaaaaa; opacity: 0.8; }
+            100% { background-color: #e5e5e5; border-color: #cccccc; color: #888888; opacity: 0.2; transform: scale(0.95); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-6px); }
+            40%, 80% { transform: translateX(6px); }
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #ffffff;
+            border-top: 2px solid #e5e5e5;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .score-text {
+            font-size: 16px;
+            font-weight: bold;
+            color: #4b4b4b;
+        }
+
+        .exit-btn {
+            background-color: #fff;
+            border: 2px solid #e5e5e5;
+            border-radius: 10px;
+            padding: 6px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #777;
+            cursor: pointer;
+        }
+        .exit-btn:hover {
+            background-color: #f7f7f7;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="header">
+            <h3 class="pattern-title" id="game-pattern-title">단어 매칭 게임</h3>
+            <p class="title">의미가 일치하는 단어끼리 짝을 지으세요</p>
+            <div class="combo-container">
+                <span class="combo-text" id="combo-label">콤보 x0</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="combo-progress"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-board" id="game-board"></div>
+
+        <div class="footer">
+            <div class="score-text" id="score-label">획득 XP: 0</div>
+            <button class="exit-btn" onclick="location.href='./index.html'">나가기</button>
+        </div>
+    </div>
+
+    <script>
+        let wordDatabase = [];
+        let currentPool = [];
+        
+        let activeKrWords = [null, null, null, null, null];
+        let activeEnWords = [null, null, null, null, null];
+
+        let completedKrSlots = [];
+        let completedEnSlots = [];
+
+        let pendingKrSlots = []; 
+        let pendingEnSlots = [];
+
+        let krTimers = {};
+        let enTimers = {};
+
+        let selectedKrBtn = null;
+        let selectedEnBtn = null;
+        let score = 0;
+        let combo = 0;
+
+        let isFinalFiveMode = false;
+
+        // [새로 추가된 핵심 톱니바퀴 큐]
+        // 콤보 리필 시 단어 데이터들이 엇갈려 들어갈 수 있도록 임시 대기하는 버퍼 저장소입니다.
+        let waitingKrBuffer = [];
+        let waitingEnBuffer = [];
+
+        const board = document.getElementById("game-board");
+        const comboLabel = document.getElementById("combo-label");
+        const comboProgress = document.getElementById("combo-progress");
+        const scoreLabel = document.getElementById("score-label");
+        const patternTitleView = document.getElementById("game-pattern-title");
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        async function loadGameData() {
+            const savedGame = localStorage.getItem('selected_word_game');
+            if (!savedGame) {
+                alert("선택된 게임 데이터가 없습니다. 리스트 페이지로 이동합니다.");
+                window.location.href = './index.html';
+                return;
+            }
+
+            const gameSetup = JSON.parse(savedGame);
+            patternTitleView.innerText = gameSetup.title;
+
+            try {
+                const response = await fetch(gameSetup.json_file);
+                if (!response.ok) throw new Error("네트워크 응답 오류");
+                
+                wordDatabase = await response.json();
+                
+                if (wordDatabase && wordDatabase.length >= 5) {
+                    initGame();
+                } else {
+                    alert("게임 진행을 위해 최소 5개 이상의 단어가 필요합니다.");
+                }
+            } catch (error) {
+                console.error("데이터 로드 실패:", error);
+                alert("단어 데이터를 불러오는 데 실패했습니다.\n요청 경로: " + gameSetup.json_file);
+            }
+        }
+
+        function initGame() {
+            currentPool = shuffle([...wordDatabase]);
+            let initialKr = [], initialEn = [];
+            
+            for(let i=0; i<5; i++) {
+                let word = currentPool.pop();
+                initialKr.push(word.kr);
+                initialEn.push(word.en);
+            }
+            
+            shuffle(initialKr); shuffle(initialEn);
+            activeKrWords = initialKr; activeEnWords = initialEn;
+            
+            pendingKrSlots = []; pendingEnSlots = [];
+            completedKrSlots = []; completedEnSlots = [];
+            waitingKrBuffer = []; waitingEnBuffer = [];
+            krTimers = {}; enTimers = {};
+            score = 0; combo = 0;
+            isFinalFiveMode = false;
+            updateHUD();
+
+            renderBoard();
+        }
+
+        function renderBoard() {
+            board.innerHTML = "";
+            for (let i = 0; i < 5; i++) {
+                const krBtn = document.createElement("button");
+                krBtn.className = "word-btn";
+                krBtn.innerText = activeKrWords[i] || "";
+                krBtn.dataset.type = "kr";
+                krBtn.dataset.index = i;
+                
+                if (completedKrSlots.includes(i)) {
+                    krBtn.classList.add("completed-gray");
+                } else if (pendingKrSlots.includes(i)) {
+                    krBtn.classList.add("dimming");
+                }
+                krBtn.onclick = () => handleSelect(krBtn);
+
+                const enBtn = document.createElement("button");
+                enBtn.className = "word-btn";
+                enBtn.innerText = activeEnWords[i] || "";
+                enBtn.dataset.type = "en";
+                enBtn.dataset.index = i;
+                
+                if (completedEnSlots.includes(i)) {
+                    enBtn.classList.add("completed-gray");
+                } else if (pendingEnSlots.includes(i)) {
+                    enBtn.classList.add("dimming");
+                }
+                enBtn.onclick = () => handleSelect(enBtn);
+
+                board.appendChild(krBtn);
+                board.appendChild(enBtn);
+            }
+        }
+
+        function handleSelect(btn) {
+            const idx = parseInt(btn.dataset.index);
+            if (btn.classList.contains('dimming') || btn.classList.contains('completed-gray') || btn.innerText === "") return;
+
+            if (btn.dataset.type === "kr") {
+                if (selectedKrBtn) selectedKrBtn.classList.remove("selected");
+                selectedKrBtn = btn; selectedKrBtn.classList.add("selected");
+            } else {
+                if (selectedEnBtn) selectedEnBtn.classList.remove("selected");
+                selectedEnBtn = btn; selectedEnBtn.classList.add("selected");
+            }
+
+            if (selectedKrBtn && selectedEnBtn) {
+                const krVal = selectedKrBtn.innerText;
+                const enVal = selectedEnBtn.innerText;
+                const krIdx = parseInt(selectedKrBtn.dataset.index);
+                const enIdx = parseInt(selectedEnBtn.dataset.index);
+
+                const match = wordDatabase.find(w => w.kr === krVal && w.en === enVal);
+
+                if (match) {
+                    score += 10;
+                    combo += 1;
+                    updateHUD();
+
+                    completedKrSlots.push(krIdx);
+                    completedEnSlots.push(enIdx);
+
+                    // 버퍼에 대기 중인 수량까지 합쳐서 남은 총 수량 계산
+                    const uncompletedCountOnBoard = 5 - completedKrSlots.length + pendingKrSlots.length;
+                    const totalRemainingWords = currentPool.length + waitingKrBuffer.length + uncompletedCountOnBoard;
+
+                    if (isFinalFiveMode || totalRemainingWords <= 5) {
+                        isFinalFiveMode = true;
+                        clearAllPendingTimers();
+                        pendingKrSlots = [];
+                        pendingEnSlots = [];
+                        waitingKrBuffer = [];
+                        waitingEnBuffer = [];
+
+                        renderBoard();
+                        checkGameClear();
+                    } else {
+                        completedKrSlots = completedKrSlots.filter(id => id !== krIdx);
+                        completedEnSlots = completedEnSlots.filter(id => id !== enIdx);
+
+                        pendingKrSlots.push(krIdx);
+                        pendingEnSlots.push(enIdx);
+                        renderBoard();
+
+                        // [핵심 변경: 무한 연쇄 톱니바퀴 리필 제어]
+                        if (pendingKrSlots.length >= 2) {
+                            clearAllPendingTimers();
+                            triggerContinuousComboRefill();
+                        } else {
+                            startSingleTimer(krIdx, enIdx);
+                        }
+                    }
+
+                } else {
+                    selectedKrBtn.classList.add("wrong");
+                    selectedEnBtn.classList.add("wrong");
+                    combo = 0;
+                    updateHUD();
+
+                    const tKr = selectedKrBtn; const tEn = selectedEnBtn;
+                    setTimeout(() => {
+                        tKr.classList.remove("selected", "wrong");
+                        tEn.classList.remove("selected", "wrong");
+                    }, 300);
+                }
+
+                selectedKrBtn = null;
+                selectedEnBtn = null;
+            }
+        }
+
+        function startSingleTimer(krIdx, enIdx) {
+            const timerId = setTimeout(() => {
+                refillSlotAt(krIdx, enIdx);
+            }, 3000);
+
+            krTimers[krIdx] = timerId;
+            enTimers[enIdx] = timerId;
+        }
+
+        function clearAllPendingTimers() {
+            Object.values(krTimers).forEach(t => clearTimeout(t));
+            Object.values(enTimers).forEach(t => clearTimeout(t));
+            krTimers = {};
+            enTimers = {};
+        }
+
+        // 3초를 초과하여 콤보가 끊겼을 때 개별적으로 일반 리필하는 함수 (버퍼 우선 소진)
+        function refillSlotAt(krIdx, enIdx) {
+            pendingKrSlots = pendingKrSlots.filter(id => id !== krIdx);
+            pendingEnSlots = pendingEnSlots.filter(id => id !== enIdx);
+
+            let newKr = null; let newEn = null;
+
+            // 쌓여있던 연쇄 엇갈림 버퍼가 있다면 거기서 먼저 꺼내옴
+            if (waitingKrBuffer.length > 0) {
+                newKr = waitingKrBuffer.shift();
+                newEn = waitingEnBuffer.shift();
+            } else if (currentPool.length > 0) {
+                let word = currentPool.pop();
+                newKr = word.kr; newEn = word.en;
+            }
+
+            activeKrWords[krIdx] = newKr;
+            activeEnWords[enIdx] = newEn;
+
+            renderBoard();
+            applyFadeIn([newKr], [newEn]);
+        }
+
+        // [요청 반영 핵심 함수: 무한 연쇄 리필 시스템]
+        function triggerContinuousComboRefill() {
+            let targetKrIndices = [...pendingKrSlots];
+            let targetEnIndices = [...pendingEnSlots];
+
+            pendingKrSlots = [];
+            pendingEnSlots = [];
+
+            // 1. 방금 맞춘 카드 쌍의 수만큼 데이터베이스(Pool)에서 완전히 새로운 단어 세트를 추출합니다.
+            let newlyFetchedKr = [];
+            let newlyFetchedEn = [];
+            let count = targetKrIndices.length;
+
+            for(let i=0; i<count; i++) {
+                if(currentPool.length > 0) {
+                    let word = currentPool.pop();
+                    newlyFetchedKr.push(word.kr);
+                    newlyFetchedEn.push(word.en);
+                }
+            }
+
+            // 2. 새로 가져온 단어들을 기존의 엇갈림 대기 버퍼 배열 뒤에 순서대로 누적 합산합니다.
+            waitingKrBuffer = waitingKrBuffer.concat(newlyFetchedKr);
+            waitingEnBuffer = waitingEnBuffer.concat(newlyFetchedEn);
+
+            // 3. 톱니바퀴 교차 주입: 한쪽은 버퍼의 앞에서(가장 오래된 것), 다른 쪽은 버퍼의 뒤에서(방금 들어온 것) 추출!
+            // 이렇게 하면 요청하신 대로 "1번 자리에는 새 단어 한글(6) + 이전 단어 영어(7)" 같은 엇갈림 교차가 무한히 유지됩니다.
+            let finalKrToInsert = [];
+            let finalEnToInsert = [];
+
+            for(let i=0; i<count; i++) {
+                if(waitingKrBuffer.length > 0) {
+                    // 한국어는 버퍼 맨 앞에서 순서대로 방출
+                    finalKrToInsert.push(waitingKrBuffer.shift());
+                    // 영어는 버퍼 맨 뒤에서(가장 최근 데이터) 교차 방출하여 서로 자리가 다른 칸에 배치되도록 유도
+                    finalEnToInsert.push(waitingEnBuffer.pop());
+                }
+            }
+
+            // 4. 화면에 비어있는 슬롯 인덱스에 밀어 넣기
+            for(let i=0; i<count; i++) {
+                activeKrWords[targetKrIndices[i]] = finalKrToInsert[i];
+                activeEnWords[targetEnIndices[i]] = finalEnToInsert[i];
+            }
+
+            renderBoard();
+            applyFadeIn(finalKrToInsert, finalEnToInsert);
+        }
+
+        function applyFadeIn(krList, enList) {
+            const allButtons = board.querySelectorAll('.word-btn');
+            allButtons.forEach(btn => {
+                if(krList.includes(btn.innerText) || enList.includes(btn.innerText)) {
+                    if (btn.innerText !== "") btn.classList.add('fade-in');
+                }
+            });
+        }
+
+        function checkGameClear() {
+            if (completedKrSlots.length === 5 && completedEnSlots.length === 5) {
+                setTimeout(() => {
+                    alert("축하합니다! 모든 단어를 매칭했습니다. 확인을 누르면 새 라운드가 시작됩니다.");
+                    initGame();
+                }, 400);
+            }
+        }
+
+        function updateHUD() {
+            scoreLabel.innerText = `획득 XP: ${score}`;
+            comboLabel.innerText = `콤보 x${combo}`;
+            let progressPercent = Math.min((combo / 10) * 100, 100);
+            comboProgress.style.width = `${progressPercent}%`;
+        }
+
+        loadGameData();
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+{
+  "pattern_en": "I have to",
+  "pattern_kr": "나 ~해야 해",
+  "pattern_highlight": "I have to",
+  "sentences": [
+    { "en": "I have to go", "kr": "나 가야 해", "pron": "아이 해브 투 고" },
+    { "en": "I have to go home", "kr": "나 집에 가야 해", "pron": "아이 해브 투 고 홈" },
+    { "en": "I have to go home right now", "kr": "나 지금 당장 집에 가야 해", "pron": "아이 해브 투 고 홈 라이트 나우" },
+
+    { "en": "I have to study", "kr": "나 공부해야 해", "pron": "아이 해브 투 스터디" },
+    { "en": "I have to study English", "kr": "나 영어 공부해야 해", "pron": "아이 해브 투 스터디 잉글리시" },
+    { "en": "I have to study English for the test", "kr": "나 시험을 위해 영어 공부해야 해", "pron": "아이 해브 투 스터디 잉글리시 포어 더 테스트" },
+
+    { "en": "I have to work", "kr": "나 일해야 해", "pron": "아이 해브 투 워크" },
+    { "en": "I have to work tonight", "kr": "나 오늘 밤에 일해야 해", "pron": "아이 해브 투 워크 투나잇" },
+    { "en": "I have to work tonight until late", "kr": "나 오늘 밤 늦게까지 일해야 해", "pron": "아이 해브 투 워크 투나잇 언틸 레이트" },
+
+    { "en": "I have to wake up", "kr": "나 일어나야 해", "pron": "아이 해브 투 웨이크 업" },
+    { "en": "I have to wake up early", "kr": "나 일찍 일어나야 해", "pron": "아이 해브 투 웨이크 업 얼리" },
+    { "en": "I have to wake up early tomorrow morning", "kr": "나 내일 아침 일찍 일어나야 해", "pron": "아이 해브 투 웨이크 업 얼리 투모로우 모닝" },
+
+    { "en": "I have to clean", "kr": "나 청소해야 해", "pron": "아이 해브 투 클린" },
+    { "en": "I have to clean my room", "kr": "나 내 방 청소해야 해", "pron": "아이 해브 투 클린 마이 룸" },
+    { "en": "I have to clean my room this weekend", "kr": "나 이번 주말에 내 방 청소해야 해", "pron": "아이 해브 투 클린 마이 룸 디스 위켄드" },
+
+    { "en": "I have to buy", "kr": "나 사야 해", "pron": "아이 해브 투 바이" },
+    { "en": "I have to buy groceries", "kr": "나 식료품을 사야 해", "pron": "아이 해브 투 바이 그로서리즈" },
+    { "en": "I have to buy groceries on my way home", "kr": "나 집에 가는 길에 식료품을 사야 해", "pron": "아이 해브 투 바이 그로서리즈 온 마이 웨이 홈" },
+
+    { "en": "I have to meet", "kr": "나 만나야 해", "pron": "아이 해브 투 미트" },
+    { "en": "I have to meet my friend", "kr": "나 내 친구를 만나야 해", "pron": "아이 해브 투 미트 마이 프렌드" },
+    { "en": "I have to meet my friend at two o'clock", "kr": "나 2시에 내 친구를 만나야 해", "pron": "아이 해브 투 미트 마이 프렌드 앳 투 어클락" },
+
+    { "en": "I have to call", "kr": "나 전화해야 해", "pron": "아이 해브 투 콜" },
+    { "en": "I have to call my mom", "kr": "나 우리 엄마한테 전화해야 해", "pron": "아이 해브 투 콜 마이 맘" },
+    { "en": "I have to call my mom after dinner", "kr": "나 저녁 먹고 우리 엄마한테 전화해야 해", "pron": "아이 해브 투 콜 마이 맘 애프터 디너" },
+
+    { "en": "I have to write", "kr": "나 써야 해", "pron": "아이 해브 투 라이트" },
+    { "en": "I have to write an email", "kr": "나 이메일을 써야 해", "pron": "아이 해브 투 라이트 언 이메일" },
+    { "en": "I have to write an email to my boss", "kr": "나 내 상사에게 이메일을 써야 해", "pron": "아이 해브 투 라이트 언 이메일 투 마이 보스" },
+
+    { "en": "I have to finish", "kr": "나 끝내야 해", "pron": "아이 해브 투 피니시" },
+    { "en": "I have to finish this report", "kr": "나 이 보고서를 끝내야 해", "pron": "아이 해브 투 피니시 디스 리포트" },
+    { "en": "I have to finish this report by Friday", "kr": "나 금요일까지 이 보고서를 끝내야 해", "pron": "아이 해브 투 피니시 디스 리포트 바이 프라이데이" },
+
+    { "en": "I have to do", "kr": "나 해야 해", "pron": "아이 해브 투 두" },
+    { "en": "I have to do my homework", "kr": "나 숙제해야 해", "pron": "아이 해브 투 두 마이 홈워크" },
+    { "en": "I have to do my homework before watching TV", "kr": "나 TV 보기 전에 숙제해야 해", "pron": "아이 해브 투 두 마이 홈워크 비포어 워칭 티비" },
+
+    { "en": "I have to find", "kr": "나 찾아야 해", "pron": "아이 해브 투 파인드" },
+    { "en": "I have to find my keys", "kr": "나 내 열쇠를 찾아야 해", "pron": "아이 해브 투 파인드 마이 키즈" },
+    { "en": "I have to find my keys before leaving", "kr": "나 나가기 전에 내 열쇠를 찾아야 해", "pron": "아이 해브 투 파인드 마이 키즈 비포어 리빙" },
+
+    { "en": "I have to lose", "kr": "나 빼야 해", "pron": "아이 해브 투 루즈" },
+    { "en": "I have to lose weight", "kr": "나 몸무게를 빼야 해", "pron": "아이 해브 투 루즈 웨이트" },
+    { "en": "I have to lose weight for my health", "kr": "나 내 건강을 위해 몸무게를 빼야 해", "pron": "아이 해브 투 루즈 웨이트 포어 마이 헬스" },
+
+    { "en": "I have to wash", "kr": "나 씻어야 해", "pron": "아이 해브 투 워시" },
+    { "en": "I have to wash my hands", "kr": "나 내 손을 씻어야 해", "pron": "아이 해브 투 워시 마이 핸즈" },
+    { "en": "I have to wash my hands with soap", "kr": "나 비누로 내 손을 씻어야 해", "pron": "아이 해브 투 워시 마이 핸즈 위드 소프" },
+
+    { "en": "I have to check", "kr": "나 확인해야 해", "pron": "아이 해브 투 체크" },
+    { "en": "I have to check the schedule", "kr": "나 일정을 확인해야 해", "pron": "아이 해브 투 체크 더 스케줄" },
+    { "en": "I have to check the schedule one more time", "kr": "나 일정을 한 번 더 확인해야 해", "pron": "아이 해브 투 체크 더 스케줄 원 모어 타임" },
+
+    { "en": "I have to pay", "kr": "나 내야 해", "pron": "아이 해브 투 페이" },
+    { "en": "I have to pay the rent", "kr": "나 집세를 내야 해", "pron": "아이 해브 투 페이 더 렌트" },
+    { "en": "I have to pay the rent by tomorrow", "kr": "나 내일까지 집세를 내야 해", "pron": "아이 해브 투 페이 더 렌트 바이 투모로우" },
+
+    { "en": "I have to leave", "kr": "나 떠나야 해", "pron": "아이 해브 투 리브" },
+    { "en": "I have to leave for the airport", "kr": "나 공항으로 떠나야 해", "pron": "아이 해브 투 리브 포어 디 에어포트" },
+    { "en": "I have to leave for the airport in ten minutes", "kr": "나 10분 뒤에 공항으로 떠나야 해", "pron": "아이 해브 투 리브 포어 디 에어포트 인 텐 미니츠" },
+
+    { "en": "I have to cancel", "kr": "나 취소해야 해", "pron": "아이 해브 투 캔슬" },
+    { "en": "I have to cancel the meeting", "kr": "나 회의를 취소해야 해", "pron": "아이 해브 투 캔슬 더 미팅" },
+    { "en": "I have to cancel the meeting due to a problem", "kr": "나 문제 때문에 회의를 취소해야 해", "pron": "아이 해브 투 캔슬 더 미팅 듀 투 어 프라블럼" },
+
+    { "en": "I have to book", "kr": "나 예약해야 해", "pron": "아이 해브 투 북" },
+    { "en": "I have to book a hotel room", "kr": "나 호텔 방을 예약해야 해", "pron": "아이 해브 투 북 어 호텔 룸" },
+    { "en": "I have to book a hotel room for our vacation", "kr": "나 우리 휴가를 위해 호텔 방을 예약해야 해", "pron": "아이 해브 투 북 어 호텔 룸 포어 아워 베이케이션" },
+
+    { "en": "I have to practice", "kr": "나 연습해야 해", "pron": "아이 해브 투 프랙티스" },
+    { "en": "I have to practice the piano", "kr": "나 피아노를 연습해야 해", "pron": "아이 해브 투 프랙티스 더 피아노" },
+    { "en": "I have to practice the piano every single day", "kr": "나 매일매일 피아노를 연습해야 해", "pron": "아이 해브 투 프랙티스 더 피아노 에브리 싱글 데이" },
+
+    { "en": "I have to save", "kr": "나 아껴야 해", "pron": "아이 해브 투 세이브" },
+    { "en": "I have to save money", "kr": "나 돈을 아껴야 해", "pron": "아이 해브 투 세이브 머니" },
+    { "en": "I have to save money to buy a car", "kr": "나 차를 사기 위해 돈을 아껴야 해", "pron": "아이 해브 투 세이브 머니 투 바이 어 카" },
+
+    { "en": "I have to exercise", "kr": "나 운동해야 해", "pron": "아이 해브 투 엑서사이즈" },
+    { "en": "I have to exercise at the gym", "kr": "나 헬스장에서 운동해야 해", "pron": "아이 해브 투 엑서사이즈 앳 더 짐" },
+    { "en": "I have to exercise at the gym three times a week", "kr": "나 일주일에 세 번 헬스장에서 운동해야 해", "pron": "아이 해브 투 엑서사이즈 앳 더 짐 쓰리 타임즈 어 위크" },
+
+    { "en": "I have to prepare", "kr": "나 준비해야 해", "pron": "아이 해브 투 프리페어" },
+    { "en": "I have to prepare a presentation", "kr": "나 발표를 준비해야 해", "pron": "아이 해브 투 프리페어 어 프레젠테이션" },
+    { "en": "I have to prepare a presentation for the client", "kr": "나 고객을 위해 발표를 준비해야 해", "pron": "아이 해브 투 프리페어 어 프레젠테이션 포어 더 클라이언트" },
+
+    { "en": "I have to fix", "kr": "나 고쳐야 해", "pron": "아이 해브 투 픽스" },
+    { "en": "I have to fix my computer", "kr": "나 내 컴퓨터를 고쳐야 해", "pron": "아이 해브 투 픽스 마이 컴퓨터" },
+    { "en": "I have to fix my computer as soon as possible", "kr": "나 가능한 한 빨리 내 컴퓨터를 고쳐야 해", "pron": "아이 해브 투 픽스 마이 컴퓨터 애즈 순 애즈 파서블" },
+
+    { "en": "I have to return", "kr": "나 반납해야 해", "pron": "아이 해브 투 리턴" },
+    { "en": "I have to return this book", "kr": "나 이 책을 반납해야 해", "pron": "아이 해브 투 리턴 디스 북" },
+    { "en": "I have to return this book to the library", "kr": "나 도서관에 이 책을 반납해야 해", "pron": "아이 해브 투 리턴 디스 북 투 더 라이브러리" },
+
+    { "en": "I have to take", "kr": "나 먹어야 해", "pron": "아이 해브 투 테이크" },
+    { "en": "I have to take this medicine", "kr": "나 이 약을 먹어야 해", "pron": "아이 해브 투 테이크 디스 메디슨" },
+    { "en": "I have to take this medicine after meals", "kr": "나 식후에 이 약을 먹어야 해", "pron": "아이 해브 투 테이크 디스 메디슨 애프터 밀즈" },
+
+    { "en": "I have to send", "kr": "나 보내야 해", "pron": "아이 해브 투 샌드" },
+    { "en": "I have to send a package", "kr": "나 택배를 보내야 해", "pron": "아이 해브 투 샌드 어 패키지" },
+    { "en": "I have to send a package to my brother", "kr": "나 내 남동생에게 택배를 보내야 해", "pron": "아이 해브 투 샌드 어 패키지 투 마이 브라더" },
+
+    { "en": "I have to change", "kr": "나 바꿔야 해", "pron": "아이 해브 투 체인지" },
+    { "en": "I have to change my password", "kr": "나 내 비밀번호를 바꿔야 해", "pron": "아이 해브 투 체인지 마이 패스워드" },
+    { "en": "I have to change my password for security reasons", "kr": "나 보안상의 이유로 내 비밀번호를 바꿔야 해", "pron": "아이 해브 투 체인지 마이 패스워드 포어 시큐리티 리즌즈" },
+
+    { "en": "I have to ask", "kr": "나 물어봐야 해", "pron": "아이 해브 투 애스크" },
+    { "en": "I have to ask a question", "kr": "나 질문을 물어봐야 해", "pron": "아이 해브 투 애스크 어 퀘스천" },
+    { "en": "I have to ask a question to the teacher", "kr": "나 선생님께 질문을 물어봐야 해", "pron": "아이 해브 투 애스크 어 퀘스천 투 더 티처" },
+
+    { "en": "I have to listen", "kr": "나 들어야 해", "pron": "아이 해브 투 리슨" },
+    { "en": "I have to listen to the lecture", "kr": "나 강의를 들어야 해", "pron": "아이 해브 투 리슨 투 더 렉처" },
+    { "en": "I have to listen to the online lecture carefully", "kr": "나 온라인 강의를 주의 깊게 들어야 해", "pron": "아이 해브 투 리슨 투 디 온라인 렉처 케어풀리" },
+
+    { "en": "I have to wait", "kr": "나 기다려야 해", "pron": "아이 해브 투 웨이트" },
+    { "en": "I have to wait for the bus", "kr": "나 버스를 기다려야 해", "pron": "아이 해브 투 웨이트 포어 더 버스" },
+    { "en": "I have to wait for the bus at the stop", "kr": "나 정류장에서 버스를 기다려야 해", "pron": "아이 해브 투 웨이트 포어 더 버스 앳 더 스탑" },
+
+    { "en": "I have to refuse", "kr": "나 거절해야 해", "pron": "아이 해브 투 리퓨즈" },
+    { "en": "I have to refuse the offer", "kr": "나 제안을 거절해야 해", "pron": "아이 해브 투 리퓨즈 디 오퍼" },
+    { "en": "I have to refuse the offer politely", "kr": "나 제안을 정중하게 거절해야 해", "pron": "아이 해브 투 리퓨즈 디 오퍼 폴라이틀리" },
+
+    { "en": "I have to think", "kr": "나 생각해야 해", "pron": "아이 해브 투 띵크" },
+    { "en": "I have to think about it", "kr": "나 그것에 대해 생각해야 해", "pron": "아이 해브 투 띵크 어바웃 잇" },
+    { "en": "I have to think about it until tonight", "kr": "나 오늘 밤까지 그것에 대해 생각해야 해", "pron": "아이 해브 투 띵크 어바웃 잇 언틸 투나잇" },
+
+    { "en": "I have to print", "kr": "나 인쇄해야 해", "pron": "아이 해브 투 프린트" },
+    { "en": "I have to print some documents", "kr": "나 서류 몇 장을 인쇄해야 해", "pron": "아이 해브 투 프린트 썸 다큐먼츠" },
+    { "en": "I have to print some documents for the meeting", "kr": "나 회의를 위해 서류 몇 장을 인쇄해야 해", "pron": "아이 해브 투 프린트 썸 다큐먼츠 포어 더 미팅" }
+  ]
+}

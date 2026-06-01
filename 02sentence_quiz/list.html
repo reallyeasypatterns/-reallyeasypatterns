@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    function includeTop() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/top.html', false); // 동기 방식으로 로드하여 마크업이 그려진 후 본문이 오도록 제어
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeTop();    
+</script>
+<style>
+</style>
+<script type="text/javascript">
+</script>
+<div id="contents">
+    <div class="wrap">
+        <h2 class="m2">문장퀴즈</h2>
+        <p class="page_t_guide">각 레슨에서 사용된 <em>다양한 난이도의 문장</em>으로 퀴즈를 풀어보세요.</p>
+        <div class="search_box">
+            <input type="text" id="quiz_pattern_search" placeholder="영어 패턴이나 뜻을 검색해보세요!" />
+        </div>
+        <div class="quiz_pattern_list"></div>
+        <div class="quiz_list_fixed">
+            <div class="wrap">
+                <p><em>0</em> 개의 패턴을 선택하셨습니다. (3개 이상 선택)</p>
+                <a href="quiz.html" id="btn_start_quiz" class="disabled">선택 완료</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function includeFooter() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/bottom.html', false);
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeFooter();
+</script>
