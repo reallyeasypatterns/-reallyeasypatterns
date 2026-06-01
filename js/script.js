@@ -182,17 +182,6 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-    $('.box + a').on('mousedown touchstart', function(e) {
-        e.preventDefault();
-        $(this).closest('li').addClass('active');
-    });
-
-    $(document).on('mouseup mouseleave touchend', function() {
-        $('li.active').removeClass('active');
-    });
-});
-
-$(document).ready(function() {
     $('.lesson .sentences .op li input').on('change', function() {
         var idx = $(this).parent().index();
         var isChecked = $(this).is(':checked');
