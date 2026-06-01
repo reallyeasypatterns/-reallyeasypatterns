@@ -8,7 +8,6 @@
     includeTop();
 </script>
 <style>
-
 </style>
 
 <div id="contents">
@@ -34,6 +33,59 @@
 
             <div class="game-board" id="game-board"></div>
 
+        </div>
+    </div>
+</div>
+<div class="wg_result_bg" id="clear_popup_bg">
+    <div class="wg_result_popup" id="clear_popup">
+        <div class="wg_pu_header">🎉 GAME CLEAR!</div>
+        <div class="wg_pu_body">
+            <p>축하합니다! 모든 단어를 매칭했습니다.</p>
+            <div class="wg_clear_stats">
+                <dl>
+                    <dt>⏱️ 클리어 시간</dt>
+                    <dd id="popup_clear_time">0초</dd>
+                </dl>
+                <dl>
+                    <dt>🔥 최대 콤보</dt>
+                    <dd id="popup_max_combo">0 콤보</dd>
+                </dl>
+            </div>
+
+            <div class="wg_wrong_section" id="wrong_word_section" style="display:none;">
+                <button type="button" class="btn_wrong_toggle" id="btn_wrong_toggle">틀린 단어 보기 (<span>0</span>)</button>
+                <div class="wg_wrong_wrap" id="wrong_word_wrap">
+                    <ul class="wg_wrong_list" id="wrong_word_list">
+                        </ul>
+                </div>
+            </div>
+        </div>
+        <div class="wg_pu_footer">
+            <button type="button" class="btn_wg_retry" id="btn_game_retry">다시 도전</button>
+            <a href="./list.html" class="btn_wg_retry btn_list">리스트로</a>
+        </div>
+    </div>
+</div>
+<!-- 게임 오버 레이어 팝업 -->
+<div class="wg_result_bg" id="over_popup_bg" style="display:none;">
+    <div class="wg_result_popup" id="over_popup">
+        <div class="wg_pu_header" style="color:#de3545;">⏰ GAME OVER</div>
+        <div class="wg_pu_body">
+            <p>제한 시간이 초과되었습니다!</p>
+            <div class="wg_clear_stats">
+                <dl>
+                    <dt>🎯 매칭 성공</dt>
+                    <dd id="popup_over_progress">0 / 0</dd>
+                </dl>
+                <dl>
+                    <dt>🔥 최대 콤보</dt>
+                    <dd id="popup_over_max_combo">0 콤보</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="wg_pu_footer">
+            <button type="button" class="btn_wg_retry" id="btn_game_over_retry">다시 도전</button>
+            <a href="./list.html" class="btn_wg_retry btn_list">리스트</a>
         </div>
     </div>
 </div>

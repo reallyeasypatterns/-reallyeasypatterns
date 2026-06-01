@@ -22,6 +22,9 @@ $(document).ready(function() {
     var isWrongReviewStage = false;
     var firstTryCorrectCount = 0;
 
+    // 성공 효과음 오디오 객체 생성
+    var correctAudio = new Audio('../audio/correct.mp3');
+
     // 1. 데이터 로드 초기 검증
     var savedQuizData = localStorage.getItem('current_quiz_set');
     if (!savedQuizData) {
@@ -51,7 +54,7 @@ $(document).ready(function() {
 
     // 3. 문제 렌더링 함수
     function loadQuiz(index) {
-        // [수정 포인트] 이전 문제 오버레이 메시지 및 버튼 토글 상태 초기화
+        // 이전 문제 오버레이 메시지 및 버튼 토글 상태 초기화
         $('.quiz_overlay_msg').removeClass('msg_correct msg_wrong').hide();
         $('#btn_next').hide();
         $('#btn_check').show();
@@ -123,6 +126,10 @@ $(document).ready(function() {
         var isCorrect = userAnswerStr.toLowerCase() === originAnswerStr.toLowerCase();
         
         if (isCorrect) {
+            // [효과음 재생] 매칭 성공 시 연속 유입으로 인한 씹힘을 방지하고 즉시 오디오를 출력합니다.
+            correctAudio.currentTime = 0;
+            correctAudio.play();
+
             if (!isWrongReviewStage) firstTryCorrectCount++;
 
             $('.quiz_overlay_msg').addClass('msg_correct');
@@ -136,10 +143,10 @@ $(document).ready(function() {
             $('.overlay_txt').html('정답 예문을 확인하고 기억해 보세요.<span class="origin_text">' + originAnswerStr + '</span>');
         }
 
-        // [수정 포인트] 퀴즈 센텐스 영역 위에 오버레이 메시지 flex 형태로 노출
+        // 퀴즈 센텐스 영역 위에 오버레이 메시지 flex 형태로 노출
         $('.quiz_overlay_msg').css('display', 'flex');
         
-        // [수정 포인트] 하단 제어 구역 버튼 가시성 교체 교환 (클릭 좌표 고정)
+        // 하단 제어 구역 버튼 가시성 교체 교환 (클릭 좌표 고정)
         $('#btn_check').hide();
         $('#btn_next').show();
     });

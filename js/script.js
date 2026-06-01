@@ -505,6 +505,11 @@ $(document).ready(function() {
     let waitingKrBuffer = [];
     let waitingEnBuffer = [];
 
+    let wrongWordsPool = [];   // 틀린 단어 쌍을 중복 없이 담아둘 배열
+    
+    // 성공 효과음 오디오 객체 생성
+    const correctAudio = new Audio('../audio/correct2.mp3');
+
     const board = document.getElementById("game-board");
     const comboLabel = document.getElementById("combo-label");
     const gameProgress = document.getElementById("game-progress");
@@ -594,7 +599,14 @@ $(document).ready(function() {
         maxCombo = 0;
         isFinalFiveMode = false;
 
-        // 타이머 설정 (한 쌍당 1초)
+        // 오답 노트 기록 및 버튼 UI 리셋
+        wrongWordsPool = [];
+        $('#btn_wrong_toggle').removeClass('on');
+        $('#wrong_word_wrap').hide();
+        $('#wrong_word_list').html('');
+        $('#wrong_word_section').hide();
+
+        // 타이머 설정 (한 쌍당 1.5초)
         totalTimeLimit = wordDatabase.length * 1.5;
         timeLeft = totalTimeLimit;
         
@@ -624,14 +636,19 @@ $(document).ready(function() {
                 timeLeft = 0;
                 clearInterval(timerInterval);
                 updateHUD();
+                
+                // 게임 오버 레이어 팝업 제어
                 setTimeout(() => {
-                    alert("⏰ 시간이 초과되었습니다! 게임 오버.");
-                    initGame(); // 게임 재시작
+                    const totalWords = wordDatabase.length;
+                    document.getElementById('popup_over_progress').innerText = `${matchedCount} / ${totalWords}`;
+                    document.getElementById('popup_over_max_combo').innerText = `${maxCombo} 콤보`;
+                    
+                    $('#over_popup_bg').fadeIn(200);
                 }, 100);
                 return;
             }
             updateHUD();
-        }, 1000); // 1초 단위 구동
+        }, 1000);
     }
 
     function renderBoard() {
@@ -703,6 +720,10 @@ $(document).ready(function() {
             const match = wordDatabase.find(w => w.kr === krVal && w.en === enVal);
 
             if (match) {
+                // 매칭 성공 효과음 재생 (연속 재생 시 음 잘림 방지 처리)
+                correctAudio.currentTime = 0;
+                correctAudio.play();
+
                 matchedCount += 1; // 맞춘 개수 증가
                 combo += 1;        // 콤보 증가
                 if (combo > maxCombo) maxCombo = combo; // 맥스 콤보 갱신
@@ -773,6 +794,15 @@ $(document).ready(function() {
                 if(targetKrBtn) targetKrBtn.classList.add("wrong");
                 if(targetEnBtn) targetEnBtn.classList.add("wrong");
                 
+                // 틀린 단어의 올바른 짝을 찾아 수집 (중복 제거 검증)
+                const correctPair = wordDatabase.find(w => w.kr === krVal || w.en === enVal);
+                if (correctPair) {
+                    const isAlreadyAdded = wrongWordsPool.some(w => w.kr === correctPair.kr);
+                    if (!isAlreadyAdded) {
+                        wrongWordsPool.push(correctPair);
+                    }
+                }
+
                 combo = 0; // 틀리면 콤보 리셋
                 updateHUD();
 
@@ -839,25 +869,58 @@ $(document).ready(function() {
             const clearTime = totalTimeLimit - timeLeft; // 걸린 시간 계산
 
             setTimeout(() => {
-                alert(`🎉 축하합니다! 모든 단어를 매칭했습니다.\n\n⏱️ 클리어 시간: ${clearTime}초\n🔥 최대 콤보: ${maxCombo} 콤보`);
-                initGame();
+                // 레이어 팝업 내부 통계 데이터 주입
+                document.getElementById('popup_clear_time').innerText = `${clearTime}초`;
+                document.getElementById('popup_max_combo').innerText = `${maxCombo} 콤보`;
+                
+                // 오답 데이터 화면 매핑 처리
+                const wrongCount = wrongWordsPool.length;
+                $('#btn_wrong_toggle').find('span').text(wrongCount);
+
+                if (wrongCount > 0) {
+                    let listHtml = '';
+                    wrongWordsPool.forEach(w => {
+                        listHtml += `<li><span>${w.kr}</span><span>${w.en}</span></li>`;
+                    });
+                    $('#wrong_word_list').html(listHtml);
+                    $('#wrong_word_section').show();
+                } else {
+                    $('#wrong_word_section').hide();
+                }
+                
+                // 클리어 배경 팝업 띄우기
+                $('#clear_popup_bg').fadeIn(200);
             }, 400);
         }
     }
+    
+    // 단어게임 결과 팝업창 닫기 및 재시작 이벤트
+    $('#btn_game_retry').stop().click(function() {
+        $('#clear_popup_bg').fadeOut(200);
+        initGame();
+    });
+
+    // 게임 오버 팝업창 닫기 및 재시작 이벤트
+    $('#btn_game_over_retry').stop().click(function() {
+        $('#over_popup_bg').fadeOut(200);
+        initGame();
+    });
+
+    // 틀린 단어 리스트 아코디언 토글 이벤트
+    $('#btn_wrong_toggle').stop().click(function() {
+        $(this).toggleClass('on');
+        $('#wrong_word_wrap').slideToggle(200);
+    });
 
     // 상단 UI 요소 업데이트 (프로그래스바, 콤보, 타이머)
     function updateHUD() {
-        // 1. 전체 진행 상황 업데이트
         const totalWords = wordDatabase.length;
         progressLabel.innerText = `${matchedCount} / ${totalWords}`;
         
         let progressPercent = totalWords > 0 ? (matchedCount / totalWords) * 100 : 0;
         gameProgress.style.width = `${progressPercent}%`;
 
-        // 2. 콤보 텍스트 업데이트
         comboLabel.innerText = `${combo} 콤보`;
-
-        // 4. 타이머 텍스트 업데이트
         timerLabel.innerText = `제한시간 ${timeLeft}초`;
     }
 
