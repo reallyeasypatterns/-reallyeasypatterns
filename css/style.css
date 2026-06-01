@@ -151,7 +151,7 @@ body { background: #000a14; }
 .m_cards li:nth-child(1) .box { background: var(--color_green); }
 .m_cards li:nth-child(2) .box { background: var(--color_yellow); }
 .m_cards li:nth-child(3) .box { background: var(--color_red); }
-.m_cards li.active .box { transform: translateX(12px) translateY(12px); }
+.m_cards li:active .box { transform: translateX(12px) translateY(12px); }
 .m_cards li:nth-child(2) { color: #000a14; }
 .m_cards li::before { content: ''; position: absolute; top: 12px; left: 12px; width: 100%; height: 100%; border-radius: 20px 20px 0 20px; opacity: 0.3; }
 .m_cards li:nth-child(1)::before { background: var(--color_green); }
@@ -176,7 +176,7 @@ body { background: #000a14; }
 .m_cards { flex-direction: column; gap: 25px; }
 .m_cards li { width: 100%; font-size: 20px; }
 .m_cards li .box { padding: 20px 20px 50px; border-radius: 15px 15px 0 15px; }
-.m_cards li.active .box { transform: translateX(10px) translateY(10px); }
+.m_cards li:active .box { transform: translateX(10px) translateY(10px); }
 .m_cards li::before { top: 10px; left: 10px; border-radius: 15px 15px 0 15px; }
 .m_cards li dt { font-size: 30px; margin-bottom: 12px; }
 .m_cards li .ill { margin: 0; position: absolute; right: 0; bottom: 0; }
@@ -194,7 +194,7 @@ body { background: #000a14; }
 .m_cards { gap: 20px; }
 .m_cards li { font-size: 18px; }
 .m_cards li .box { padding-bottom: 35px; }
-.m_cards li.active .box { transform: translateX(7px) translateY(7px); }
+.m_cards li:active .box { transform: translateX(7px) translateY(7px); }
 .m_cards li::before { top: 7px; left: 7px; }
 .m_cards li dt { font-size: 26px; margin-bottom: 10px; }
 .m_cards li .ill img { width: 120px; }
