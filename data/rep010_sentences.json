@@ -1,0 +1,157 @@
+{
+  "pattern_en": "I don't think",
+  "pattern_kr": "~인 것 같지 않아",
+  "pattern_highlight": "I don't think",
+  "sentences": [
+    { "en": "I don't think he knows", "kr": "그가 아는 것 같지 않아", "pron": "아이 돈 띵크 히 노우즈" },
+    { "en": "I don't think he knows the answer", "kr": "그가 답을 아는 것 같지 않아", "pron": "아이 돈 띵크 히 노우즈 디 앤서" },
+
+    { "en": "I don't think it will rain", "kr": "비가 올 것 같지 않아", "pron": "아이 돈 띵크 잇 윌 레인" },
+    { "en": "I don't think it will rain today", "kr": "오늘 비가 올 것 같지 않아", "pron": "아이 돈 띵크 잇 윌 레인 투데이" },
+
+    { "en": "I don't think we have enough", "kr": "충분하지 않은 것 같아", "pron": "아이 돈 띵크 위 해브 이너프" },
+    { "en": "I don't think we have enough money", "kr": "돈이 충분하지 않은 것 같아", "pron": "아이 돈 띵크 위 해브 이너프 머니" },
+
+    { "en": "I don't think she is coming", "kr": "그녀가 오는 것 같지 않아", "pron": "아이 돈 띵크 쉬 이즈 커밍" },
+    { "en": "I don't think she is coming tonight", "kr": "그녀가 오늘 밤 오는 것 같지 않아", "pron": "아이 돈 띵크 쉬 이즈 커밍 투나잇" },
+
+    { "en": "I don't think this is good", "kr": "이게 좋은 것 같지 않아", "pron": "아이 돈 띵크 디스 이즈 굿" },
+    { "en": "I don't think this is a good idea", "kr": "이게 좋은 생각인 것 같지 않아", "pron": "아이 돈 띵크 디스 이즈 어 굿 아이디어" },
+
+    { "en": "I don't think you should worry", "kr": "네가 걱정할 필요는 없는 것 같아", "pron": "아이 돈 띵크 유 슈드 워리" },
+    { "en": "I don't think you should worry about it", "kr": "그것 때문에 걱정할 필요는 없는 것 같아", "pron": "아이 돈 띵크 유 슈드 워리 어바웃 잇" },
+
+    { "en": "I don't think they will agree", "kr": "그들이 동의할 것 같지 않아", "pron": "아이 돈 띵크 데이 윌 어그리" },
+    { "en": "I don't think they will agree with us", "kr": "그들이 우리 의견에 동의할 것 같지 않아", "pron": "아이 돈 띵크 데이 윌 어그리 위드 어스" },
+
+    { "en": "I don't think it's expensive", "kr": "비싼 것 같지 않아", "pron": "아이 돈 띵크 잇츠 익스펜시브" },
+    { "en": "I don't think it's that expensive", "kr": "그렇게 비싼 것 같지 않아", "pron": "아이 돈 띵크 잇츠 댓 익스펜시브" },
+
+    { "en": "I don't think I can finish", "kr": "내가 끝낼 수 있을 것 같지 않아", "pron": "아이 돈 띵크 아이 캔 피니시" },
+    { "en": "I don't think I can finish this today", "kr": "오늘 이걸 끝낼 수 없을 것 같아", "pron": "아이 돈 띵크 아이 캔 피니시 디스 투데이" },
+
+    { "en": "I don't think he will like it", "kr": "그가 그걸 좋아할 것 같지 않아", "pron": "아이 돈 띵크 히 윌 라이크 잇" },
+    { "en": "I don't think he will like this gift", "kr": "그가 이 선물을 좋아할 것 같지 않아", "pron": "아이 돈 띵크 히 윌 라이크 디스 기프트" },
+
+    { "en": "I don't think we can find one", "kr": "우리가 하나 찾을 수 있을 것 같지 않아", "pron": "아이 돈 띵크 위 캔 파인드 원" },
+    { "en": "I don't think we can find a taxi now", "kr": "지금 택시를 잡을 수 없을 것 같아", "pron": "아이 돈 띵크 위 캔 파인드 어 택시 나우" },
+
+    { "en": "I don't think it is open", "kr": "문을 연 것 같지 않아", "pron": "아이 돈 띵크 잇 이즈 오픈" },
+    { "en": "I don't think it is open on Sundays", "kr": "일요일에는 문을 열지 않는 것 같아", "pron": "아이 돈 띵크 잇 이즈 오픈 온 선데이즈" },
+
+    { "en": "I don't think you need it", "kr": "그게 필요 없는 것 같아", "pron": "아이 돈 띵크 유 니드 잇" },
+    { "en": "I don't think you need a new phone", "kr": "새 휴대폰이 필요 없는 것 같아", "pron": "아이 돈 띵크 유 니드 어 뉴 폰" },
+
+    { "en": "I don't think I have seen it", "kr": "그걸 본 적이 없는 것 같아", "pron": "아이 돈 띵크 아이 해브 신 잇" },
+    { "en": "I don't think I have seen this movie before", "kr": "이 영화를 본 적이 없는 것 같아", "pron": "아이 돈 띵크 아이 해브 신 디스 무비 비포어" },
+
+    { "en": "I don't think the store accepts cards", "kr": "그 가게는 카드를 받지 않는 것 같아", "pron": "아이 돈 띵크 더 스토어 액셉츠 카드즈" },
+    { "en": "I don't think the store accepts credit cards", "kr": "그 가게는 신용카드를 받지 않는 것 같아", "pron": "아이 돈 띵크 더 스토어 액셉츠 크레딧 카드즈" },
+
+    { "en": "I don't think anyone is here", "kr": "아무도 없는 것 같아", "pron": "아이 돈 띵크 애니원 이즈 히어" },
+    { "en": "I don't think anyone is in the office", "kr": "사무실에 아무도 없는 것 같아", "pron": "아이 돈 띵크 애니원 이즈 인 디 오피스" },
+
+    { "en": "I don't think this bus goes there", "kr": "이 버스는 거기로 가지 않는 것 같아", "pron": "아이 돈 띵크 디스 버스 고우즈 데어" },
+    { "en": "I don't think this bus goes to the airport", "kr": "이 버스는 공항으로 가지 않는 것 같아", "pron": "아이 돈 띵크 디스 버스 고우즈 투 디 에어포트" },
+
+    { "en": "I don't think it makes sense", "kr": "말이 안 되는 것 같아", "pron": "아이 돈 띵크 잇 메이크스 센스" },
+    { "en": "I don't think it makes any sense", "kr": "전혀 말이 안 되는 것 같아", "pron": "아이 돈 띵크 잇 메이크스 애니 센스" },
+
+    { "en": "I don't think we should wait", "kr": "기다릴 필요가 없는 것 같아", "pron": "아이 돈 띵크 위 슈드 웨이트" },
+    { "en": "I don't think we should wait any longer", "kr": "더 기다릴 필요는 없는 것 같아", "pron": "아이 돈 띵크 위 슈드 웨이트 애니 롱거" },
+
+    { "en": "I don't think the Wi-Fi works", "kr": "와이파이가 작동하지 않는 것 같아", "pron": "아이 돈 띵크 더 와이파이 웍스" },
+    { "en": "I don't think the Wi-Fi works right now", "kr": "지금 와이파이가 안 되는 것 같아", "pron": "아이 돈 띵크 더 와이파이 웍스 라이트 나우" },
+
+    { "en": "I don't think you understand", "kr": "네가 이해하지 못하는 것 같아", "pron": "아이 돈 띵크 유 언더스탠드" },
+    { "en": "I don't think you understand my situation", "kr": "네가 내 상황을 이해하지 못하는 것 같아", "pron": "아이 돈 띵크 유 언더스탠드 마이 시추에이션" },
+    
+    { "en": "I don't think he remembers", "kr": "그가 기억하지 못하는 것 같아", "pron": "아이 돈 띵크 히 리멤버즈" },
+    { "en": "I don't think he remembers my name", "kr": "그가 내 이름을 기억하지 못하는 것 같아", "pron": "아이 돈 띵크 히 리멤버즈 마이 네임" },
+
+    { "en": "I don't think there is a problem", "kr": "문제가 없는 것 같아", "pron": "아이 돈 띵크 데어 이즈 어 프라블럼" },
+    { "en": "I don't think there is a problem with it", "kr": "그것에 문제가 없는 것 같아", "pron": "아이 돈 띵크 데어 이즈 어 프라블럼 위드 잇" },
+
+    { "en": "I don't think I can come", "kr": "내가 갈 수 없을 것 같아", "pron": "아이 돈 띵크 아이 캔 컴" },
+    { "en": "I don't think I can come tonight", "kr": "오늘 밤 갈 수 없을 것 같아", "pron": "아이 돈 띵크 아이 캔 컴 투나잇" },
+
+    { "en": "I don't think this key fits", "kr": "이 열쇠가 맞지 않는 것 같아", "pron": "아이 돈 띵크 디스 키 핏츠" },
+    { "en": "I don't think this key fits the door", "kr": "이 열쇠가 이 문에 맞지 않는 것 같아", "pron": "아이 돈 띵크 디스 키 핏츠 더 도어" },
+
+    { "en": "I don't think she likes it", "kr": "그녀가 그걸 좋아하지 않는 것 같아", "pron": "아이 돈 띵크 쉬 라이크스 잇" },
+    { "en": "I don't think she likes spicy food", "kr": "그녀가 매운 음식을 좋아하지 않는 것 같아", "pron": "아이 돈 띵크 쉬 라이크스 스파이시 푸드" },
+
+    { "en": "I don't think it's easy", "kr": "쉽지 않은 것 같아", "pron": "아이 돈 띵크 잇츠 이지" },
+    { "en": "I don't think it's easy to find", "kr": "찾기 쉽지 않은 것 같아", "pron": "아이 돈 띵크 잇츠 이지 투 파인드" },
+
+    { "en": "I don't think they know", "kr": "그들이 모르는 것 같아", "pron": "아이 돈 띵크 데이 노우" },
+    { "en": "I don't think they know how to use it", "kr": "그들이 그걸 사용하는 방법을 모르는 것 같아", "pron": "아이 돈 띵크 데이 노우 하우 투 유즈 잇" },
+
+    { "en": "I don't think we need to call", "kr": "전화할 필요는 없는 것 같아", "pron": "아이 돈 띵크 위 니드 투 콜" },
+    { "en": "I don't think we need to call a repairman", "kr": "수리 기사를 부를 필요는 없는 것 같아", "pron": "아이 돈 띵크 위 니드 투 콜 어 리페어맨" },
+
+    { "en": "I don't think this room has one", "kr": "이 방에는 없는 것 같아", "pron": "아이 돈 띵크 디스 룸 해즈 원" },
+    { "en": "I don't think this room has a good view", "kr": "이 방은 전망이 좋은 것 같지 않아", "pron": "아이 돈 띵크 디스 룸 해즈 어 굿 뷰" },
+
+    { "en": "I don't think I left it", "kr": "내가 그걸 두고 오지 않은 것 같아", "pron": "아이 돈 띵크 아이 레프트 잇" },
+    { "en": "I don't think I left my phone in the car", "kr": "휴대폰을 차에 두고 오지 않은 것 같아", "pron": "아이 돈 띵크 아이 레프트 마이 폰 인 더 카" },
+
+    { "en": "I don't think he is ready", "kr": "그가 준비되지 않은 것 같아", "pron": "아이 돈 띵크 히 이즈 레디" },
+    { "en": "I don't think he is ready for the test", "kr": "그가 시험 준비가 안 된 것 같아", "pron": "아이 돈 띵크 히 이즈 레디 포 더 테스트" },
+
+    { "en": "I don't think this milk is fresh", "kr": "이 우유가 신선하지 않은 것 같아", "pron": "아이 돈 띵크 디스 밀크 이즈 프레시" },
+    { "en": "I don't think this milk is fresh anymore", "kr": "이 우유는 이제 신선하지 않은 것 같아", "pron": "아이 돈 띵크 디스 밀크 이즈 프레시 애니모어" },
+
+    { "en": "I don't think we can change it", "kr": "우리가 그걸 바꿀 수 없을 것 같아", "pron": "아이 돈 띵크 위 캔 체인지 잇" },
+    { "en": "I don't think we can change the schedule now", "kr": "지금 일정을 바꿀 수 없을 것 같아", "pron": "아이 돈 띵크 위 캔 체인지 더 스케줄 나우" },
+
+    { "en": "I don't think you should eat it", "kr": "그걸 먹지 않는 게 좋을 것 같아", "pron": "아이 돈 띵크 유 슈드 잇 잇" },
+    { "en": "I don't think you should eat that food", "kr": "그 음식은 먹지 않는 게 좋을 것 같아", "pron": "아이 돈 띵크 유 슈드 잇 댓 푸드" },
+
+    { "en": "I don't think this game is good", "kr": "이 게임이 좋은 것 같지 않아", "pron": "아이 돈 띵크 디스 게임 이즈 굿" },
+    { "en": "I don't think this game is suitable for kids", "kr": "이 게임은 아이들에게 적합하지 않은 것 같아", "pron": "아이 돈 띵크 디스 게임 이즈 수터블 포 키즈" },
+
+    { "en": "I don't think he will stay", "kr": "그가 오래 있지 않을 것 같아", "pron": "아이 돈 띵크 히 윌 스테이" },
+    { "en": "I don't think he will stay very long", "kr": "그가 오래 머물지는 않을 것 같아", "pron": "아이 돈 띵크 히 윌 스테이 베리 롱" },
+
+    { "en": "I don't think we can arrive", "kr": "우리가 도착할 수 없을 것 같아", "pron": "아이 돈 띵크 위 캔 어라이브" },
+    { "en": "I don't think we can arrive before dark", "kr": "해지기 전에 도착하지 못할 것 같아", "pron": "아이 돈 띵크 위 캔 어라이브 비포어 다크" },
+
+    { "en": "I don't think she will notice", "kr": "그녀가 알아채지 못할 것 같아", "pron": "아이 돈 띵크 쉬 윌 노티스" },
+    { "en": "I don't think she will notice the mistake", "kr": "그녀가 그 실수를 알아채지 못할 것 같아", "pron": "아이 돈 띵크 쉬 윌 노티스 더 미스테이크" },
+
+    { "en": "I don't think this movie is good", "kr": "이 영화가 좋은 것 같지 않아", "pron": "아이 돈 띵크 디스 무비 이즈 굿" },
+    { "en": "I don't think this movie is as good as the first one", "kr": "이 영화는 1편만큼 좋은 것 같지 않아", "pron": "아이 돈 띵크 디스 무비 이즈 애즈 굿 애즈 더 퍼스트 원" },
+
+    { "en": "I don't think you can buy them", "kr": "그걸 살 수 없을 것 같아", "pron": "아이 돈 띵크 유 캔 바이 뎀" },
+    { "en": "I don't think you can buy tickets there", "kr": "거기서는 표를 살 수 없을 것 같아", "pron": "아이 돈 띵크 유 캔 바이 티켓츠 데어" },
+
+    { "en": "I don't think this plan will work", "kr": "이 계획이 잘 안 될 것 같아", "pron": "아이 돈 띵크 디스 플랜 윌 워크" },
+    { "en": "I don't think this plan will work out well", "kr": "이 계획은 잘 풀리지 않을 것 같아", "pron": "아이 돈 띵크 디스 플랜 윌 워크 아웃 웰" },
+
+    { "en": "I don't think we should buy it", "kr": "그걸 사지 않는 게 좋을 것 같아", "pron": "아이 돈 띵크 위 슈드 바이 잇" },
+    { "en": "I don't think we should buy a new car yet", "kr": "아직 새 차를 살 때는 아닌 것 같아", "pron": "아이 돈 띵크 위 슈드 바이 어 뉴 카 옛" },
+
+    { "en": "I don't think he is hiding anything", "kr": "그가 아무것도 숨기고 있지 않은 것 같아", "pron": "아이 돈 띵크 히 이즈 하이딩 애니띵" },
+    { "en": "I don't think he is hiding anything from us", "kr": "그가 우리에게 숨기는 것은 없는 것 같아", "pron": "아이 돈 띵크 히 이즈 하이딩 애니띵 프롬 어스" },
+
+    { "en": "I don't think the rain will stop", "kr": "비가 그치지 않을 것 같아", "pron": "아이 돈 띵크 더 레인 윌 스탑" },
+    { "en": "I don't think the rain will stop soon", "kr": "비가 곧 그치지 않을 것 같아", "pron": "아이 돈 띵크 더 레인 윌 스탑 순" },
+
+    { "en": "I don't think she heard me", "kr": "그녀가 내 말을 듣지 못한 것 같아", "pron": "아이 돈 띵크 쉬 허드 미" },
+    { "en": "I don't think she heard me clearly", "kr": "그녀가 내 말을 분명하게 듣지 못한 것 같아", "pron": "아이 돈 띵크 쉬 허드 미 클리얼리" },
+
+    { "en": "I don't think this seat is taken", "kr": "이 자리는 주인이 없는 것 같아", "pron": "아이 돈 띵크 디스 시트 이즈 테이큰" },
+    { "en": "I don't think this seat is taken right now", "kr": "지금 이 자리는 비어 있는 것 같아", "pron": "아이 돈 띵크 디스 시트 이즈 테이큰 라이트 나우" },
+
+    { "en": "I don't think we are late", "kr": "우리가 늦은 것 같지 않아", "pron": "아이 돈 띵크 위 아 레이트" },
+    { "en": "I don't think we are late for the meeting", "kr": "우리가 회의에 늦은 것 같지 않아", "pron": "아이 돈 띵크 위 아 레이트 포 더 미팅" },
+
+    { "en": "I don't think he needs help", "kr": "그가 도움이 필요한 것 같지 않아", "pron": "아이 돈 띵크 히 니즈 헬프" },
+    { "en": "I don't think he needs help with this task", "kr": "그가 이 일을 하는 데 도움이 필요한 것 같지 않아", "pron": "아이 돈 띵크 히 니즈 헬프 위드 디스 태스크" },
+
+    { "en": "I don't think they are ready", "kr": "그들이 준비된 것 같지 않아", "pron": "아이 돈 띵크 데이 아 레디" },
+    { "en": "I don't think they are ready to leave yet", "kr": "그들이 아직 떠날 준비가 안 된 것 같아", "pron": "아이 돈 띵크 데이 아 레디 투 리브 옛" }
+
+  ]
+}

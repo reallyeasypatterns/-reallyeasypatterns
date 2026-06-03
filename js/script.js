@@ -53,8 +53,8 @@ $(document).ready(function() {
         { en: "I need to ~", kr: "~할 필요가 있어 (해야 해)", url: "lesson_006.html" },
         { en: "Do you want to ~?", kr: "~하고 싶어?", url: "lesson_007.html" },
         { en: "Do you like ~?", kr: "~ 좋아해?", url: "lesson_008.html" },
-        { en: "I like to ~", kr: "~하는 걸 좋아해", url: "" },
-        { en: "I don't think ~", kr: "~인 것 같지 않아 (내 생각엔 ~가 아니야)", url: "" },
+        { en: "I like to ~", kr: "~하는 걸 좋아해", url: "lesson_009.html" },
+        { en: "I don't think ~", kr: "~인 것 같지 않아 (내 생각엔 ~가 아니야)", url: "lesson_010.html" },
         { en: "It's time to ~", kr: "~할 시간이야", url: "" },
         { en: "Are you sure ~?", kr: "정말 ~야? (확실해?)", url: "" },
         { en: "I'm sorry for ~", kr: "~해서 미안해", url: "" },
@@ -255,8 +255,8 @@ $(document).ready(function() {
         { en: "I need to ~", kr: "~할 필요가 있어 (해야 해)", json: "../data/rep006_sentences.json" },
         { en: "Do you want to ~?", kr: "~하고 싶어?", json: "../data/rep007_sentences.json" },
         { en: "Do you like ~?", kr: "~ 좋아해?", json: "../data/rep008_sentences.json" },
-        { en: "I like to ~", kr: "~하는 걸 좋아해", json: "" },
-        { en: "I don't think ~", kr: "~인 것 같지 않아 (내 생각엔 ~가 아니야)", json: "" },
+        { en: "I like to ~", kr: "~하는 걸 좋아해", json: "../data/rep009_sentences.json" },
+        { en: "I don't think ~", kr: "~인 것 같지 않아 (내 생각엔 ~가 아니야)", json: "../data/rep010_sentences.json" },
         { en: "It's time to ~", kr: "~할 시간이야", json: "" },
         { en: "Are you sure ~?", kr: "정말 ~야? (확실해?)", json: "" },
         { en: "I'm sorry for ~", kr: "~해서 미안해", json: "" },
@@ -606,8 +606,8 @@ $(document).ready(function() {
         $('#wrong_word_list').html('');
         $('#wrong_word_section').hide();
 
-        // 타이머 설정 (한 쌍당 1.5초)
-        totalTimeLimit = wordDatabase.length * 1.5;
+        // 타이머 설정 (한 쌍당 2초)
+        totalTimeLimit = wordDatabase.length * 2;
         timeLeft = totalTimeLimit;
         
         startTimer();

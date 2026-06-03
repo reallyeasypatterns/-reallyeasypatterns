@@ -1,0 +1,142 @@
+{
+  "pattern_en": "I like to",
+  "pattern_kr": "나는 ~하는 걸 좋아해",
+  "pattern_highlight": "I like to",
+  "sentences": [
+    { "en": "I like to read", "kr": "나는 읽는 걸 좋아해", "pron": "아이 라이크 투 리드" },
+    { "en": "I like to read books", "kr": "나는 책 읽는 걸 좋아해", "pron": "아이 라이크 투 리드 북스" },
+    { "en": "I like to read books before going to sleep", "kr": "나는 잠들기 전에 책 읽는 걸 좋아해", "pron": "아이 라이크 투 리드 북스 비포어 고잉 투 슬립" },
+
+    { "en": "I like to cook", "kr": "나는 요리하는 걸 좋아해", "pron": "아이 라이크 투 쿡" },
+    { "en": "I like to cook pasta", "kr": "나는 파스타 요리하는 걸 좋아해", "pron": "아이 라이크 투 쿡 파스타" },
+    { "en": "I like to cook pasta for my family on Sundays", "kr": "나는 일요일마다 가족을 위해 파스타를 요리하는 걸 좋아해", "pron": "아이 라이크 투 쿡 파스타 포어 마이 패밀리 온 선데이즈" },
+
+    { "en": "I like to swim", "kr": "나는 수영하는 걸 좋아해", "pron": "아이 라이크 투 스윔" },
+    { "en": "I like to swim in the pool", "kr": "나는 수영장에서 수영하는 걸 좋아해", "pron": "아이 라이크 투 스윔 인 더 풀" },
+    { "en": "I like to swim in the pool during the summer", "kr": "나는 여름 동안에 수영장에서 수영하는 걸 좋아해", "pron": "아이 라이크 투 스윔 인 더 풀 듀어링 더 서머" },
+
+    { "en": "I like to run", "kr": "나는 달리는 걸 좋아해", "pron": "아이 라이크 투 런" },
+    { "en": "I like to run in the park", "kr": "나는 공원에서 달리는 걸 좋아해", "pron": "아이 라이크 투 런 인 더 파크" },
+    { "en": "I like to run in the park early in the morning", "kr": "나는 아침 일찍 공원에서 달리는 걸 좋아해", "pron": "아이 라이크 투 런 인 더 파크 얼리 인 더 모닝" },
+
+    { "en": "I like to sing", "kr": "나는 노래하는 걸 좋아해", "pron": "아이 라이크 투 싱" },
+    { "en": "I like to sing songs", "kr": "나는 노래 부르는 걸 좋아해", "pron": "아이 라이크 투 싱 송즈" },
+    { "en": "I like to sing songs while playing the guitar", "kr": "나는 기타를 치면서 노래 부르는 걸 좋아해", "pron": "아이 라이크 투 싱 송즈 와일 플레이잉 더 기타" },
+
+    { "en": "I like to walk", "kr": "나는 걷는 걸 좋아해", "pron": "아이 라이크 투 워크" },
+    { "en": "I like to walk my dog", "kr": "나는 반려견을 산책시키는 걸 좋아해", "pron": "아이 라이크 투 워크 마이 독" },
+    { "en": "I like to walk my dog around the neighborhood", "kr": "나는 동네 주변으로 반려견을 산책시키는 걸 좋아해", "pron": "아이 라이크 투 워크 마이 독 어라운드 더 네이버후드" },
+
+    { "en": "I like to study", "kr": "나는 공부하는 걸 좋아해", "pron": "아이 라이크 투 스터디" },
+    { "en": "I like to study English", "kr": "나는 영어 공부하는 걸 좋아해", "pron": "아이 라이크 투 스터디 잉글리시" },
+    { "en": "I like to study English to travel the world", "kr": "나는 세계 여행을 하기 위해 영어 공부하는 걸 좋아해", "pron": "아이 라이크 투 스터디 잉글리시 투 트래블 더 월드" },
+
+    { "en": "I like to paint", "kr": "나는 그림 그리는 걸 좋아해", "pron": "아이 라이크 투 페인트" },
+    { "en": "I like to paint landscapes", "kr": "나는 풍경화 그리는 걸 좋아해", "pron": "아이 라이크 투 페인트 랜스케이프스" },
+    { "en": "I like to paint landscapes with watercolors", "kr": "나는 수채화로 풍경화 그리는 걸 좋아해", "pron": "아이 라이크 투 페인트 랜스케이프스 위드 워터컬러즈" },
+
+    { "en": "I like to hike", "kr": "나는 등산하는 걸 좋아해", "pron": "아이 라이크 투 하이크" },
+    { "en": "I like to hike high mountains", "kr": "나는 높은 산을 등산하는 걸 좋아해", "pron": "아이 라이크 투 하이크 하이 마운틴즈" },
+    { "en": "I like to hike high mountains on weekends", "kr": "나는 주말마다 높은 산을 등산하는 걸 좋아해", "pron": "아이 라이크 투 하이크 하이 마운틴즈 온 위켄즈" },
+
+    { "en": "I like to play", "kr": "나는 경기하는 걸 좋아해", "pron": "아이 라이크 투 플레이" },
+    { "en": "I like to play tennis", "kr": "나는 테니스 치는 걸 좋아해", "pron": "아이 라이크 투 플레이 테니스" },
+    { "en": "I like to play tennis with my close friends", "kr": "나는 친한 친구들과 테니스 치는 걸 좋아해", "pron": "아이 라이크 투 플레이 테니스 위드 마이 클로즈 프렌즈" },
+
+    { "en": "I like to listen", "kr": "나는 듣는 걸 좋아해", "pron": "아이 라이크 투 리슨" },
+    { "en": "I like to listen to jazz", "kr": "나는 재즈 듣는 걸 좋아해", "pron": "아이 라이크 투 리슨 투 재즈" },
+    { "en": "I like to listen to jazz on rainy afternoons", "kr": "나는 비 오는 오후에 재즈 듣는 걸 좋아해", "pron": "아이 라이크 투 리슨 투 재즈 온 레이니 애프터눈즈" },
+
+    { "en": "I like to travel", "kr": "나는 여행하는 걸 좋아해", "pron": "아이 라이크 투 트래블" },
+    { "en": "I like to travel alone", "kr": "나는 혼자 여행하는 걸 좋아해", "pron": "아이 라이크 투 트래블 얼론" },
+    { "en": "I like to travel alone to find peace of mind", "kr": "나는 마음의 평화를 찾기 위해 혼자 여행하는 걸 좋아해", "pron": "아이 라이크 투 트래블 얼론 투 파인드 피스 오브 마인드" },
+
+    { "en": "I like to drink", "kr": "나는 마시는 걸 좋아해", "pron": "아이 라이크 투 드링크" },
+    { "en": "I like to drink coffee", "kr": "나는 커피 마시는 걸 좋아해", "pron": "아이 라이크 투 드링크 커피" },
+    { "en": "I like to drink coffee at a cozy cafe", "kr": "나는 아늑한 카페에서 커피 마시는 걸 좋아해", "pron": "아이 라이크 투 드링크 커피 앳 어 코지 카페" },
+
+    { "en": "I like to eat", "kr": "나는 먹는 걸 좋아해", "pron": "아이 라이크 투 이트" },
+    { "en": "I like to eat sweet desserts", "kr": "나는 달콤한 디저트 먹는 걸 좋아해", "pron": "아이 라이크 투 이트 스위트 디저츠" },
+    { "en": "I like to eat sweet desserts after lunchtime", "kr": "나는 점심시간이 지난 후에 달콤한 디저트 먹는 걸 좋아해", "pron": "아이 라이크 투 이트 스위트 디저츠 애프터 런치타임" },
+
+    { "en": "I like to sleep", "kr": "나는 자는 걸 좋아해", "pron": "아이 라이크 투 슬립" },
+    { "en": "I like to sleep late", "kr": "나는 늦잠 자는 걸 좋아해", "pron": "아이 라이크 투 슬립 레이트" },
+    { "en": "I like to sleep late on the weekend mornings", "kr": "나는 주말 아침에 늦잠 자는 걸 좋아해", "pron": "아이 라이크 투 슬립 레이트 온 더 위켄드 모닝즈" },
+
+    { "en": "I like to buy", "kr": "나는 사는 걸 좋아해", "pron": "아이 라이크 투 바이" },
+    { "en": "I like to buy vintage clothes", "kr": "나는 빈티지 옷 사는 걸 좋아해", "pron": "아이 라이크 투 바이 빈티지 클로즈" },
+    { "en": "I like to buy vintage clothes at the market", "kr": "나는 시장에서 빈티지 옷 사는 걸 좋아해", "pron": "아이 라이크 투 바이 빈티지 클로즈 앳 더 마켓" },
+
+    { "en": "I like to clean", "kr": "나는 청소하는 걸 좋아해", "pron": "아이 라이크 투 클린" },
+    { "en": "I like to clean my room", "kr": "나는 내 방 청소하는 걸 좋아해", "pron": "아이 라이크 투 클린 마이 룸" },
+    { "en": "I like to clean my room while listening to music", "kr": "나는 음악을 들으면서 내 방 청소하는 걸 좋아해", "pron": "아이 라이크 투 클린 마이 룸 와일 리스닝 투 뮤직" },
+
+    { "en": "I like to meet", "kr": "나는 만나는 걸 좋아해", "pron": "아이 라이크 투 미트" },
+    { "en": "I like to meet new people", "kr": "나는 새로운 사람들을 만나는 걸 좋아해", "pron": "아이 라이크 투 미트 뉴 피플" },
+    { "en": "I like to meet new people at social gatherings", "kr": "나는 사교 모임에서 새로운 사람들을 만나는 걸 좋아해", "pron": "아이 라이크 투 미트 뉴 피플 앳 소셜 개더링즈" },
+
+    { "en": "I like to write", "kr": "나는 쓰는 걸 좋아해", "pron": "아이 라이크 투 라이트" },
+    { "en": "I like to write short stories", "kr": "나는 단편 소설 쓰는 걸 좋아해", "pron": "아이 라이크 투 라이트 쇼트 스토리즈" },
+    { "en": "I like to write short stories in my notebook", "kr": "나는 공책에 단편 소설 쓰는 걸 좋아해", "pron": "아이 라이크 투 라이트 쇼트 스토리즈 인 마이 노트북" },
+
+    { "en": "I like to learn", "kr": "나는 배우는 걸 좋아해", "pron": "아이 라이크 투 러른" },
+    { "en": "I like to learn new languages", "kr": "나는 새로운 언어 배우는 걸 좋아해", "pron": "아이 라이크 투 러른 뉴 랭귀지즈" },
+    { "en": "I like to learn new languages using an app", "kr": "나는 앱을 사용해서 새로운 언어 배우는 걸 좋아해", "pron": "아이 라이크 투 러른 뉴 랭귀지즈 유징 언 앱" },
+
+    { "en": "I like to talk", "kr": "나는 대화하는 걸 좋아해", "pron": "아이 라이크 투 토크" },
+    { "en": "I like to talk to my friends", "kr": "나는 친구들과 대화하는 걸 좋아해", "pron": "아이 라이크 투 토크 투 마이 프렌즈" },
+    { "en": "I like to talk to my friends about everything", "kr": "나는 친구들과 모든 것에 대해 대화하는 걸 좋아해", "pron": "아이 라이크 투 토크 투 마이 프렌즈 어바웃 에브리씽" },
+
+    { "en": "I like to make", "kr": "나는 만드는 걸 좋아해", "pron": "아이 라이크 투 메이크" },
+    { "en": "I like to make fresh bread", "kr": "나는 신선한 빵 만드는 걸 좋아해", "pron": "아이 라이크 투 메이크 프레시 브레드" },
+    { "en": "I like to make fresh bread early in the morning", "kr": "나는 아침 일찍 신선한 빵 만드는 걸 좋아해", "pron": "아이 라이크 투 메이크 프레시 브레드 얼리 인 더 모닝" },
+
+    { "en": "I like to take", "kr": "나는 찍는 걸 좋아해", "pron": "아이 라이크 투 테이크" },
+    { "en": "I like to take beautiful photos", "kr": "나는 아름다운 사진 찍는 걸 좋아해", "pron": "아이 라이크 투 테이크 뷰티풀 포토즈" },
+    { "en": "I like to take beautiful photos of nature", "kr": "나는 자연의 아름다운 사진을 찍는 걸 좋아해", "pron": "아이 라이크 투 테이크 뷰티풀 포토즈 오브 네이처" },
+
+    { "en": "I like to visit", "kr": "나는 방문하는 걸 좋아해", "pron": "아이 라이크 투 비지트" },
+    { "en": "I like to visit art museums", "kr": "나는 미술관 방문하는 걸 좋아해", "pron": "아이 라이크 투 비지트 아트 뮤지엄즈" },
+    { "en": "I like to visit art museums in other cities", "kr": "나는 다른 도시에 있는 미술관 방문하는 걸 좋아해", "pron": "아이 라이크 투 비지트 아트 뮤지엄즈 인 아더 시티즈" },
+
+    { "en": "I like to drive", "kr": "나는 운전하는 걸 좋아해", "pron": "아이 라이크 투 드라이브" },
+    { "en": "I like to drive my own car", "kr": "나는 내 차를 운전하는 걸 좋아해", "pron": "아이 라이크 투 드라이브 마이 온 카" },
+    { "en": "I like to drive my own car along the coast", "kr": "나는 해안가를 따라 내 차를 운전하는 걸 좋아해", "pron": "아이 라이크 투 드라이브 마이 온 카 얼롱 더 코스트" },
+
+    { "en": "I like to bake", "kr": "나는 굽는 걸 좋아해", "pron": "아이 라이크 투 베이크" },
+    { "en": "I like to bake sweet cookies", "kr": "나는 달콤한 쿠키 굽는 걸 좋아해", "pron": "아이 라이크 투 베이크 스위트 쿠키즈" },
+    { "en": "I like to bake sweet cookies for my nephews", "kr": "나는 조카들을 위해 달콤한 쿠키를 굽는 걸 좋아해", "pron": "아이 라이크 투 베이크 스위트 쿠키즈 포어 마이 네퓨즈" },
+
+    { "en": "I like to ride", "kr": "나는 타는 걸 좋아해", "pron": "아이 라이크 투 라이드" },
+    { "en": "I like to ride a bicycle", "kr": "나는 자전거 타는 걸 좋아해", "pron": "아이 라이크 투 라이드 어 바이시클" },
+    { "en": "I like to ride a bicycle along the riverside road", "kr": "나는 강변 도로를 따라 자전거 타는 걸 좋아해", "pron": "아이 라이크 투 라이드 어 바이시클 얼롱 더 리버사이드 로드" },
+
+    { "en": "I like to save", "kr": "나는 저축하는 걸 좋아해", "pron": "아이 라이크 투 세이브" },
+    { "en": "I like to save spare money", "kr": "나는 여유 돈을 저축하는 걸 좋아해", "pron": "아이 라이크 투 세이브 스페어 머니" },
+    { "en": "I like to save spare money for future travel", "kr": "나는 미래의 여행을 위해 여유 돈을 저축하는 걸 좋아해", "pron": "아이 라이크 투 세이브 스페어 머니 포어 퓨처 트래블" },
+
+    { "en": "I like to watch", "kr": "나는 시청하는 걸 좋아해", "pron": "아이 라이크 투 와치" },
+    { "en": "I like to watch soccer matches", "kr": "나는 축구 경기 시청하는 걸 좋아해", "pron": "아이 라이크 투 와치 사커 매치스" },
+    { "en": "I like to watch soccer matches live on TV", "kr": "나는 TV로 축구 경기를 생중계로 시청하는 걸 좋아해", "pron": "아이 라이크 투 와치 사커 매치스 라이브 온 티비" },
+
+    { "en": "I like to help", "kr": "나는 돕는 걸 좋아해", "pron": "아이 라이크 투 헬프" },
+    { "en": "I like to help elderly people", "kr": "나는 어르신들을 돕는 걸 좋아해", "pron": "아이 라이크 투 헬프 엘더리 피플" },
+    { "en": "I like to help elderly people carry heavy bags", "kr": "나는 어르신들이 무거운 가방을 드는 것을 돕는 걸 좋아해", "pron": "아이 라이크 투 헬프 엘더리 피플 캐리 헤비 백스" },
+
+    { "en": "I like to lift", "kr": "나는 들어 올리는 걸 좋아해", "pron": "아이 라이크 투 리프트" },
+    { "en": "I like to lift heavy weights", "kr": "나는 무거운 역기 드는 걸 좋아해", "pron": "아이 라이크 투 리프트 헤비 웨이츠" },
+    { "en": "I like to lift heavy weights at the local gym", "kr": "나는 동네 헬스장에서 무거운 역기 드는 걸 좋아해", "pron": "아이 라이크 투 리프트 헤비 웨이츠 앳 더 로컬 짐" },
+
+    { "en": "I like to plant", "kr": "나는 심는 걸 좋아해", "pron": "아이 라이크 투 플랜트" },
+    { "en": "I like to plant colorful flowers", "kr": "나는 알록달록한 꽃을 심는 걸 좋아해", "pron": "아이 라이크 투 플랜트 컬러풀 플라워즈" },
+    { "en": "I like to plant colorful flowers in my garden", "kr": "나는 내 정원에 알록달록한 꽃을 심는 걸 좋아해", "pron": "아이 라이크 투 플랜트 컬러풀 플라워즈 인 마이 가든" },
+
+    { "en": "I like to dance", "kr": "나는 춤추는 걸 좋아해", "pron": "아이 라이크 투 댄스" },
+    { "en": "I like to dance to exciting music", "kr": "나는 신나는 음악에 맞춰 춤추는 걸 좋아해", "pron": "아이 라이크 투 댄스 투 익사이팅 뮤직" },
+    { "en": "I like to dance to exciting music with friends", "kr": "나는 친구들과 함께 신나는 음악에 맞춰 춤추는 걸 좋아해", "pron": "아이 라이크 투 댄스 투 익사이팅 뮤직 위드 프렌즈" },
+
+    { "en": "I like to teach", "kr": "나는 가르치는 걸 좋아해", "pron": "아이 라이크 투 티치" },
+    { "en": "I like to teach young kids", "kr": "나는 어린 아이들을 가르치는 걸 좋아해", "pron": "아이 라이크 투 티치 영 키즈" },
+    { "en": "I like to teach young kids how to ride a bike", "kr": "나는 어린 아이들에게 자전거 타는 법을 가르치는 걸 좋아해", "pron": "아이 라이크 투 티치 영 키즈 하우 투 라이드 어 바이크" }
+  ]
+}
