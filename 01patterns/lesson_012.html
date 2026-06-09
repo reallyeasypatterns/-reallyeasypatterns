@@ -1,0 +1,56 @@
+<script type="text/javascript">
+    function includeTop() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/top.html', false); // 동기 방식으로 로드하여 마크업이 그려진 후 본문이 오도록 제어
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeTop();
+</script>
+    <div id="contents">
+        <div class="wrap">
+            <h2 class="m1">패턴 뽀개기</h2>
+            <p class="page_t_guide">각 레슨에서 사용된 <em>핵심 패턴</em>을 다양한 문장으로 공부해 보세요.</p>
+            <div class="lesson" data-json="rep012_sentences.json">
+                <div class="video"><iframe src="https://www.youtube.com/embed/Qowy_h4vRb8" title="012. 하루 10분만 투자해 보세요. 정말 쉽게 배우는 [ Are you sure ] 패턴 | 틈 날 때 마다 들으세요! 습관이 실력이 됩니다." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                <div class="sentences">
+                    <div class="op">
+                        <div class="pattern"></div>
+                        <ul>
+                            <li><input type="checkbox" id="cb_op01" checked><label for="cb_op01">영어</label></li>
+                            <li><input type="checkbox" id="cb_op02" checked><label for="cb_op02">해석</label></li>
+                            <li><input type="checkbox" id="cb_op03" checked><label for="cb_op03">발음</label></li>
+                        </ul>
+                    </div>
+                    <table class="tb_sentences">
+                        <caption>
+                        패턴 문장
+                        </caption>
+                        <colgroup>
+                            <col width="" />
+                            <col width="32%" />
+                            <col width="32%" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">영어</th>
+                                <th scope="col">해석</th>
+                                <th scope="col">발음</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    function includeFooter() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/bottom.html', false);
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeFooter();
+</script>
