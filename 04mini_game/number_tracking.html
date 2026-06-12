@@ -1,0 +1,354 @@
+<script type="text/javascript">
+    function includeTop() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/top.html', false);
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeTop();
+</script>
+<style>
+#game_container { max-width: 400px; margin: 20px auto; background: var(--color_w10); padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; position: relative; }
+#game_container h3 { font-size: 30px; margin-bottom: 20px; }
+#info_panel { margin-bottom: 15px; font-size: 18px; color: #fff; display: flex; gap: 10px; justify-content: center; }
+#quiz_area { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 380px; margin: 10px auto; }
+#question_guide { font-size: 18px; color: #ffeb3b; font-weight: bold; margin-bottom: 15px; }
+#number_board { display: grid; gap: 8px; width: 320px; height: 320px; margin: 0 auto; transition: opacity 0.3s; }
+.num_btn { font-size: 26px; font-weight: bold; border: 3px solid #000; border-radius: 50%; cursor: pointer; transition: transform 0.1s, background-color 0.2s, opacity 0.2s; -webkit-text-stroke: 0.5px #000; color: #fff; background-color: rgb(73, 145, 242); display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 6px rgba(0,0,0,0.2); }
+.num_btn:active { transform: scale(0.92); }
+.num_btn.cleared { opacity: 0.25; background-color: #555 !important; cursor: not-allowed; transform: none; box-shadow: none; }
+.num_btn.disabled { cursor: not-allowed; transform: none; }
+.hidden { display: none !important; }
+button.sys_btn { padding: 12px 24px; font-size: 18px; font-weight: bold; border: none; border-radius: 6px; background: #007bff; color: #fff; cursor: pointer; margin: 10px 5px; }
+button.sys_btn:hover { background: #0056b3; }
+.wrong_text { color: #dc3545; font-weight: bold; }
+.comment_section { margin-top: 15px; padding: 15px; background: var(--color_w10); border-radius: 8px; text-align: center; margin-bottom: 15px; }
+.comment_section h4 { margin-bottom: 20px; }
+.comment_section input { width: 100%; padding: 8px; margin-bottom: 8px; background: var(--color_w50); border: 0; outline: 0; border-radius: 4px; display: block; text-align: center; font-size: 18px; }
+.comment_section button { background: var(--color_green); }
+#leaderboard_container { max-width: 400px; margin: 30px auto; text-align: left; background: var(--color_w10); padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-size: 18px; }
+#leaderboard_container h4 { margin-bottom: 20px; }
+.record_item { padding: 10px; border-bottom: 1px solid #eee; font-size: 14px; }
+.record_item:last-child { border-bottom: none; }
+.record_meta { font-size: 12px; color: #888; margin-top: 4px; }
+#result_screen { margin-top: 20px; padding: 15px; background: rgba(0,0,0,0.75); border-radius: 10px; border: 2px solid #fff; }
+#result_msg { font-size: 22px !important; line-height: 1.5; color: #fff; }
+#bridge_screen { padding: 20px 10px; background: rgba(0,0,0,0.85); border-radius: 10px; position: absolute; top: 100px; left: 20px; right: 20px; z-index: 10; border: 2px solid #ffeb3b; }
+#bridge_screen h4 { font-size: 26px; color: #ffeb3b; margin-bottom: 15px; }
+#bridge_screen p { font-size: 18px; line-height: 1.6; color: #fff; margin-bottom: 20px; }
+</style>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBygkwSpi46zPk7jOiqindlmr3WTSYTzig",
+    authDomain: "reallyeasypatterns-4102d.firebaseapp.com",
+    projectId: "reallyeasypatterns-4102d",
+    storageBucket: "reallyeasypatterns-4102d.firebasestorage.app",
+    messagingSenderId: "326239198300",
+    appId: "1:326239198300:web:61f5ae9fce25f68e3b5a99",
+    measurementId: "G-8T88SDWSWK"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.db = db;
+  window.addDoc = addDoc;
+  window.collection = collection;
+  window.getDocs = getDocs;
+  window.query = query;
+  window.orderBy = orderBy;
+  window.limit = limit;
+</script>
+
+<div id="contents">
+    <div class="wrap">
+      <h2 class="m4">미니게임</h2>
+      <p class="page_t_guide"><em>조작은 간단하게, 두뇌 자극은 확실하게!</em> 즐겁게 인지 능력을 키워보세요.</p>
+      <div id="game_container">
+        <h3>번호 순서대로 잇기</h3>
+        <div id="info_panel">
+          <span>단계: <strong id="stage_title">1단계</strong></span> | 
+          <span>남은시간: <strong id="timer">120</strong>초</span> | 
+          <span class="wrong_text">오답: <strong id="wrong_cnt">0</strong>/3</span>
+        </div>
+
+        <div id="quiz_area">
+          <div id="question_guide">💡 1부터 순서대로 번호를 터치하세요!</div>
+          <div id="number_board"></div>
+        </div>
+
+        <div id="bridge_screen" class="hidden">
+          <h4>🎉 1단계 통과 성공!</h4>
+          <p>정말 잘하셨습니다!<br>이제 마지막 <strong>2단계</strong>에 도전합니다.<br><br>2단계는 숫자가 1부터 25까지 늘어나고 격자가 더 촘촘해지니 눈을 크게 뜨고 찾아보세요!</p>
+          <button class="sys_btn" style="background:var(--color_green);" onclick="startStage2()">2단계 계속 도전하기</button>
+        </div>
+
+        <div id="result_screen" class="hidden">
+          <h3 id="result_msg"></h3>
+          
+          <div id="success_form" class="comment_section hidden">
+            <h4>🏆 명예의 전당 등록</h4>
+            <input type="text" id="nickname" placeholder="닉네임 (최대 10자)" maxlength="10">
+            <input type="text" id="comment" placeholder="한 줄 댓글을 남겨보세요! (최대 30자)" maxlength="30">
+            <button class="sys_btn" onclick="saveRecordToServer()">기록 등록하기</button>
+          </div>
+
+          <button class="sys_btn" onclick="startGame()">다시 도전</button>
+        </div>
+      </div>
+
+      <div id="leaderboard_container">
+        <h4>🏆 성공 기록 및 댓글</h4>
+        <div id="records_list">불러오는 중...</div>
+      </div>
+    </div>
+</div>
+
+<script>
+let currentStage = 1; // 1: 1단계, 2: 2단계
+let currentTargetNumber = 1; // 현재 찾아야 할 숫자 타겟
+let maxNumber = 12; // 단계별 최대 숫자 (1단계: 12, 2단계: 25)
+let timeLeft = 100;
+let wrongCount = 0;
+let timerInterval = null;
+let isGameOver = false;
+let isBridgeActive = false;
+let currentTopPercent = "0.0";
+
+// 시각적 가시성을 위한 어르신 맞춤형 고대비 배경 컬러 색상 리스트
+const buttonColors = ["rgb(73, 145, 242)", "rgb(242, 95, 102)", "rgb(39, 174, 96)", "rgb(242, 201, 76)", "rgb(155, 89, 182)"];
+
+const numberBoard = document.getElementById('number_board');
+const stageTitleDisplay = document.getElementById('stage_title');
+const timerDisplay = document.getElementById('timer');
+const wrongCntDisplay = document.getElementById('wrong_cnt');
+const bridgeScreen = document.getElementById('bridge_screen');
+const resultScreen = document.getElementById('result_screen');
+const resultMsg = document.getElementById('result_msg');
+const successForm = document.getElementById('success_form');
+const recordsList = document.getElementById('records_list');
+
+function startGame() {
+  currentStage = 1;
+  currentTargetNumber = 1;
+  maxNumber = 12;
+  timeLeft = 120;
+  wrongCount = 0;
+  isGameOver = false;
+  isBridgeActive = false;
+  
+  stageTitleDisplay.textContent = "1단계";
+  timerDisplay.textContent = timeLeft;
+  wrongCntDisplay.textContent = wrongCount;
+  
+  resultScreen.classList.add('hidden');
+  successForm.classList.add('hidden');
+  bridgeScreen.classList.add('hidden');
+  
+  document.getElementById('nickname').value = '';
+  document.getElementById('comment').value = '';
+  
+  clearInterval(timerInterval);
+  timerInterval = setInterval(() => {
+    if (isGameOver || isBridgeActive) return;
+    timeLeft--;
+    timerDisplay.textContent = timeLeft;
+    if (timeLeft <= 0) endGame('timeout');
+  }, 1000);
+
+  buildBoard();
+}
+
+function buildBoard() {
+  if (isGameOver) return;
+
+  numberBoard.innerHTML = '';
+  
+  // 단계별 격자(Grid) 구조 및 최대값 분기 생성
+  if (currentStage === 1) {
+    maxNumber = 12;
+    numberBoard.style.gridTemplateColumns = `repeat(3, 1fr)`;
+  } else {
+    maxNumber = 25;
+    numberBoard.style.gridTemplateColumns = `repeat(5, 1fr)`;
+  }
+
+  // 숫자 배열 생성 및 랜덤 셔플(Shuffle)
+  let numberArray = [];
+  for (let i = 1; i <= maxNumber; i++) {
+    numberArray.push(i);
+  }
+  numberArray.sort(() => Math.random() - 0.5);
+
+  // 동적 버튼 인스턴스 배치 생성
+  numberArray.forEach((num) => {
+    const btn = document.createElement('button');
+    btn.classList.add('num_btn');
+    btn.textContent = num;
+    
+    // 심심하지 않도록 숫자 버튼마다 무작위 소프트 컬러 바인딩
+    btn.style.backgroundColor = buttonColors[num % buttonColors.length];
+
+    btn.onclick = () => {
+      if (isGameOver || isBridgeActive) return;
+      if (btn.classList.contains('cleared')) return;
+
+      // 올바른 순서의 숫자를 터치했을 경우
+      if (num === currentTargetNumber) {
+        btn.classList.add('cleared');
+        currentTargetNumber++;
+
+        // 현재 단계의 마지막 숫자까지 다 찾았을 경우
+        if (currentTargetNumber > maxNumber) {
+          if (currentStage === 1) {
+            showBridge();
+          } else {
+            endGame('success');
+          }
+        }
+      } else {
+        // 잘못된 순서의 숫자를 터치했을 경우 오답 처리
+        wrongCount++;
+        wrongCount = Math.min(wrongCount, 3);
+        wrongCntDisplay.textContent = wrongCount;
+        if (wrongCount >= 3) endGame('wrong_limit');
+      }
+    };
+
+    numberBoard.appendChild(btn);
+  });
+}
+
+function showBridge() {
+  isBridgeActive = true;
+  bridgeScreen.classList.remove('hidden');
+  // 화면 유지 보장을 위해 버튼들만 작동 비활성화
+  const btns = document.querySelectorAll('.num_btn');
+  btns.forEach(b => b.classList.add('disabled'));
+}
+
+function startStage2() {
+  isBridgeActive = false;
+  currentStage = 2;
+  currentTargetNumber = 1;
+  stageTitleDisplay.textContent = "2단계";
+  bridgeScreen.classList.add('hidden');
+  buildBoard();
+}
+
+function endGame(reason) {
+  isGameOver = true;
+  clearInterval(timerInterval);
+  
+  // 직전 화면 완벽 보존을 위해 클릭만 완전 차단 처리
+  const btns = document.querySelectorAll('.num_btn');
+  btns.forEach(b => {
+    b.classList.add('disabled');
+    b.onclick = null;
+  });
+  
+  resultScreen.classList.remove('hidden');
+
+  if (reason === 'success') {
+    currentTopPercent = Math.max(0.1, (100 - (timeLeft * 0.75))).toFixed(1);
+    resultMsg.innerHTML = `🎉 축하합니다! 모든 숫자를 순서대로 연결했습니다!<br>당신의 기록은 <strong>상위 ${currentTopPercent}%</strong> 입니다.`;
+    successForm.classList.remove('hidden');
+  } else if (reason === 'timeout') {
+    resultMsg.textContent = "⏱️ 시간 초과! 실패했습니다.";
+  } else if (reason === 'wrong_limit') {
+    resultMsg.textContent = "❌ 오답 횟수 초과(3회)! 실패했습니다.";
+  }
+}
+
+async function saveRecordToServer() {
+  const btn = document.querySelector("#success_form button");
+  if (btn.disabled) return;
+  
+  const nickname = document.getElementById('nickname').value.trim() || '익명';
+  const comment = document.getElementById('comment').value.trim() || '성공했습니다!';
+  
+  const badWords = ["바보", "멍청이", "욕설단어1", "욕설단어2"]; 
+  for (let word of badWords) {
+    if (nickname.includes(word) || comment.includes(word)) {
+      alert("부적절한 단어가 포함되어 있어 등록할 수 없습니다.");
+      return;
+    }
+  }
+  
+  try {
+    btn.disabled = true;
+    btn.textContent = "등록 중...";
+
+    await window.addDoc(window.collection(window.db, "numberConnectRecords"), {
+      nickname: nickname,
+      comment: comment,
+      timeLeft: timeLeft,
+      topPercent: currentTopPercent,
+      createdAt: Date.now()
+    });
+
+    successForm.classList.add('hidden');
+    resultMsg.innerHTML = "🏆 명예의 전당에 기록이 등록되었습니다!";
+    loadRecordsFromServer();
+  } catch (error) {
+    console.error("등록 실패: ", error);
+    btn.disabled = false;
+    btn.textContent = "기록 등록하기";
+    alert("기록 저장 중 오류가 발생했습니다.");
+  }
+}
+
+async function loadRecordsFromServer() {
+  try {
+    const q = window.query(
+      window.collection(window.db, "numberConnectRecords"), 
+      window.orderBy("createdAt", "desc"), 
+      window.limit(30)
+    );
+    
+    const querySnapshot = await window.getDocs(q);
+    
+    if (querySnapshot.empty) {
+      recordsList.innerHTML = '등록된 기록이 없습니다.<br> 성공하여 첫 댓글을 남겨보세요!';
+      return;
+    }
+
+    let htmlBuffer = "";
+    querySnapshot.forEach((doc) => {
+      const item = doc.data();
+      const dateFormatted = new Date(item.createdAt).toLocaleString('ko-KR', { hour12: false });
+      
+      htmlBuffer += `
+        <div class="record_item">
+          <strong>${item.nickname}</strong>: ${item.comment}
+          <div class="record_meta">⏱️ 남은 시간: ${item.timeLeft}초 (상위 ${item.topPercent}%) | 📅 ${dateFormatted}</div>
+        </div>
+      `;
+    });
+    
+    recordsList.innerHTML = htmlBuffer;
+  } catch (error) {
+    console.error("데이터 불러오기 실패: ", error);
+    recordsList.innerHTML = "기록을 불러오는 중 오류가 발생했습니다. Firebase 설정을 확인해 주세요.";
+  }
+}
+
+setTimeout(() => {
+  loadRecordsFromServer();
+}, 800);
+
+startGame();
+</script>
+<script type="text/javascript">
+    function includeFooter() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/bottom.html', false);
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeFooter();
+</script>

@@ -1,0 +1,443 @@
+<script type="text/javascript">
+    function includeTop() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/top.html', false);
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeTop();
+</script>
+<style>
+#game_container { max-width: 400px; margin: 20px auto; background: var(--color_w10); padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; position: relative; }
+#game_container h3 { font-size: 30px; margin-bottom: 20px; }
+#info_panel { margin-bottom: 15px; font-size: 18px; color: #fff; display: flex; gap: 10px; justify-content: center; }
+#quiz_area { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 380px; margin: 10px auto; }
+#question_guide { font-size: 18px; color: #ffeb3b; font-weight: bold; margin-bottom: 15px; min-height: 27px; }
+#card_board { display: grid; gap: 8px; width: 320px; margin: 0 auto; perspective: 1000px; }
+.card_item { height: 75px; cursor: pointer; position: relative; perspective: 1000px; user-select: none; }
+.card_inner { width: 100%; height: 100%; position: absolute; transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.card_item.flipped .card_inner { transform: rotateY(180deg); }
+.card_front, .card_back { width: 100%; height: 100%; position: absolute; backface-visibility: hidden; border: 3px solid #000; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 3px 6px rgba(0,0,0,0.2); }
+.card_back { box-sizing: border-box; background-color: #343a40; color: #fff; font-size: 24px; }
+.card_front { box-sizing: border-box; background-color: #fff; color: #000; font-size: 32px; transform: rotateY(180deg); }
+.card_item.matched { opacity: 0.4; cursor: not-allowed; }
+.card_item.matched .card_front { background-color: #e2e3e5; box-shadow: none; }
+.card_item.disabled { cursor: not-allowed; }
+.hidden { display: none !important; }
+button.sys_btn { padding: 12px 24px; font-size: 18px; font-weight: bold; border: none; border-radius: 6px; background: #007bff; color: #fff; cursor: pointer; margin: 10px 5px; }
+button.sys_btn:hover { background: #0056b3; }
+.comment_section { margin-top: 15px; padding: 15px; background: var(--color_w10); border-radius: 8px; text-align: center; margin-bottom: 15px; }
+.comment_section h4 { margin-bottom: 20px; }
+.comment_section input { width: 100%; padding: 8px; margin-bottom: 8px; background: var(--color_w50); border: 0; outline: 0; border-radius: 4px; display: block; text-align: center; font-size: 18px; }
+.comment_section button { background: var(--color_green); }
+#leaderboard_container { max-width: 400px; margin: 30px auto; text-align: left; background: var(--color_w10); padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); font-size: 18px; }
+#leaderboard_container h4 { margin-bottom: 20px; }
+.record_item { padding: 10px; border-bottom: 1px solid #eee; font-size: 14px; }
+.record_item:last-child { border-bottom: none; }
+.record_meta { font-size: 12px; color: #888; margin-top: 4px; }
+#result_screen { margin-top: 20px; padding: 15px; background: rgba(0,0,0,0.75); border-radius: 10px; border: 2px solid #fff; }
+#result_msg { font-size: 22px !important; line-height: 1.5; color: #fff; }
+#bridge_screen { padding: 20px 10px; background: rgba(0,0,0,0.85); border-radius: 10px; position: absolute; top: 100px; left: 20px; right: 20px; z-index: 10; border: 2px solid #ffeb3b; }
+#bridge_screen h4 { font-size: 26px; color: #ffeb3b; margin-bottom: 15px; }
+#bridge_screen p { font-size: 18px; line-height: 1.6; color: #fff; margin-bottom: 20px; }
+</style>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyBygkwSpi46zPk7jOiqindlmr3WTSYTzig",
+    authDomain: "reallyeasypatterns-4102d.firebaseapp.com",
+    projectId: "reallyeasypatterns-4102d",
+    storageBucket: "reallyeasypatterns-4102d.firebasestorage.app",
+    messagingSenderId: "326239198300",
+    appId: "1:326239198300:web:61f5ae9fce25f68e3b5a99",
+    measurementId: "G-8T88SDWSWK"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  window.db = db;
+  window.addDoc = addDoc;
+  window.collection = collection;
+  window.getDocs = getDocs;
+  window.query = query;
+  window.orderBy = orderBy;
+  window.limit = limit;
+</script>
+
+<div id="contents">
+    <div class="wrap">
+      <h2 class="m4">미니게임</h2>
+      <p class="page_t_guide"><em>조작은 간단하게, 두뇌 자극은 확실하게!</em> 즐겁게 인지 능력을 키워보세요.</p>
+      <div id="game_container">
+        <h3>같은 그림 짝맞추기</h3>
+        <div id="info_panel">
+            <span>단계: <strong id="stage_title">1단계</strong></span> |
+            <span>남은시간: <strong id="timer">180</strong>초</span>
+        </div>
+
+        <!-- 게임 보드 구동 영역 -->
+        <div id="quiz_area">
+          <div id="question_guide">💡 카드를 뒤집어 같은 그림의 짝을 찾으세요!</div>
+          <div id="card_board"></div>
+        </div>
+
+        <!-- 다음 단계 전환 브릿지 화면 -->
+        <div id="bridge_screen" class="hidden">
+          <h4 id="bridge_title">🎉 1단계 통과 성공!</h4>
+          <p id="bridge_desc">정말 잘하셨습니다!<br>다음 단계로 넘어갑니다.</p>
+          <button class="sys_btn" style="background:var(--color_green);" onclick="startNextStage()">다음 단계 도전하기</button>
+        </div>
+
+        <!-- 게임 결과 영역 -->
+        <div id="result_screen" class="hidden">
+          <h3 id="result_msg"></h3>
+          
+          <div id="success_form" class="comment_section hidden">
+            <h4>🏆 명예의 전당 등록</h4>
+            <input type="text" id="nickname" placeholder="닉네임 (최대 10자)" maxlength="10">
+            <input type="text" id="comment" placeholder="한 줄 댓글을 남겨보세요! (최대 30자)" maxlength="30">
+            <button class="sys_btn" onclick="saveRecordToServer()">기록 등록하기</button>
+          </div>
+
+          <button class="sys_btn" onclick="startGame()">다시 도전</button>
+        </div>
+      </div>
+
+      <div id="leaderboard_container">
+        <h4>🏆 성공 기록 및 댓글</h4>
+        <div id="records_list">불러오는 중...</div>
+      </div>
+    </div>
+</div>
+
+<script>
+let currentStage = 1; 
+let timeLeft = 100;
+let wrongCount = 0;
+let timerInterval = null;
+let isGameOver = false;
+let isBridgeActive = false;
+let isChecking = false; 
+let isPreviewMode = false; // 미리보기 선행 암기 모드 구분 플래그
+let currentTopPercent = "0.0";
+
+let selectedCards = []; 
+let matchedPairs = 0; 
+let totalPairsNeeded = 2; 
+
+const emojiPool = ["🍎", "🐯", "🍇", "🍌", "🚗", "✈️", "🐻", "🐟", "⚽", "🍦", "🎁", "🎈"];
+
+const cardBoard = document.getElementById('card_board');
+const stageTitleDisplay = document.getElementById('stage_title');
+const timerDisplay = document.getElementById('timer');
+const questionGuide = document.getElementById('question_guide');
+const bridgeScreen = document.getElementById('bridge_screen');
+const bridgeTitle = document.getElementById('bridge_title');
+const bridgeDesc = document.getElementById('bridge_desc');
+const resultScreen = document.getElementById('result_screen');
+const resultMsg = document.getElementById('result_msg');
+const successForm = document.getElementById('success_form');
+const recordsList = document.getElementById('records_list');
+
+// 단계별 미리보기 암기 지정 시간 설정 객체
+const previewTimes = { 1: 2, 2: 4, 3: 6, 4: 10 };
+
+function startGame() {
+  currentStage = 1;
+  timeLeft = 180;
+  wrongCount = 0;
+  isGameOver = false;
+  isBridgeActive = false;
+  isChecking = false;
+  isPreviewMode = true;
+  
+  stageTitleDisplay.textContent = "1단계";
+  timerDisplay.textContent = timeLeft;
+  
+  resultScreen.classList.add('hidden');
+  successForm.classList.add('hidden');
+  bridgeScreen.classList.add('hidden');
+  
+  document.getElementById('nickname').value = '';
+  document.getElementById('comment').value = '';
+  
+  clearInterval(timerInterval);
+  buildBoard();
+}
+
+function buildBoard() {
+  if (isGameOver) return;
+
+  cardBoard.innerHTML = '';
+  selectedCards = [];
+  matchedPairs = 0;
+  isChecking = false;
+  isPreviewMode = true;
+
+  let cols = 2;
+  let rows = 2;
+
+  if (currentStage === 1) { cols = 2; rows = 2; totalPairsNeeded = 2; }
+  else if (currentStage === 2) { cols = 4; rows = 3; totalPairsNeeded = 6; }
+  else if (currentStage === 3) { cols = 4; rows = 4; totalPairsNeeded = 8; }
+  else if (currentStage === 4) { cols = 4; rows = 6; totalPairsNeeded = 12; }
+
+  cardBoard.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
+
+  let currentStageEmojis = [];
+  for (let i = 0; i < totalPairsNeeded; i++) {
+    currentStageEmojis.push(emojiPool[i]);
+    currentStageEmojis.push(emojiPool[i]);
+  }
+
+  currentStageEmojis.sort(() => Math.random() - 0.5);
+
+  currentStageEmojis.forEach((emoji, idx) => {
+    const card = document.createElement('div');
+    card.classList.add('card_item', 'flipped'); // 최초 생성 시 flipped 추가하여 앞면(그림) 노출
+    card.dataset.emoji = emoji;
+
+    const inner = document.createElement('div');
+    inner.classList.add('card_inner');
+
+    const front = document.createElement('div');
+    front.classList.add('card_front');
+    front.textContent = emoji;
+
+    const back = document.createElement('div');
+    back.classList.add('card_back');
+    back.textContent = "❓";
+
+    inner.appendChild(front);
+    inner.appendChild(back);
+    card.appendChild(inner);
+
+    card.onclick = () => {
+      if (isGameOver || isBridgeActive || isChecking || isPreviewMode) return;
+      if (card.classList.contains('flipped') || card.classList.contains('matched')) return;
+
+      card.classList.add('flipped');
+      selectedCards.push(card);
+
+      if (selectedCards.length === 2) {
+        checkMatch();
+      }
+    };
+
+    cardBoard.appendChild(card);
+  });
+
+  runPreviewCountdown();
+}
+
+function runPreviewCountdown() {
+  let pTime = previewTimes[currentStage];
+  questionGuide.innerHTML = `👀 <strong>[보고 기억하세요!]</strong> 그림 위치 기억까지 <span style='color:#ffeb3b;'>${pTime}초</span> 남음`;
+
+  let previewInterval = setInterval(() => {
+    pTime--;
+    if (pTime > 0) {
+      questionGuide.innerHTML = `👀 <strong>[보고 기억하세요!]</strong> 그림 위치 기억까지 <span style='color:#ffeb3b;'>${pTime}초</span> 남음`;
+    } else {
+      clearInterval(previewInterval);
+      isPreviewMode = false;
+      questionGuide.textContent = "💡 카드를 뒤집어 같은 그림의 짝을 찾으세요!";
+      
+      // 암기 종료 후 전체 카드를 3D 효과로 뒷면 뒤집기
+      const cards = document.querySelectorAll('.card_item');
+      cards.forEach(c => c.classList.remove('flipped'));
+
+      // 이제 본 임무 게임 타이머 구동 시작
+      startMainTimer();
+    }
+  }, 1000);
+}
+
+function startMainTimer() {
+  if (timerInterval) clearInterval(timerInterval);
+  timerInterval = setInterval(() => {
+    if (isGameOver || isBridgeActive || isPreviewMode) return;
+    timeLeft--;
+    timerDisplay.textContent = timeLeft;
+    if (timeLeft <= 0) endGame('timeout');
+  }, 1000);
+}
+
+function checkMatch() {
+  isChecking = true;
+
+  const [card1, card2] = selectedCards;
+
+  if (card1.dataset.emoji === card2.dataset.emoji) {
+
+    card1.classList.add('matched');
+    card2.classList.add('matched');
+
+    matchedPairs++;
+    selectedCards = [];
+    isChecking = false;
+
+    if (matchedPairs === totalPairsNeeded) {
+
+      if (currentStage < 4) {
+        showBridge();
+      } else {
+        endGame('success');
+      }
+
+    }
+
+  } else {
+
+    // 오답 횟수는 기록용으로만 증가
+    wrongCount++;
+
+    setTimeout(() => {
+      card1.classList.remove('flipped');
+      card2.classList.remove('flipped');
+      selectedCards = [];
+      isChecking = false;
+    }, 850);
+
+  }
+}
+
+function showBridge() {
+  isBridgeActive = true;
+  clearInterval(timerInterval);
+  
+  bridgeTitle.textContent = `🎉 ${currentStage}단계 통과 성공!`;
+  let nextStageNum = currentStage + 1;
+  let nextInfo = "";
+  if (nextStageNum === 2) nextInfo = "2단계는 4x3 크기로 총 12장의 카드가 등장하며, 4초간 보여줍니다.";
+  else if (nextStageNum === 3) nextInfo = "3단계는 4x4 크기로 총 16장의 카드가 등장하며, 6초간 보여줍니다.";
+  else if (nextStageNum === 4) nextInfo = "마지막 4단계는 4x6 크기로 총 24장의 카드가 거대하게 늘어나며, 무려 10초간 보여줍니다!";
+
+  bridgeDesc.innerHTML = `정말 대단한 기억력이십니다!<br>이제 <strong>${nextStageNum}단계</strong>에 도전합니다.<br><br>${nextInfo}`;
+  bridgeScreen.classList.remove('hidden');
+
+  const cards = document.querySelectorAll('.card_item');
+  cards.forEach(c => c.classList.add('disabled'));
+}
+
+function startNextStage() {
+  isBridgeActive = false;
+  currentStage++;
+  stageTitleDisplay.textContent = `${currentStage}단계`;
+  bridgeScreen.classList.add('hidden');
+  buildBoard();
+}
+
+function endGame(reason) {
+  isGameOver = true;
+  clearInterval(timerInterval);
+  
+  const cards = document.querySelectorAll('.card_item');
+  cards.forEach(c => {
+    c.classList.add('disabled');
+    c.onclick = null;
+  });
+  
+  resultScreen.classList.remove('hidden');
+
+  if (reason === 'success') {
+    currentTopPercent = Math.max(0.1, (100 - (timeLeft * 0.5)) - (wrongCount * 2)).toFixed(1);
+    resultMsg.innerHTML = `🎉 축하합니다! 4단계까지 모든 그림 카드의 짝을 완벽히 맞췄습니다!<br>당신의 기록은 <strong>상위 ${currentTopPercent}%</strong> 입니다.`;
+    successForm.classList.remove('hidden');
+  } else if (reason === 'timeout') {
+    resultMsg.textContent = "⏱️ 시간 초과! 실패했습니다.";
+  } 
+}
+
+async function saveRecordToServer() {
+  const btn = document.querySelector("#success_form button");
+  if (btn.disabled) return;
+  
+  const nickname = document.getElementById('nickname').value.trim() || '익명';
+  const comment = document.getElementById('comment').value.trim() || '성공했습니다!';
+  
+  const badWords = ["바보", "멍청이", "욕설단어1", "욕설단어2"]; 
+  for (let word of badWords) {
+    if (nickname.includes(word) || comment.includes(word)) {
+      alert("부적절한 단어가 포함되어 있어 등록할 수 없습니다.");
+      return;
+    }
+  }
+  
+  try {
+    btn.disabled = true;
+    btn.textContent = "등록 중...";
+
+    await window.addDoc(window.collection(window.db, "cardMatchRecords"), {
+      nickname: nickname,
+      comment: comment,
+      timeLeft: timeLeft,
+      topPercent: currentTopPercent,
+      createdAt: Date.now()
+    });
+
+    successForm.classList.add('hidden');
+    resultMsg.innerHTML = "🏆 명예의 전당에 기록이 등록되었습니다!";
+    loadRecordsFromServer();
+  } catch (error) {
+    console.error("등록 실패: ", error);
+    btn.disabled = false;
+    btn.textContent = "기록 등록하기";
+    alert("기록 저장 중 오류가 발생했습니다.");
+  }
+}
+
+async function loadRecordsFromServer() {
+  try {
+    const q = window.query(
+      window.collection(window.db, "cardMatchRecords"), 
+      window.orderBy("createdAt", "desc"), 
+      window.limit(30)
+    );
+    
+    const querySnapshot = await window.getDocs(q);
+    
+    if (querySnapshot.empty) {
+      recordsList.innerHTML = '등록된 기록이 없습니다.<br> 성공하여 첫 댓글을 남겨보세요!';
+      return;
+    }
+
+    let htmlBuffer = "";
+    querySnapshot.forEach((doc) => {
+      const item = doc.data();
+      const dateFormatted = new Date(item.createdAt).toLocaleString('ko-KR', { hour12: false });
+      
+      htmlBuffer += `
+        <div class="record_item">
+          <strong>${item.nickname}</strong>: ${item.comment}
+          <div class="record_meta">⏱️ 남은 시간: ${item.timeLeft}초 (상위 ${item.topPercent}%) | 📅 ${dateFormatted}</div>
+        </div>
+      `;
+    });
+    
+    recordsList.innerHTML = htmlBuffer;
+  } catch (error) {
+    console.error("데이터 불러오기 실패: ", error);
+    recordsList.innerHTML = "기록을 불러오는 중 오류가 발생했습니다. Firebase 설정을 확인해 주세요.";
+  }
+}
+
+setTimeout(() => {
+  loadRecordsFromServer();
+}, 800);
+
+startGame();
+</script>
+<script type="text/javascript">
+    function includeFooter() {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '../include/bottom.html', false);
+        xhr.send();
+        if (xhr.status === 200) document.write(xhr.responseText);
+    }
+    includeFooter();
+</script>

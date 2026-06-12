@@ -212,7 +212,7 @@ body { background: #000a14; }
 #contents h2.m4::before { background-image: url(../images/m_ic04.png); }
 
 .page_t_guide { text-align: center; font-size: 24px; color: rgba(255,255,255,0.6); line-height: 160%; margin: 0 0 50px; }
-.page_t_guide em { color: var(--color_yellow); font-style: normal; font-weight: bold; }
+.page_t_guide em { color: #fff; font-style: normal; font-weight: bold; }
 @media screen and (max-width:900px) {
 #contents { padding: 40px 0 60px; }
 #contents h2 { font-size: 36px; margin-bottom: 15px; gap: 10px; padding: 15px 0; border-radius: 15px; }
