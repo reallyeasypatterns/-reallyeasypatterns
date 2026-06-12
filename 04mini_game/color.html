@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>다른 색상 찾기 게임</title>
+<style>
+body { font-family: sans-serif; text-align: center; background: #f0f2f5; margin: 0; padding: 20px; }
+#game_container { max-width: 400px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+#info_panel { margin-bottom: 15px; font-size: 15px; color: #444; }
+#board { display: grid; gap: 8px; width: 300px; height: 300px; margin: 20px auto; }
+.cell { border-radius: 6px; cursor: pointer; transition: transform 0.1s; }
+.cell:active { transform: scale(0.95); }
+.hidden { display: none; }
+button { padding: 10px 20px; font-size: 16px; border: none; border-radius: 6px; background: #007bff; color: #fff; cursor: pointer; margin: 5px; }
+button:hover { background: #0056b3; }
+.wrong_text { color: #dc3545; font-weight: bold; }
+.comment_section { margin-top: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: left; }
+.comment_section input { width: calc(100% - 22px); padding: 8px; margin-bottom: 8px; border: 1px solid #ddd; border-radius: 4px; display: block; }
+#leaderboard_container { max-width: 400px; margin: 30px auto; text-align: left; background: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+.record_item { padding: 10px; border-bottom: 1px solid #eee; font-size: 14px; }
+.record_item:last-child { border-bottom: none; }
+.record_meta { font-size: 12px; color: #888; margin-top: 4px; }
+</style>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getFirestore, collection, addDoc, getDocs, query, orderBy, limit } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+  // ※ 중요: 1단계에서 발급받은 본인의 Firebase 웹 앱 구성 정보로 반드시 교체해 주세요!
+  const firebaseConfig = {
+    apiKey: "AIzaSyBygkwSpi46zPk7jOiqindlmr3WTSYTzig",
+    authDomain: "reallyeasypatterns-4102d.firebaseapp.com",
+    projectId: "reallyeasypatterns-4102d",
+    storageBucket: "reallyeasypatterns-4102d.firebasestorage.app",
+    messagingSenderId: "326239198300",
+    appId: "1:326239198300:web:61f5ae9fce25f68e3b5a99",
+    measurementId: "G-8T88SDWSWK"
+  };
+
+  // Firebase 초기화 및 DB 객체 생성
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // 전역 스코프에 공유하기 위해 window 객체에 할당
+  window.db = db;
+  window.addDoc = addDoc;
+  window.collection = collection;
+  window.getDocs = getDocs;
+  window.query = query;
+  window.orderBy = orderBy;
+  window.limit = limit;
+</script>
+</head>
+<body>
+
+<div id="game_container">
+  <h2>다른 색 찾기 게임</h2>
+  <div id="info_panel">
+    <span>문항: <strong id="stage_num">1</strong>/50</span> | 
+    <span>남은시간: <strong id="timer">50</strong>초</span> | 
+    <span class="wrong_text">오답: <strong id="wrong_cnt">0</strong>/5</span>
+  </div>
+
+  <div id="board"></div>
+
+  <div id="result_screen" class="hidden">
+    <h3 id="result_msg"></h3>
+    
+    <div id="success_form" class="comment_section hidden">
+      <h4>🏆 전 세계 명예의 전당 등록</h4>
+      <input type="text" id="nickname" placeholder="닉네임 (최대 10자)" maxlength="10">
+      <input type="text" id="comment" placeholder="한 줄 댓글을 남겨보세요! (최대 30자)" maxlength="30">
+      <button onclick="saveRecordToServer()">기록 등록하기</button>
+    </div>
+
+    <button onclick="startGame()">다시 도전</button>
+  </div>
+</div>
+
+<div id="leaderboard_container">
+  <h3>🏆 실시간 성공 기록 및 댓글</h3>
+  <div id="records_list">불러오는 중...</div>
+</div>
+
+<script>
+let stage = 1;
+let timeLeft = 50;
+let wrongCount = 0;
+let timerInterval = null;
+let gridSize = 2;
+let colorDiff = 40;
+let isGameOver = false;
+let currentTopPercent = "0.0";
+
+const board = document.getElementById('board');
+const stageNumDisplay = document.getElementById('stage_num');
+const timerDisplay = document.getElementById('timer');
+const wrongCntDisplay = document.getElementById('wrong_cnt');
+const resultScreen = document.getElementById('result_screen');
+const resultMsg = document.getElementById('result_msg');
+const successForm = document.getElementById('success_form');
+const recordsList = document.getElementById('records_list');
+
+function startGame() {
+  stage = 1;
+  timeLeft = 150;
+  wrongCount = 0;
+  isGameOver = false;
+  
+  stageNumDisplay.textContent = stage;
+  timerDisplay.textContent = timeLeft;
+  wrongCntDisplay.textContent = wrongCount;
+  
+  resultScreen.classList.add('hidden');
+  successForm.classList.add('hidden');
+  board.classList.remove('hidden');
+  
+  document.getElementById('nickname').value = '';
+  document.getElementById('comment').value = '';
+  
+  clearInterval(timerInterval);
+  timerInterval = setInterval(() => {
+    if (isGameOver) return;
+    timeLeft--;
+    timerDisplay.textContent = timeLeft;
+    if (timeLeft <= 0) endGame('timeout');
+  }, 1000);
+
+  nextQuestion();
+}
+
+function nextQuestion() {
+  if (isGameOver) return;
+  if (stage > 50) {
+    endGame('success');
+    return;
+  }
+
+  stageNumDisplay.textContent = stage;
+  gridSize = 2 + Math.floor((stage - 1) / 10); 
+  colorDiff = Math.max(12, 40 - Math.floor((stage - 1) / 2) * 1.5); 
+
+  board.innerHTML = '';
+  board.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+
+  const r = Math.floor(Math.random() * (255 - colorDiff));
+  const g = Math.floor(Math.random() * (255 - colorDiff));
+  const b = Math.floor(Math.random() * (255 - colorDiff));
+  
+  const baseColor = `rgb(${r}, ${g}, ${b})`;
+  const targetColor = `rgb(${r + colorDiff}, ${g + colorDiff}, ${b + colorDiff})`;
+
+  const totalCells = gridSize * gridSize;
+  const targetIndex = Math.floor(Math.random() * totalCells);
+
+  for (let i = 0; i < totalCells; i++) {
+    const cell = document.createElement('div');
+    cell.classList.add('cell');
+    
+    if (i === targetIndex) {
+      cell.style.backgroundColor = targetColor;
+      cell.onclick = () => {
+        if (isGameOver) return;
+        stage++;
+        nextQuestion();
+      };
+    } else {
+      cell.style.backgroundColor = baseColor;
+      cell.onclick = () => {
+        if (isGameOver) return;
+        wrongCount++;
+        wrongCntDisplay.textContent = wrongCount;
+        if (wrongCount >= 5) endGame('wrong_limit');
+      };
+    }
+    board.appendChild(cell);
+  }
+}
+
+function endGame(reason) {
+  isGameOver = true;
+  clearInterval(timerInterval);
+  board.classList.add('hidden');
+  resultScreen.classList.remove('hidden');
+
+  if (reason === 'success') {
+    currentTopPercent = Math.max(0.1, (100 - (timeLeft * 2))).toFixed(1);
+    resultMsg.innerHTML = `🎉 축하합니다! 50문제를 모두 맞췄습니다!<br>당신의 기록은 <strong>상위 ${currentTopPercent}%</strong> 입니다.`;
+    successForm.classList.remove('hidden');
+  } else if (reason === 'timeout') {
+    resultMsg.textContent = "⏱️ 시간 초과! 실패했습니다.";
+  } else if (reason === 'wrong_limit') {
+    resultMsg.textContent = "❌ 오답 횟수 초과(5회)! 실패했습니다.";
+  }
+}
+
+// Firebase 클라우드 DB에 데이터 저장하기
+async function saveRecordToServer() {
+  const nickname = document.getElementById('nickname').value.trim() || '익명';
+  const comment = document.getElementById('comment').value.trim() || '성공했습니다!';
+  
+  try {
+    // 'colorGameRecords'라는 컬렉션에 새 문서 추가
+    await window.addDoc(window.collection(window.db, "colorGameRecords"), {
+      nickname: nickname,
+      comment: comment,
+      timeLeft: timeLeft,
+      topPercent: currentTopPercent,
+      createdAt: Date.now() // 정렬을 위한 타임스탬프 저장
+    });
+
+    successForm.classList.add('hidden');
+    resultMsg.innerHTML = "🏆 명예의 전당에 전 세계 실시간 기록이 등록되었습니다!";
+    loadRecordsFromServer(); // 목록 즉시 갱신
+  } catch (error) {
+    console.error("데이터 저장 실패: ", error);
+    alert("기록 저장 중 오류가 발생했습니다.");
+  }
+}
+
+// Firebase 클라우드 DB에서 최신 데이터 30개 가져오기
+async function loadRecordsFromServer() {
+  try {
+    const q = window.query(
+      window.collection(window.db, "colorGameRecords"), 
+      window.orderBy("createdAt", "desc"), 
+      window.limit(30)
+    );
+    
+    const querySnapshot = await window.getDocs(q);
+    
+    if (querySnapshot.empty) {
+      recordsList.innerHTML = '등록된 기록이 없습니다. 성공하여 전 세계 첫 댓글을 남겨보세요!';
+      return;
+    }
+
+    let htmlBuffer = "";
+    querySnapshot.forEach((doc) => {
+      const item = doc.data();
+      const dateFormatted = new Date(item.createdAt).toLocaleString('ko-KR', { hour12: false });
+      
+      htmlBuffer += `
+        <div class="record_item">
+          <strong>${item.nickname}</strong>: ${item.comment}
+          <div class="record_meta">⏱️ 남은 시간: ${item.timeLeft}초 (상위 ${item.topPercent}%) | 📅 ${dateFormatted}</div>
+        </div>
+      `;
+    });
+    
+    recordsList.innerHTML = htmlBuffer;
+  } catch (error) {
+    console.error("데이터 불러오기 실패: ", error);
+    recordsList.innerHTML = "기록을 불러오는 중 오류가 발생했습니다. Firebase 설정을 확인해 주세요.";
+  }
+}
+
+// 페이지가 처음 로드될 때 실시간 서버 데이터 읽어오기
+// Firebase가 비동기 로드되므로 안전하게 약간의 지연 처리 후 호출
+setTimeout(() => {
+  loadRecordsFromServer();
+}, 800);
+
+startGame();
+</script>
+
+</body>
+</html>

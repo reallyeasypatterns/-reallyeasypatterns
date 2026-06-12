@@ -142,7 +142,7 @@ body { background: #000a14; }
 .today_patterns h2 { font-size: 40px; color: #fff; margin-bottom: 20px; }
 .today_patterns .t_tx { font-size: 24px; opacity: 0.4; margin-bottom: 30px; }
 .today_patterns dl { font-size: 50px; border-top: 1px dashed rgba(255,255,255,0.3); padding: 15px 0 10px; }
-.today_patterns dl dt { font-size: 100px; color: var(--color_yellow); margin-bottom: 15px; text-transform: uppercase; }
+.today_patterns dl dt { font-size: 90px; color: var(--color_yellow); margin-bottom: 15px; text-transform: uppercase; }
 .today_patterns a { position: absolute; top:0; left: 0; right: 0; bottom: 0; text-indent: -9999px; z-index: 6; }
 
 .m_cards { display: flex; gap: 30px; flex-wrap: wrap; }
