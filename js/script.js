@@ -43,7 +43,7 @@ $(document).ready(function(e) {
 });
 
 $(document).ready(function() {
-    // 1. 패턴 데이터 정의 (url이 있는 것과 없는 것을 구분합니다)
+    // 1. 패턴 데이터 정의 (url이 있는 것과 없는 것을 구분합니다) 여기
     var patternData = [
         { en: "I want to ~", kr: "~하고 싶어", url: "lesson_001.html" },
         { en: "I'm going to ~", kr: "~할 예정이야 (할 거야)", url: "lesson_002.html" },
@@ -60,11 +60,11 @@ $(document).ready(function() {
         { en: "I'm sorry for ~", kr: "~해서 미안해", url: "lesson_013.html" },
         { en: "Thank you for ~", kr: "~해 줘서 고마워", url: "lesson_014.html" },
         { en: "Don't forget to ~", kr: "~하는 거 잊지 마", url: "lesson_015.html" },
-        { en: "I'm looking for ~", kr: "~를 찾고 있어", url: "" },
-        { en: "I'm trying to ~", kr: "~하려고 노력 중이야 (하는 중이야)", url: "" },
-        { en: "How about ~?", kr: "~는 어때?", url: "" },
-        { en: "What are you ~?", kr: "너 지금 뭐 ~하는 거야?", url: "" },
-        { en: "Where is ~?", kr: "~는 어디에 있어?", url: "" },
+        { en: "I'm looking for ~", kr: "~를 찾고 있어", url: "lesson_016.html" },
+        { en: "I'm trying to ~", kr: "~하려고 노력 중이야 (하는 중이야)", url: "lesson_017.html" },
+        { en: "How about ~?", kr: "~는 어때?", url: "lesson_018.html" },
+        { en: "What are you ~?", kr: "너 지금 뭐 ~하는 거야?", url: "lesson_019.html" },
+        { en: "Where is ~?", kr: "~는 어디에 있어?", url: "lesson_020.html" },
         { en: "When do you ~?", kr: "너 언제 ~해?", url: "" },
         { en: "Why did you ~?", kr: "너 왜 ~했어?", url: "" },
         { en: "Let's ~", kr: "우리 ~하자", url: "" },
@@ -245,7 +245,7 @@ $(document).on('click', 'a._ready_menu', function(e) {
     alert('"' + menuText + '" 메뉴는 현재 준비 중입니다 조금만 기다려 주세요!');    
 });
 $(document).ready(function() {
-    // 1. 패턴 데이터 정의
+    // 1. 패턴 데이터 정의 여기
     var quizPatternData = [
         { en: "I want to ~", kr: "~하고 싶어", json: "../data/rep001_sentences.json" },
         { en: "I'm going to ~", kr: "~할 예정이야 (할 거야)", json: "../data/rep002_sentences.json" },
@@ -262,11 +262,11 @@ $(document).ready(function() {
         { en: "I'm sorry for ~", kr: "~해서 미안해", json: "../data/rep013_sentences.json" },
         { en: "Thank you for ~", kr: "~해 줘서 고마워", json: "../data/rep014_sentences.json" },
         { en: "Don't forget to ~", kr: "~하는 거 잊지 마", json: "../data/rep015_sentences.json" },
-        { en: "I'm looking for ~", kr: "~를 찾고 있어", json: "" },
-        { en: "I'm trying to ~", kr: "~하려고 노력 중이야 (하는 중이야)", json: "" },
-        { en: "How about ~?", kr: "~는 어때?", json: "" },
-        { en: "What are you ~?", kr: "너 지금 뭐 ~하는 거야?", json: "" },
-        { en: "Where is ~?", kr: "~는 어디에 있어?", json: "" },
+        { en: "I'm looking for ~", kr: "~를 찾고 있어", json: "../data/rep016_sentences.json" },
+        { en: "I'm trying to ~", kr: "~하려고 노력 중이야 (하는 중이야)", json: "../data/rep017_sentences.json" },
+        { en: "How about ~?", kr: "~는 어때?", json: "../data/rep018_sentences.json" },
+        { en: "What are you ~?", kr: "너 지금 뭐 ~하는 거야?", json: "../data/rep019_sentences.json" },
+        { en: "Where is ~?", kr: "~는 어디에 있어?", json: "../data/rep020_sentences.json" },
         { en: "When do you ~?", kr: "너 언제 ~해?", json: "" },
         { en: "Why did you ~?", kr: "너 왜 ~했어?", json: "" },
         { en: "Let's ~", kr: "우리 ~하자", json: "" },
