@@ -75,11 +75,11 @@ $(document).ready(function() {
         { en: "I'm good at ~", kr: "나 ~ 잘해", url: "lesson_028.html" },
         { en: "I'm afraid of ~", kr: "나 ~가 두려워 (무서워)", url: "lesson_029.html" },
         { en: "I'm ready to ~", kr: "나 ~할 준비가 됐어", url: "lesson_030.html" },
-        { en: "Is it okay if I ~?", kr: "내가 ~해도 괜찮을까?", url: "" },
-        { en: "It looks like ~", kr: "~처럼 보여 (인 것 같아)", url: "" },
-        { en: "There is / are ~", kr: "~가 있어", url: "" },
-        { en: "I can't wait to ~", kr: "빨리 ~하고 싶어 (기다릴 수 없어)", url: "" },
-        { en: "I can't believe ~", kr: "~라니 믿을 수 없어", url: "" },
+        { en: "Is it okay if I ~?", kr: "내가 ~해도 괜찮을까?", url: "lesson_031.html" },
+        { en: "It looks like ~", kr: "~처럼 보여 (인 것 같아)", url: "lesson_032.html" },
+        { en: "There is / are ~", kr: "~가 있어", url: "lesson_033.html" },
+        { en: "I can't wait to ~", kr: "빨리 ~하고 싶어 (기다릴 수 없어)", url: "lesson_034.html" },
+        { en: "I can't believe ~", kr: "~라니 믿을 수 없어", url: "lesson_035.html" },
         { en: "I don't know how to ~", kr: "어떻게 ~해야 할지 모르겠어", url: "" },
         { en: "I remember ~", kr: "나 ~한 거 기억나", url: "" },
         { en: "I decided to ~", kr: "나 ~하기기로 결정했어 (마음먹었어)", url: "" },
@@ -202,17 +202,22 @@ $(document).ready(function() {
             var patternKeyword = data.pattern_en;
             var patternKorean = data.pattern_kr;
 
-            // 1. 상단 .pattern 영역에 JSON 데이터 자동 삽입 (영어 패턴 부분은 span으로 감싸기)
+            // 1. 상단 .pattern 영역 처리
             if (patternKeyword && patternKorean) {
-                $('.lesson .sentences .op .pattern').html('<span class="point_text">' + patternKeyword + '</span> ' + patternKorean);
+                var displayPattern = Array.isArray(patternKeyword) ? patternKeyword.join(', ') : patternKeyword;
+                $('.lesson .sentences .op .pattern').html('<span class="point_text">' + displayPattern + '</span> ' + patternKorean);
             }
             
-            // 2. 루프를 돌며 테이블 tbody에 데이터 바인딩 및 패턴 강조 처리
+            // 2. 정규식 생성 (배열인지 문자열인지 확인하여 처리)
+            // 배열이면 ["A", "B"] -> "A|B" 형태로 결합하여 정규식 생성
+            var patternRegexSource = Array.isArray(patternKeyword) ? patternKeyword.join('|') : patternKeyword;
+            var regex = patternRegexSource ? new RegExp('(' + patternRegexSource + ')', 'gi') : null;
+
+            // 3. 루프를 돌며 테이블 tbody에 데이터 바인딩
             $.each(data.sentences, function(index, item) {
                 var fullEnglish = item.en;
                 
-                if (patternKeyword) {
-                    var regex = new RegExp('(' + patternKeyword + ')', 'gi');
+                if (regex) {
                     fullEnglish = fullEnglish.replace(regex, '<span class="point_text">$1</span>');
                 }
 
@@ -229,7 +234,7 @@ $(document).ready(function() {
         });
     }
 
-    // 3. 옵션 체크박스 클릭 시 해당 열의 텍스트 토글 (인덱스 구조 맞춤)
+    // 4. 옵션 체크박스 클릭 이벤트 (기존 코드 유지)
     $('.lesson .sentences .op ul li input').on('change', function() {
         var idx = $(this).parent().index();
         var isChecked = $(this).is(':checked');
@@ -277,11 +282,11 @@ $(document).ready(function() {
         { en: "I'm good at ~", kr: "나 ~ 잘해", json: "../data/rep028_sentences.json" },
         { en: "I'm afraid of ~", kr: "나 ~가 두려워 (무서워)", json: "../data/rep029_sentences.json" },
         { en: "I'm ready to ~", kr: "나 ~할 준비가 됐어", json: "../data/rep030_sentences.json" },
-        { en: "Is it okay if I ~?", kr: "내가 ~해도 괜찮을까?", json: "" },
-        { en: "It looks like ~", kr: "~처럼 보여 (인 것 같아)", json: "" },
-        { en: "There is / are ~", kr: "~가 있어", json: "" },
-        { en: "I can't wait to ~", kr: "빨리 ~하고 싶어 (기다릴 수 없어)", json: "" },
-        { en: "I can't believe ~", kr: "~라니 믿을 수 없어", json: "" },
+        { en: "Is it okay if I ~?", kr: "내가 ~해도 괜찮을까?", json: "../data/rep031_sentences.json" },
+        { en: "It looks like ~", kr: "~처럼 보여 (인 것 같아)", json: "../data/rep032_sentences.json" },
+        { en: "There is / are ~", kr: "~가 있어", json: "../data/rep033_sentences.json" },
+        { en: "I can't wait to ~", kr: "빨리 ~하고 싶어 (기다릴 수 없어)", json: "../data/rep034_sentences.json" },
+        { en: "I can't believe ~", kr: "~라니 믿을 수 없어", json: "../data/rep035_sentences.json" },
         { en: "I don't know how to ~", kr: "어떻게 ~해야 할지 모르겠어", json: "" },
         { en: "I remember ~", kr: "나 ~한 거 기억나", json: "" },
         { en: "I decided to ~", kr: "나 ~하기기로 결정했어 (마음먹었어)", json: "" },
