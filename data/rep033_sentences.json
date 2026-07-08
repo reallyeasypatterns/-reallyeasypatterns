@@ -1,6 +1,5 @@
 {
   "pattern_en": ["There is", "There are"],
-
   "pattern_kr": "~가 있어",
   "pattern_highlight": ["There is", "There are"],
   "sentences": [
