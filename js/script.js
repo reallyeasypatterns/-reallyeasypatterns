@@ -81,20 +81,20 @@ $(document).ready(function() {
         { en: "I can't wait to ~", kr: "빨리 ~하고 싶어 (기다릴 수 없어)", url: "lesson_034.html" },
         { en: "I can't believe ~", kr: "~라니 믿을 수 없어", url: "lesson_035.html" },
         { en: "I don't know how to ~", kr: "어떻게 ~해야 할지 모르겠어", url: "lesson_036.html" },
-        { en: "I remember ~", kr: "나 ~한 거 기억나", url: "lesson_037.html" },
-        { en: "I decided to ~", kr: "나 ~하기기로 결정했어 (마음먹었어)", url: "lesson_038.html" },
-        { en: "I promise to ~", kr: "나 ~하겠다고 약속할게", url: "lesson_039.html" },
-        { en: "I'm interested in ~", kr: "나 ~에 관심 있어", url: "lesson_040.html" },
-        { en: "Have you ever ~?", kr: "너 이전에 ~해 본 적 있어?", url: "" },
-        { en: "How long does it take to ~?", kr: "~하는 데 얼마나 걸려?", url: "" },
-        { en: "What do you think about ~?", kr: "~에 대해 어떻게 생각해?", url: "" },
-        { en: "Make sure to ~", kr: "반드시 ~하도록 해", url: "" },
-        { en: "You don't have to ~", kr: "너 ~ 안 해도 돼 (할 필요 없어)", url: "" },
-        { en: "It's hard to ~", kr: "~하는 건 어려워", url: "" },
-        { en: "It's easy to ~", kr: "~하는 건 쉬워", url: "" },
-        { en: "I'm busy ~ing", kr: "나 ~하느라 바빠", url: "" },
-        { en: "I feel like ~ing", kr: "나 ~하고 싶은 기분이야", url: "" },
-        { en: "No wonder ~", kr: "어쩐지 ~하더라니 (하는 게 당연해)", url: "" },
+        { en: "I remember ~", kr: "~한 거 기억나", url: "lesson_037.html" },
+        { en: "I decided to ~", kr: "~하기기로 결정했어 (마음먹었어)", url: "lesson_038.html" },
+        { en: "I promise to ~", kr: "~하겠다고 약속할게", url: "lesson_039.html" },
+        { en: "I'm interested in ~", kr: "~에 관심 있어", url: "lesson_040.html" },
+        { en: "Have you ever ~?", kr: "너 이전에 ~해 본 적 있어?", url: "lesson_041.html" },
+        { en: "How long does it take to ~?", kr: "~하는 데 얼마나 걸려?", url: "lesson_042.html" },
+        { en: "What do you think about ~?", kr: "~에 대해 어떻게 생각해?", url: "lesson_043.html" },
+        { en: "Make sure to ~", kr: "반드시 ~하도록 해", url: "lesson_044.html" },
+        { en: "You don't have to ~", kr: "너 ~ 안 해도 돼 (할 필요 없어)", url: "lesson_045.html" },
+        { en: "It's hard to ~", kr: "~하는 건 어려워", url: "lesson_046.html" },
+        { en: "It's easy to ~", kr: "~하는 건 쉬워", url: "lesson_047.html" },
+        { en: "I'm busy ~ing", kr: "~하느라 바빠", url: "lesson_048.html" },
+        { en: "I feel like ~ing", kr: "~하고 싶은 기분이야", url: "lesson_049.html" },
+        { en: "No wonder ~", kr: "어쩐지 ~하더라니 (하는 게 당연해)", url: "lesson_050.html" },
         { en: "I'd like to ~", kr: "~하고 싶습니다 (공손하게)", url: "" },
         { en: "I was about to ~", kr: "막 ~하려던 참이었어", url: "" },
         { en: "It takes time to ~", kr: "~하는 데 시간이 걸려", url: "" },
@@ -195,54 +195,107 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     var jsonFileName = $('.lesson').attr('data-json');
-    
+
     if (jsonFileName) {
         $.getJSON('../data/' + jsonFileName, function(data) {
+
             var tableRows = '';
+
             var patternKeyword = data.pattern_en;
             var patternKorean = data.pattern_kr;
+            var patternHighlight = data.pattern_highlight || patternKeyword;
 
-            // 1. 상단 .pattern 영역 처리
+            // ============================
+            // 상단 패턴 표시
+            // ============================
             if (patternKeyword && patternKorean) {
-                var displayPattern = Array.isArray(patternKeyword) ? patternKeyword.join(', ') : patternKeyword;
-                $('.lesson .sentences .op .pattern').html('<span class="point_text">' + displayPattern + '</span> ' + patternKorean);
-            }
-            
-            // 2. 정규식 생성 (배열인지 문자열인지 확인하여 처리)
-            // 배열이면 ["A", "B"] -> "A|B" 형태로 결합하여 정규식 생성
-            var patternRegexSource = Array.isArray(patternKeyword) ? patternKeyword.join('|') : patternKeyword;
-            var regex = patternRegexSource ? new RegExp('(' + patternRegexSource + ')', 'gi') : null;
+                var displayPattern = Array.isArray(patternKeyword)
+                    ? patternKeyword.join(', ')
+                    : patternKeyword;
 
-            // 3. 루프를 돌며 테이블 tbody에 데이터 바인딩
-            $.each(data.sentences, function(index, item) {
-                var fullEnglish = item.en;
-                
-                if (regex) {
-                    fullEnglish = fullEnglish.replace(regex, '<span class="point_text">$1</span>');
+                $('.lesson .sentences .op .pattern').html(
+                    '<span class="point_text">' + displayPattern + '</span> ' + patternKorean
+                );
+            }
+
+            // ============================
+            // 하이라이트 규칙 생성
+            // ============================
+            var highlightRules = [];
+
+            if (patternHighlight) {
+
+                if (!Array.isArray(patternHighlight)) {
+                    patternHighlight = [patternHighlight];
                 }
 
+                $.each(patternHighlight, function(i, rule) {
+
+                    // 특수 토큰 처리
+                    if (rule === "~ing") {
+
+                        // studying, cooking, working...
+                        highlightRules.push({
+                            regex: /\b([A-Za-z]+ing)\b/g,
+                            replacement: '<span class="point_text">$1</span>'
+                        });
+
+                    } else {
+
+                        // 일반 문자열
+                        var escaped = rule.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+                        highlightRules.push({
+                            regex: new RegExp('(' + escaped + ')', 'gi'),
+                            replacement: '<span class="point_text">$1</span>'
+                        });
+
+                    }
+
+                });
+
+            }
+
+            // ============================
+            // 문장 출력
+            // ============================
+            $.each(data.sentences, function(index, item) {
+
+                var fullEnglish = item.en;
+
+                $.each(highlightRules, function(i, rule) {
+                    fullEnglish = fullEnglish.replace(rule.regex, rule.replacement);
+                });
+
                 tableRows += '<tr>';
-                tableRows += '    <td>' + fullEnglish + '</td>';
-                tableRows += '    <td>' + item.kr + '</td>';
-                tableRows += '    <td>' + item.pron + '</td>';
+                tableRows += '<td>' + fullEnglish + '</td>';
+                tableRows += '<td>' + item.kr + '</td>';
+                tableRows += '<td>' + item.pron + '</td>';
                 tableRows += '</tr>';
+
             });
-            
+
             $('.tb_sentences tbody').html(tableRows);
+
         }).fail(function() {
-            console.log('JSON 데이터를 불러오는 데 실패했습니다 경로를 확인해 주세요.');
+            console.log('JSON 데이터를 불러오는 데 실패했습니다. 경로를 확인해 주세요.');
         });
     }
 
-    // 4. 옵션 체크박스 클릭 이벤트 (기존 코드 유지)
+    // ============================
+    // 체크박스
+    // ============================
     $('.lesson .sentences .op ul li input').on('change', function() {
+
         var idx = $(this).parent().index();
         var isChecked = $(this).is(':checked');
-        
+
         $('.tb_sentences tbody tr').each(function() {
             $(this).children().eq(idx).toggleClass('blind_text', !isChecked);
         });
+
     });
+
 });
 $(document).on('click', 'a._ready_menu', function(e) {
     e.preventDefault(); // 링크 이동 원천 차단
@@ -288,20 +341,20 @@ $(document).ready(function() {
         { en: "I can't wait to ~", kr: "빨리 ~하고 싶어 (기다릴 수 없어)", json: "../data/rep034_sentences.json" },
         { en: "I can't believe ~", kr: "~라니 믿을 수 없어", json: "../data/rep035_sentences.json" },
         { en: "I don't know how to ~", kr: "어떻게 ~해야 할지 모르겠어", json: "../data/rep036_sentences.json" },
-        { en: "I remember ~", kr: "나 ~한 거 기억나", json: "../data/rep037_sentences.json" },
-        { en: "I decided to ~", kr: "나 ~하기기로 결정했어 (마음먹었어)", json: "../data/rep038_sentences.json" },
-        { en: "I promise to ~", kr: "나 ~하겠다고 약속할게", json: "../data/rep039_sentences.json" },
-        { en: "I'm interested in ~", kr: "나 ~에 관심 있어", json: "../data/rep040_sentences.json" },
-        { en: "Have you ever ~?", kr: "너 이전에 ~해 본 적 있어?", json: "" },
-        { en: "How long does it take to ~?", kr: "~하는 데 얼마나 걸려?", json: "" },
-        { en: "What do you think about ~?", kr: "~에 대해 어떻게 생각해?", json: "" },
-        { en: "Make sure to ~", kr: "반드시 ~하도록 해", json: "" },
-        { en: "You don't have to ~", kr: "너 ~ 안 해도 돼 (할 필요 없어)", json: "" },
-        { en: "It's hard to ~", kr: "~하는 건 어려워", json: "" },
-        { en: "It's easy to ~", kr: "~하는 건 쉬워", json: "" },
-        { en: "I'm busy ~ing", kr: "나 ~하느라 바빠", json: "" },
-        { en: "I feel like ~ing", kr: "나 ~하고 싶은 기분이야", json: "" },
-        { en: "No wonder ~", kr: "어쩐지 ~하더라니 (하는 게 당연해)", json: "" },
+        { en: "I remember ~", kr: "~한 거 기억나", json: "../data/rep037_sentences.json" },
+        { en: "I decided to ~", kr: "~하기기로 결정했어 (마음먹었어)", json: "../data/rep038_sentences.json" },
+        { en: "I promise to ~", kr: "~하겠다고 약속할게", json: "../data/rep039_sentences.json" },
+        { en: "I'm interested in ~", kr: "~에 관심 있어", json: "../data/rep040_sentences.json" },
+        { en: "Have you ever ~?", kr: "너 이전에 ~해 본 적 있어?", json: "../data/rep041_sentences.json" },
+        { en: "How long does it take to ~?", kr: "~하는 데 얼마나 걸려?", json: "../data/rep042_sentences.json" },
+        { en: "What do you think about ~?", kr: "~에 대해 어떻게 생각해?", json: "../data/rep043_sentences.json" },
+        { en: "Make sure to ~", kr: "반드시 ~하도록 해", json: "../data/rep044_sentences.json" },
+        { en: "You don't have to ~", kr: "너 ~ 안 해도 돼 (할 필요 없어)", json: "../data/rep045_sentences.json" },
+        { en: "It's hard to ~", kr: "~하는 건 어려워", json: "../data/rep046_sentences.json" },
+        { en: "It's easy to ~", kr: "~하는 건 쉬워", json: "../data/rep047_sentences.json" },
+        { en: "I'm busy ~ing", kr: "~하느라 바빠", json: "../data/rep048_sentences.json" },
+        { en: "I feel like ~ing", kr: "~하고 싶은 기분이야", json: "../data/rep049_sentences.json" },
+        { en: "No wonder ~", kr: "어쩐지 ~하더라니 (하는 게 당연해)", json: "../data/rep050_sentences.json" },
         { en: "I'd like to ~", kr: "~하고 싶습니다 (공손하게)", json: "" },
         { en: "I was about to ~", kr: "막 ~하려던 참이었어", json: "" },
         { en: "It takes time to ~", kr: "~하는 데 시간이 걸려", json: "" },
