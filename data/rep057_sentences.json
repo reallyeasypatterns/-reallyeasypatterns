@@ -1,0 +1,307 @@
+{
+  "pattern_en": "I'm worried about",
+  "pattern_kr": "~이 걱정돼요",
+  "pattern_highlight": "I'm worried about",
+  "sentences": [
+    {
+      "en": "I'm worried about my health",
+      "kr": "건강이 걱정돼요",
+      "pron": "아임 워리드 어바웃 마이 헬스",
+      "keyword": "health 건강"
+    },
+    {
+      "en": "I'm worried about your safety",
+      "kr": "당신의 안전이 걱정돼요",
+      "pron": "아임 워리드 어바웃 유어 세이프티",
+      "keyword": "safety 안전"
+    },
+    {
+      "en": "I'm worried about the exam results",
+      "kr": "시험 결과가 걱정돼요",
+      "pron": "아임 워리드 어바웃 디 이그잼 리절츠",
+      "keyword": "exam results 시험 결과"
+    },
+    {
+      "en": "I'm worried about losing my job",
+      "kr": "직장을 잃을까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 루징 마이 잡",
+      "keyword": "lose a job 실직하다"
+    },
+    {
+      "en": "I'm worried about the weather",
+      "kr": "날씨가 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 웨더",
+      "keyword": "weather 날씨"
+    },
+    {
+      "en": "I'm worried about my future",
+      "kr": "제 미래가 걱정돼요",
+      "pron": "아임 워리드 어바웃 마이 퓨처",
+      "keyword": "future 미래"
+    },
+    {
+      "en": "I'm worried about the deadline",
+      "kr": "마감일이 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 데드라인",
+      "keyword": "deadline 마감일"
+    },
+    {
+      "en": "I'm worried about my finances",
+      "kr": "재정 상태가 걱정돼요",
+      "pron": "아임 워리드 어바웃 마이 파이낸시스",
+      "keyword": "finances 재정"
+    },
+    {
+      "en": "I'm worried about our relationship",
+      "kr": "우리 관계가 걱정돼요",
+      "pron": "아임 워리드 어바웃 아워 릴레이션십",
+      "keyword": "relationship 관계"
+    },
+    {
+      "en": "I'm worried about your health",
+      "kr": "당신 건강이 걱정돼요",
+      "pron": "아임 워리드 어바웃 유어 헬스",
+      "keyword": "health 건강"
+    },
+    {
+      "en": "I'm worried about the flight delay",
+      "kr": "비행기가 지연될까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 플라이트 딜레이",
+      "keyword": "flight delay 비행기 지연"
+    },
+    {
+      "en": "I'm worried about making mistakes",
+      "kr": "실수할까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 메이킹 미스테이크스",
+      "keyword": "mistake 실수"
+    },
+    {
+      "en": "I'm worried about the presentation",
+      "kr": "발표가 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 프레젠테이션",
+      "keyword": "presentation 발표"
+    },
+    {
+      "en": "I'm worried about my parents",
+      "kr": "부모님이 걱정돼요",
+      "pron": "아임 워리드 어바웃 마이 페어런츠",
+      "keyword": "parents 부모님"
+    },
+    {
+      "en": "I'm worried about the traffic",
+      "kr": "차가 막힐까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 트래픽",
+      "keyword": "traffic 교통 체증"
+    },
+    {
+      "en": "I'm worried about gaining weight",
+      "kr": "살이 찔까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 게이닝 웨이트",
+      "keyword": "gain weight 살찌다"
+    },
+    {
+      "en": "I'm worried about losing touch with friends",
+      "kr": "친구들과 멀어질까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 루징 터치 위드 프렌즈",
+      "keyword": "lose touch 멀어지다"
+    },
+    {
+      "en": "I'm worried about climate change",
+      "kr": "기후 변화가 걱정돼요",
+      "pron": "아임 워리드 어바웃 클라이밋 체인지",
+      "keyword": "climate change 기후 변화"
+    },
+    {
+      "en": "I'm worried about the economy",
+      "kr": "경제가 걱정돼요",
+      "pron": "아임 워리드 어바웃 디 이코노미",
+      "keyword": "economy 경제"
+    },
+    {
+      "en": "I'm worried about my grades",
+      "kr": "성적이 걱정돼요",
+      "pron": "아임 워리드 어바웃 마이 그레이즈",
+      "keyword": "grades 성적"
+    },
+    {
+      "en": "I'm worried about the interview",
+      "kr": "면접이 걱정돼요",
+      "pron": "아임 워리드 어바웃 디 인터뷰",
+      "keyword": "interview 면접"
+    },
+    {
+      "en": "I'm worried about being late",
+      "kr": "늦을까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 비잉 레이트",
+      "keyword": "late 늦은"
+    },
+    {
+      "en": "I'm worried about falling behind",
+      "kr": "뒤처질까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 폴링 비하인드",
+      "keyword": "fall behind 뒤처지다"
+    },
+    {
+      "en": "I'm worried about the surgery",
+      "kr": "수술이 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 서저리",
+      "keyword": "surgery 수술"
+    },
+    {
+      "en": "I'm worried about my son's safety",
+      "kr": "아들의 안전이 걱정돼요",
+      "pron": "아임 워리드 어바웃 마이 선즈 세이프티",
+      "keyword": "safety 안전"
+    },
+    {
+      "en": "I'm worried about the test results",
+      "kr": "검사 결과가 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 테스트 리절츠",
+      "keyword": "test results 검사 결과"
+    },
+    {
+      "en": "I'm worried about running out of time",
+      "kr": "시간이 부족할까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 러닝 아웃 오브 타임",
+      "keyword": "run out 부족하다"
+    },
+    {
+      "en": "I'm worried about disappointing you",
+      "kr": "당신을 실망시킬까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 디서포인팅 유",
+      "keyword": "disappoint 실망시키다"
+    },
+    {
+      "en": "I'm worried about the future of the company",
+      "kr": "회사의 미래가 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 퓨처 오브 더 컴퍼니",
+      "keyword": "company's future 회사의 미래"
+    },
+    {
+      "en": "I'm worried about losing my memory",
+      "kr": "기억을 잃을까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 루징 마이 메모리",
+      "keyword": "memory 기억"
+    },
+    {
+      "en": "I'm worried about the trip",
+      "kr": "이번 여행이 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 트립",
+      "keyword": "trip 여행"
+    },
+    {
+      "en": "I'm worried about my pet's health",
+      "kr": "우리 반려동물 건강이 걱정돼요",
+      "pron": "아임 워리드 어바웃 마이 펫츠 헬스",
+      "keyword": "pet 반려동물"
+    },
+    {
+      "en": "I'm worried about speaking in public",
+      "kr": "사람들 앞에서 말하는 게 걱정돼요",
+      "pron": "아임 워리드 어바웃 스피킹 인 퍼블릭",
+      "keyword": "speak in public 대중연설"
+    },
+    {
+      "en": "I'm worried about the cost",
+      "kr": "비용이 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 코스트",
+      "keyword": "cost 비용"
+    },
+    {
+      "en": "I'm worried about failing the course",
+      "kr": "그 과목에서 낙제할까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 페일링 더 코스",
+      "keyword": "fail a course 낙제하다"
+    },
+    {
+      "en": "I'm worried about my appearance",
+      "kr": "제 외모가 걱정돼요",
+      "pron": "아임 워리드 어바웃 마이 어피어런스",
+      "keyword": "appearance 외모"
+    },
+    {
+      "en": "I'm worried about what people think",
+      "kr": "사람들이 어떻게 생각할지 걱정돼요",
+      "pron": "아임 워리드 어바웃 왓 피플 씽크",
+      "keyword": "people's opinion 사람들의 생각"
+    },
+    {
+      "en": "I'm worried about the noise",
+      "kr": "소음이 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 노이즈",
+      "keyword": "noise 소음"
+    },
+    {
+      "en": "I'm worried about security",
+      "kr": "보안이 걱정돼요",
+      "pron": "아임 워리드 어바웃 시큐리티",
+      "keyword": "security 보안"
+    },
+    {
+      "en": "I'm worried about the project timeline",
+      "kr": "프로젝트 일정이 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 프로젝트 타임라인",
+      "keyword": "timeline 일정"
+    },
+    {
+      "en": "I'm worried about your decision",
+      "kr": "당신의 결정이 걱정돼요",
+      "pron": "아임 워리드 어바웃 유어 디시전",
+      "keyword": "decision 결정"
+    },
+    {
+      "en": "I'm worried about losing this opportunity",
+      "kr": "이 기회를 놓칠까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 루징 디스 오퍼튜니티",
+      "keyword": "opportunity 기회"
+    },
+    {
+      "en": "I'm worried about my sleep schedule",
+      "kr": "제 수면 패턴이 걱정돼요",
+      "pron": "아임 워리드 어바웃 마이 슬립 스케줄",
+      "keyword": "sleep schedule 수면 패턴"
+    },
+    {
+      "en": "I'm worried about the storm",
+      "kr": "폭풍이 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 스톰",
+      "keyword": "storm 폭풍"
+    },
+    {
+      "en": "I'm worried about their reaction",
+      "kr": "그들의 반응이 걱정돼요",
+      "pron": "아임 워리드 어바웃 데어 리액션",
+      "keyword": "reaction 반응"
+    },
+    {
+      "en": "I'm worried about my son's grades",
+      "kr": "아들의 성적이 걱정돼요",
+      "pron": "아임 워리드 어바웃 마이 선즈 그레이즈",
+      "keyword": "grades 성적"
+    },
+    {
+      "en": "I'm worried about taking on too much",
+      "kr": "너무 많은 일을 맡을까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 테이킹 온 투 머치",
+      "keyword": "take on 떠맡다"
+    },
+    {
+      "en": "I'm worried about missing the flight",
+      "kr": "비행기를 놓칠까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 미싱 더 플라이트",
+      "keyword": "miss 놓치다"
+    },
+    {
+      "en": "I'm worried about the side effects",
+      "kr": "부작용이 걱정돼요",
+      "pron": "아임 워리드 어바웃 더 사이드 이펙츠",
+      "keyword": "side effects 부작용"
+    },
+    {
+      "en": "I'm worried about catching a cold",
+      "kr": "감기에 걸릴까 봐 걱정돼요",
+      "pron": "아임 워리드 어바웃 캐칭 어 콜드",
+      "keyword": "catch a cold 감기에 걸리다"
+    }
+  ]
+}

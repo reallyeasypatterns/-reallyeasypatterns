@@ -1,0 +1,307 @@
+{
+  "pattern_en": "I'm glad to",
+  "pattern_kr": "~해서 기뻐요",
+  "pattern_highlight": "I'm glad to",
+  "sentences": [
+    {
+      "en": "I'm glad to meet you",
+      "kr": "만나서 반가워요",
+      "pron": "아임 글래드 투 미트 유",
+      "keyword": "meet 만나다"
+    },
+    {
+      "en": "I'm glad to see you again",
+      "kr": "다시 만나서 반가워요",
+      "pron": "아임 글래드 투 씨 유 어게인",
+      "keyword": "see again 다시 만나다"
+    },
+    {
+      "en": "I'm glad to hear that",
+      "kr": "그 얘기를 들으니 기뻐요",
+      "pron": "아임 글래드 투 히어 댓",
+      "keyword": "hear 듣다"
+    },
+    {
+      "en": "I'm glad to help you",
+      "kr": "기꺼이 도와드릴게요",
+      "pron": "아임 글래드 투 헬프 유",
+      "keyword": "help 돕다"
+    },
+    {
+      "en": "I'm glad to be here",
+      "kr": "이 자리에 있게 되어 기뻐요",
+      "pron": "아임 글래드 투 비 히어",
+      "keyword": "be here 여기 있다"
+    },
+    {
+      "en": "I'm glad to join the team",
+      "kr": "팀에 합류하게 되어 기뻐요",
+      "pron": "아임 글래드 투 조인 더 팀",
+      "keyword": "join the team 팀에 합류하다"
+    },
+    {
+      "en": "I'm glad to announce the news",
+      "kr": "이 소식을 전하게 되어 기뻐요",
+      "pron": "아임 글래드 투 어나운스 더 뉴스",
+      "keyword": "announce 전하다"
+    },
+    {
+      "en": "I'm glad to welcome you",
+      "kr": "환영하게 되어 기뻐요",
+      "pron": "아임 글래드 투 웰컴 유",
+      "keyword": "welcome 환영하다"
+    },
+    {
+      "en": "I'm glad to finally meet you in person",
+      "kr": "드디어 직접 만나서 반가워요",
+      "pron": "아임 글래드 투 파이널리 미트 유 인 퍼슨",
+      "keyword": "meet in person 직접 만나다"
+    },
+    {
+      "en": "I'm glad to work with you",
+      "kr": "함께 일하게 되어 기뻐요",
+      "pron": "아임 글래드 투 워크 위드 유",
+      "keyword": "work with ~와 함께 일하다"
+    },
+    {
+      "en": "I'm glad to be part of this project",
+      "kr": "이 프로젝트에 함께하게 되어 기뻐요",
+      "pron": "아임 글래드 투 비 파트 오브 디스 프로젝트",
+      "keyword": "be part of 함께하다"
+    },
+    {
+      "en": "I'm glad to share this with you",
+      "kr": "이걸 당신과 나눌 수 있어 기뻐요",
+      "pron": "아임 글래드 투 쉐어 디스 위드 유",
+      "keyword": "share 나누다"
+    },
+    {
+      "en": "I'm glad to see the results",
+      "kr": "결과를 보니 기쁘네요",
+      "pron": "아임 글래드 투 씨 더 리절츠",
+      "keyword": "results 결과"
+    },
+    {
+      "en": "I'm glad to know that you're okay",
+      "kr": "당신이 괜찮다니 다행이에요",
+      "pron": "아임 글래드 투 노우 댓 유어 오케이",
+      "keyword": "know 알다"
+    },
+    {
+      "en": "I'm glad to hear your voice",
+      "kr": "목소리 들으니 반가워요",
+      "pron": "아임 글래드 투 히어 유어 보이스",
+      "keyword": "voice 목소리"
+    },
+    {
+      "en": "I'm glad to have this opportunity",
+      "kr": "이런 기회가 생겨서 기뻐요",
+      "pron": "아임 글래드 투 해브 디스 오퍼튜니티",
+      "keyword": "opportunity 기회"
+    },
+    {
+      "en": "I'm glad to be back",
+      "kr": "다시 돌아오니 좋네요",
+      "pron": "아임 글래드 투 비 백",
+      "keyword": "be back 돌아오다"
+    },
+    {
+      "en": "I'm glad to see everyone smiling",
+      "kr": "다들 웃는 모습을 보니 기뻐요",
+      "pron": "아임 글래드 투 씨 에브리원 스마일링",
+      "keyword": "smiling 웃는"
+    },
+    {
+      "en": "I'm glad to tell you the good news",
+      "kr": "좋은 소식을 전하게 되어 기뻐요",
+      "pron": "아임 글래드 투 텔 유 더 굿 뉴스",
+      "keyword": "good news 좋은 소식"
+    },
+    {
+      "en": "I'm glad to finish this chapter",
+      "kr": "이 장을 끝내서 후련해요",
+      "pron": "아임 글래드 투 피니시 디스 챕터",
+      "keyword": "finish a chapter 장을 끝내다"
+    },
+    {
+      "en": "I'm glad to be alive",
+      "kr": "살아있다는 게 감사해요",
+      "pron": "아임 글래드 투 비 얼라이브",
+      "keyword": "alive 살아있는"
+    },
+    {
+      "en": "I'm glad to get some rest",
+      "kr": "좀 쉴 수 있어서 다행이에요",
+      "pron": "아임 글래드 투 겟 섬 레스트",
+      "keyword": "rest 쉬다"
+    },
+    {
+      "en": "I'm glad to spend time with you",
+      "kr": "당신과 시간을 보내서 좋았어요",
+      "pron": "아임 글래드 투 스펜드 타임 위드 유",
+      "keyword": "spend time 시간을 보내다"
+    },
+    {
+      "en": "I'm glad to see improvement",
+      "kr": "나아지는 걸 보니 기뻐요",
+      "pron": "아임 글래드 투 씨 임프루브먼트",
+      "keyword": "improvement 발전"
+    },
+    {
+      "en": "I'm glad to accept the invitation",
+      "kr": "초대를 수락하게 되어 기뻐요",
+      "pron": "아임 글래드 투 억셉트 디 인비테이션",
+      "keyword": "accept an invitation 초대를 수락하다"
+    },
+    {
+      "en": "I'm glad to be included",
+      "kr": "함께하게 되어 기뻐요",
+      "pron": "아임 글래드 투 비 인클루디드",
+      "keyword": "included 포함된"
+    },
+    {
+      "en": "I'm glad to answer your call",
+      "kr": "당신의 전화를 받아서 반가웠어요",
+      "pron": "아임 글래드 투 앤서 유어 콜",
+      "keyword": "answer a call 전화를 받다"
+    },
+    {
+      "en": "I'm glad to reconnect with old friends",
+      "kr": "오랜 친구들과 다시 연락하게 되어 기뻐요",
+      "pron": "아임 글래드 투 리커넥트 위드 올드 프렌즈",
+      "keyword": "reconnect 다시 연락하다"
+    },
+    {
+      "en": "I'm glad to support your decision",
+      "kr": "당신의 결정을 응원할 수 있어서 기뻐요",
+      "pron": "아임 글래드 투 서포트 유어 디시전",
+      "keyword": "support a decision 결정을 지지하다"
+    },
+    {
+      "en": "I'm glad to see progress",
+      "kr": "진전을 보니 기뻐요",
+      "pron": "아임 글래드 투 씨 프로그레스",
+      "keyword": "progress 진전"
+    },
+    {
+      "en": "I'm glad to take part in this event",
+      "kr": "이 행사에 참여하게 되어 기뻐요",
+      "pron": "아임 글래드 투 테이크 파트 인 디스 이벤트",
+      "keyword": "take part 참여하다"
+    },
+    {
+      "en": "I'm glad to give you good news",
+      "kr": "좋은 소식을 전해줄 수 있어 기뻐요",
+      "pron": "아임 글래드 투 기브 유 굿 뉴스",
+      "keyword": "give good news 좋은 소식을 주다"
+    },
+    {
+      "en": "I'm glad to be your friend",
+      "kr": "당신과 친구가 되어서 기뻐요",
+      "pron": "아임 글래드 투 비 유어 프렌드",
+      "keyword": "be a friend 친구가 되다"
+    },
+    {
+      "en": "I'm glad to offer my support",
+      "kr": "힘이 되어줄 수 있어 기뻐요",
+      "pron": "아임 글래드 투 오퍼 마이 서포트",
+      "keyword": "support 지지"
+    },
+    {
+      "en": "I'm glad to celebrate with you",
+      "kr": "당신과 함께 축하할 수 있어서 기뻐요",
+      "pron": "아임 글래드 투 셀러브레이트 위드 유",
+      "keyword": "celebrate 축하하다"
+    },
+    {
+      "en": "I'm glad to be invited",
+      "kr": "초대받아서 기뻐요",
+      "pron": "아임 글래드 투 비 인바이티드",
+      "keyword": "invited 초대받은"
+    },
+    {
+      "en": "I'm glad to be of assistance",
+      "kr": "도움이 될 수 있어서 기뻐요",
+      "pron": "아임 글래드 투 비 오브 어시스턴스",
+      "keyword": "assistance 도움"
+    },
+    {
+      "en": "I'm glad to clear things up",
+      "kr": "오해를 풀 수 있어서 다행이에요",
+      "pron": "아임 글래드 투 클리어 씽스 업",
+      "keyword": "clear things up 오해를 풀다"
+    },
+    {
+      "en": "I'm glad to resolve the issue",
+      "kr": "문제가 해결되어서 다행이에요",
+      "pron": "아임 글래드 투 리졸브 디 이슈",
+      "keyword": "resolve 해결하다"
+    },
+    {
+      "en": "I'm glad to see you happy",
+      "kr": "당신이 행복해 보여서 기뻐요",
+      "pron": "아임 글래드 투 씨 유 해피",
+      "keyword": "happy 행복한"
+    },
+    {
+      "en": "I'm glad to finally relax",
+      "kr": "드디어 쉴 수 있어서 좋아요",
+      "pron": "아임 글래드 투 파이널리 릴랙스",
+      "keyword": "relax 쉬다"
+    },
+    {
+      "en": "I'm glad to report good results",
+      "kr": "좋은 결과를 보고할 수 있어서 기뻐요",
+      "pron": "아임 글래드 투 리포트 굿 리절츠",
+      "keyword": "report 보고하다"
+    },
+    {
+      "en": "I'm glad to see you succeed",
+      "kr": "당신이 성공하는 걸 보니 기뻐요",
+      "pron": "아임 글래드 투 씨 유 석시드",
+      "keyword": "succeed 성공하다"
+    },
+    {
+      "en": "I'm glad to be trusted",
+      "kr": "신뢰받는다는 게 기뻐요",
+      "pron": "아임 글래드 투 비 트러스티드",
+      "keyword": "trusted 신뢰받는"
+    },
+    {
+      "en": "I'm glad to be understood",
+      "kr": "이해받는다는 게 기뻐요",
+      "pron": "아임 글래드 투 비 언더스투드",
+      "keyword": "understood 이해받는"
+    },
+    {
+      "en": "I'm glad to move forward together",
+      "kr": "함께 나아갈 수 있어서 기뻐요",
+      "pron": "아임 글래드 투 무브 포워드 투게더",
+      "keyword": "move forward together 함께 나아가다"
+    },
+    {
+      "en": "I'm glad to see the change",
+      "kr": "변화를 보니 기뻐요",
+      "pron": "아임 글래드 투 씨 더 체인지",
+      "keyword": "change 변화"
+    },
+    {
+      "en": "I'm glad to have you on board",
+      "kr": "당신이 함께해줘서 기뻐요",
+      "pron": "아임 글래드 투 해브 유 온 보드",
+      "keyword": "on board 함께하는"
+    },
+    {
+      "en": "I'm glad to hear you're feeling better",
+      "kr": "당신이 나아지고 있다니 다행이에요",
+      "pron": "아임 글래드 투 히어 유어 필링 베터",
+      "keyword": "feeling better 나아지고 있는"
+    },
+    {
+      "en": "I'm glad to wrap this up",
+      "kr": "이걸 마무리할 수 있어서 기뻐요",
+      "pron": "아임 글래드 투 랩 디스 업",
+      "keyword": "wrap up 마무리하다"
+    }
+  ]
+}
