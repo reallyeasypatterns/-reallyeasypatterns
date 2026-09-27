@@ -1,0 +1,307 @@
+{
+  "pattern_en": "I finished ~ing",
+  "pattern_kr": "~하는 것을 끝냈어요",
+  "pattern_highlight": "I finished",
+  "sentences": [
+    {
+      "en": "I finished eating breakfast",
+      "kr": "아침 식사를 끝냈어요",
+      "pron": "아이 피니쉬트 이팅 브렉퍼스트",
+      "keyword": "breakfast 아침 식사"
+    },
+    {
+      "en": "I finished cleaning my room",
+      "kr": "방 청소를 끝냈어요",
+      "pron": "아이 피니쉬트 클리닝 마이 룸",
+      "keyword": "clean 청소하다"
+    },
+    {
+      "en": "I finished doing my homework",
+      "kr": "숙제를 끝냈어요",
+      "pron": "아이 피니쉬트 두잉 마이 홈워크",
+      "keyword": "homework 숙제"
+    },
+    {
+      "en": "I finished reading the book",
+      "kr": "그 책을 다 읽었어요",
+      "pron": "아이 피니쉬트 리딩 더 북",
+      "keyword": "read 읽다"
+    },
+    {
+      "en": "I finished watching the movie",
+      "kr": "그 영화를 다 봤어요",
+      "pron": "아이 피니쉬트 워칭 더 무비",
+      "keyword": "movie 영화"
+    },
+    {
+      "en": "I finished washing the dishes",
+      "kr": "설거지를 끝냈어요",
+      "pron": "아이 피니쉬트 워싱 더 디시즈",
+      "keyword": "dish 설거지, 접시"
+    },
+    {
+      "en": "I finished making dinner",
+      "kr": "저녁 식사 준비를 끝냈어요",
+      "pron": "아이 피니쉬트 메이킹 디너",
+      "keyword": "make 만들다, 준비하다"
+    },
+    {
+      "en": "I finished taking a shower",
+      "kr": "샤워를 끝냈어요",
+      "pron": "아이 피니쉬트 테이킹 어 샤워",
+      "keyword": "shower 샤워"
+    },
+    {
+      "en": "I finished writing the report",
+      "kr": "보고서 작성을 끝냈어요",
+      "pron": "아이 피니쉬트 라이팅 더 리포트",
+      "keyword": "report 보고서"
+    },
+    {
+      "en": "I finished checking my email",
+      "kr": "이메일 확인을 끝냈어요",
+      "pron": "아이 피니쉬트 체킹 마이 이메일",
+      "keyword": "check 확인하다"
+    },
+    {
+      "en": "I finished talking to my boss",
+      "kr": "상사와 이야기하는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 토킹 투 마이 보스",
+      "keyword": "boss 상사"
+    },
+    {
+      "en": "I finished fixing the computer",
+      "kr": "컴퓨터 수리를 끝냈어요",
+      "pron": "아이 피니쉬트 픽싱 더 컴퓨터",
+      "keyword": "fix 고치다"
+    },
+    {
+      "en": "I finished doing the laundry",
+      "kr": "빨래를 끝냈어요",
+      "pron": "아이 피니쉬트 두잉 더 론드리",
+      "keyword": "laundry 빨래"
+    },
+    {
+      "en": "I finished making the bed",
+      "kr": "침대 정리를 끝냈어요",
+      "pron": "아이 피니쉬트 메이킹 더 베드",
+      "keyword": "make the bed 침대를 정리하다"
+    },
+    {
+      "en": "I finished cooking lunch",
+      "kr": "점심 요리를 끝냈어요",
+      "pron": "아이 피니쉬트 쿠킹 런치",
+      "keyword": "cook 요리하다"
+    },
+    {
+      "en": "I finished exercising",
+      "kr": "운동을 끝냈어요",
+      "pron": "아이 피니쉬트 엑서사이징",
+      "keyword": "exercise 운동하다"
+    },
+    {
+      "en": "I finished working for today",
+      "kr": "오늘 일을 끝냈어요",
+      "pron": "아이 피니쉬트 워킹 포 투데이",
+      "keyword": "work 일하다"
+    },
+    {
+      "en": "I finished studying English",
+      "kr": "영어 공부를 끝냈어요",
+      "pron": "아이 피니쉬트 스터디잉 잉글리시",
+      "keyword": "study 공부하다"
+    },
+    {
+      "en": "I finished preparing for the meeting",
+      "kr": "회의 준비를 끝냈어요",
+      "pron": "아이 피니쉬트 프리페어링 포 더 미팅",
+      "keyword": "prepare 준비하다"
+    },
+    {
+      "en": "I finished packing my bag",
+      "kr": "가방 싸는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 패킹 마이 백",
+      "keyword": "pack 짐을 싸다"
+    },
+    {
+      "en": "I finished shopping for groceries",
+      "kr": "장 보는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 쇼핑 포 그로서리즈",
+      "keyword": "groceries 식료품"
+    },
+    {
+      "en": "I finished paying the bills",
+      "kr": "공과금 납부를 끝냈어요",
+      "pron": "아이 피니쉬트 페잉 더 빌즈",
+      "keyword": "bill 청구서, 공과금"
+    },
+    {
+      "en": "I finished organizing my desk",
+      "kr": "책상 정리를 끝냈어요",
+      "pron": "아이 피니쉬트 오거나이징 마이 데스크",
+      "keyword": "organize 정리하다"
+    },
+    {
+      "en": "I finished answering all the questions",
+      "kr": "모든 질문에 답하는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 앤서링 올 더 퀘스천즈",
+      "keyword": "answer 대답하다"
+    },
+    {
+      "en": "I finished talking on the phone",
+      "kr": "전화 통화를 끝냈어요",
+      "pron": "아이 피니쉬트 토킹 온 더 폰",
+      "keyword": "phone 전화"
+    },
+    {
+      "en": "I finished reading the newspaper",
+      "kr": "신문을 다 읽었어요",
+      "pron": "아이 피니쉬트 리딩 더 뉴스페이퍼",
+      "keyword": "newspaper 신문"
+    },
+    {
+      "en": "I finished making breakfast",
+      "kr": "아침 식사 준비를 끝냈어요",
+      "pron": "아이 피니쉬트 메이킹 브렉퍼스트",
+      "keyword": "make 만들다, 준비하다"
+    },
+    {
+      "en": "I finished cleaning the kitchen",
+      "kr": "부엌 청소를 끝냈어요",
+      "pron": "아이 피니쉬트 클리닝 더 키친",
+      "keyword": "kitchen 부엌"
+    },
+    {
+      "en": "I finished feeding the dog",
+      "kr": "개에게 먹이를 주는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 피딩 더 독",
+      "keyword": "feed 먹이를 주다"
+    },
+    {
+      "en": "I finished watering the plants",
+      "kr": "식물에 물을 주는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 워터링 더 플랜츠",
+      "keyword": "water 물을 주다"
+    },
+    {
+      "en": "I finished cutting the vegetables",
+      "kr": "채소 손질을 끝냈어요",
+      "pron": "아이 피니쉬트 커팅 더 베저터블즈",
+      "keyword": "vegetable 채소"
+    },
+    {
+      "en": "I finished preparing the food",
+      "kr": "음식 준비를 끝냈어요",
+      "pron": "아이 피니쉬트 프리페어링 더 푸드",
+      "keyword": "food 음식"
+    },
+    {
+      "en": "I finished washing my car",
+      "kr": "세차를 끝냈어요",
+      "pron": "아이 피니쉬트 워싱 마이 카",
+      "keyword": "wash 씻다"
+    },
+    {
+      "en": "I finished taking out the trash",
+      "kr": "쓰레기를 버리는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 테이킹 아웃 더 트래시",
+      "keyword": "trash 쓰레기"
+    },
+    {
+      "en": "I finished folding the clothes",
+      "kr": "옷을 개는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 폴딩 더 클로즈",
+      "keyword": "fold 접다"
+    },
+    {
+      "en": "I finished putting everything away",
+      "kr": "모든 것을 정리해 넣는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 푸팅 에브리씽 어웨이",
+      "keyword": "put away 정리해 넣다"
+    },
+    {
+      "en": "I finished sending the message",
+      "kr": "메시지를 보내는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 센딩 더 메시지",
+      "keyword": "send 보내다"
+    },
+    {
+      "en": "I finished downloading the file",
+      "kr": "파일 다운로드를 끝냈어요",
+      "pron": "아이 피니쉬트 다운로딩 더 파일",
+      "keyword": "download 다운로드하다"
+    },
+    {
+      "en": "I finished uploading the video",
+      "kr": "영상 업로드를 끝냈어요",
+      "pron": "아이 피니쉬트 업로딩 더 비디오",
+      "keyword": "upload 업로드하다"
+    },
+    {
+      "en": "I finished making the phone call",
+      "kr": "전화하는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 메이킹 더 폰 콜",
+      "keyword": "phone call 전화 통화"
+    },
+    {
+      "en": "I finished talking with my friend",
+      "kr": "친구와 이야기하는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 토킹 위드 마이 프렌드",
+      "keyword": "friend 친구"
+    },
+    {
+      "en": "I finished making a reservation",
+      "kr": "예약하는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 메이킹 어 레저베이션",
+      "keyword": "reservation 예약"
+    },
+    {
+      "en": "I finished booking the hotel",
+      "kr": "호텔 예약을 끝냈어요",
+      "pron": "아이 피니쉬트 부킹 더 호텔",
+      "keyword": "book 예약하다"
+    },
+    {
+      "en": "I finished filling out the form",
+      "kr": "서류 작성하는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 필링 아웃 더 폼",
+      "keyword": "fill out 작성하다"
+    },
+    {
+      "en": "I finished checking the schedule",
+      "kr": "일정을 확인하는 것을 끝냈어요",
+      "pron": "아이 피니쉬트 체킹 더 스케줄",
+      "keyword": "schedule 일정"
+    },
+    {
+      "en": "I finished preparing my presentation",
+      "kr": "발표 준비를 끝냈어요",
+      "pron": "아이 피니쉬트 프리페어링 마이 프레젠테이션",
+      "keyword": "presentation 발표"
+    },
+    {
+      "en": "I finished practicing my speech",
+      "kr": "연설 연습을 끝냈어요",
+      "pron": "아이 피니쉬트 프랙티싱 마이 스피치",
+      "keyword": "practice 연습하다"
+    },
+    {
+      "en": "I finished fixing the problem",
+      "kr": "문제 해결을 끝냈어요",
+      "pron": "아이 피니쉬트 픽싱 더 프라블럼",
+      "keyword": "problem 문제"
+    },
+    {
+      "en": "I finished cleaning up the house",
+      "kr": "집 청소를 끝냈어요",
+      "pron": "아이 피니쉬트 클리닝 업 더 하우스",
+      "keyword": "clean up 청소하다, 정리하다"
+    },
+    {
+      "en": "I finished getting ready for bed",
+      "kr": "잠자리에 들 준비를 끝냈어요",
+      "pron": "아이 피니쉬트 게팅 레디 포 베드",
+      "keyword": "get ready 준비하다"
+    }
+  ]
+}

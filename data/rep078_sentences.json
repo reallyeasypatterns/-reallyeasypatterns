@@ -1,0 +1,307 @@
+{
+  "pattern_en": "I used to think ~",
+  "pattern_kr": "예전에는 ~라고 생각했어요",
+  "pattern_highlight": "I used to think",
+  "sentences": [
+    {
+      "en": "I used to think money was everything",
+      "kr": "예전에는 돈이 전부라고 생각했어요",
+      "pron": "아이 유스트 띵크 머니 워즈 에브리씽",
+      "keyword": "money 돈"
+    },
+    {
+      "en": "I used to think this job was easy",
+      "kr": "예전에는 이 일이 쉬운 줄 알았어요",
+      "pron": "아이 유스트 띵크 디스 잡 워즈 이지",
+      "keyword": "easy 쉬운"
+    },
+    {
+      "en": "I used to think cooking was difficult",
+      "kr": "예전에는 요리가 어려운 줄 알았어요",
+      "pron": "아이 유스트 띵크 쿠킹 워즈 디피컬트",
+      "keyword": "cooking 요리"
+    },
+    {
+      "en": "I used to think coffee was bitter",
+      "kr": "예전에는 커피가 쓴맛만 나는 줄 알았어요",
+      "pron": "아이 유스트 띵크 커피 워즈 비터",
+      "keyword": "bitter 쓴"
+    },
+    {
+      "en": "I used to think mornings were boring",
+      "kr": "예전에는 아침 시간이 지루하다고 생각했어요",
+      "pron": "아이 유스트 띵크 모닝즈 워 보링",
+      "keyword": "boring 지루한"
+    },
+    {
+      "en": "I used to think English was too hard",
+      "kr": "예전에는 영어가 너무 어렵다고 생각했어요",
+      "pron": "아이 유스트 띵크 잉글리시 워즈 투 하드",
+      "keyword": "too hard 너무 어려운"
+    },
+    {
+      "en": "I used to think I needed more things",
+      "kr": "예전에는 물건을 더 많이 가져야 한다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 니디드 모어 씽즈",
+      "keyword": "need 필요하다"
+    },
+    {
+      "en": "I used to think I had to work every day",
+      "kr": "예전에는 매일 일해야 한다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 해드 투 워크 에브리 데이",
+      "keyword": "work 일하다"
+    },
+    {
+      "en": "I used to think staying home was boring",
+      "kr": "예전에는 집에 있는 게 지루하다고 생각했어요",
+      "pron": "아이 유스트 띵크 스테잉 홈 워즈 보링",
+      "keyword": "stay home 집에 있다"
+    },
+    {
+      "en": "I used to think exercise was a waste of time",
+      "kr": "예전에는 운동이 시간 낭비라고 생각했어요",
+      "pron": "아이 유스트 띵크 엑서사이즈 워즈 어 웨이스트 어브 타임",
+      "keyword": "a waste of time 시간 낭비"
+    },
+    {
+      "en": "I used to think winter was the worst season",
+      "kr": "예전에는 겨울이 제일 싫은 계절이라고 생각했어요",
+      "pron": "아이 유스트 띵크 윈터 워즈 더 워스트 시즌",
+      "keyword": "season 계절"
+    },
+    {
+      "en": "I used to think vegetables were boring",
+      "kr": "예전에는 채소가 맛없는 음식이라고 생각했어요",
+      "pron": "아이 유스트 띵크 베저터블즈 워 보링",
+      "keyword": "vegetables 채소"
+    },
+    {
+      "en": "I used to think reading was old-fashioned",
+      "kr": "예전에는 책 읽는 게 시대에 뒤떨어진 일이라고 생각했어요",
+      "pron": "아이 유스트 띵크 리딩 워즈 올드 패션드",
+      "keyword": "old-fashioned 구식의"
+    },
+    {
+      "en": "I used to think I knew everything",
+      "kr": "예전에는 내가 모든 걸 다 안다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 뉴 에브리씽",
+      "keyword": "know 알다"
+    },
+    {
+      "en": "I used to think people were always honest",
+      "kr": "예전에는 사람들이 언제나 솔직하다고 생각했어요",
+      "pron": "아이 유스트 띵크 피플 워 올웨이즈 아너스트",
+      "keyword": "honest 솔직한"
+    },
+    {
+      "en": "I used to think being alone was sad",
+      "kr": "예전에는 혼자 있는 게 외롭고 쓸쓸한 일이라고 생각했어요",
+      "pron": "아이 유스트 띵크 빙 얼론 워즈 새드",
+      "keyword": "being alone 혼자 있는 것"
+    },
+    {
+      "en": "I used to think weekends were too short",
+      "kr": "예전에는 주말이 너무 짧다고 생각했어요",
+      "pron": "아이 유스트 띵크 위켄즈 워 투 쇼트",
+      "keyword": "weekend 주말"
+    },
+    {
+      "en": "I used to think I needed a big house",
+      "kr": "예전에는 큰 집이 있어야 한다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 니디드 어 빅 하우스",
+      "keyword": "big house 큰 집"
+    },
+    {
+      "en": "I used to think traveling was expensive",
+      "kr": "예전에는 여행은 돈이 많이 드는 일이라고 생각했어요",
+      "pron": "아이 유스트 띵크 트래블링 워즈 익스펜시브",
+      "keyword": "expensive 비싼"
+    },
+    {
+      "en": "I used to think I was too busy",
+      "kr": "예전에는 내가 너무 바쁘다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 워즈 투 비지",
+      "keyword": "busy 바쁜"
+    },
+    {
+      "en": "I used to think mornings were difficult",
+      "kr": "예전에는 아침에 일어나는 게 힘들다고 생각했어요",
+      "pron": "아이 유스트 띵크 모닝즈 워 디피컬트",
+      "keyword": "morning 아침"
+    },
+    {
+      "en": "I used to think cooking at home was boring",
+      "kr": "예전에는 집에서 요리하는 게 재미없다고 생각했어요",
+      "pron": "아이 유스트 띵크 쿠킹 앳 홈 워즈 보링",
+      "keyword": "cook at home 집에서 요리하다"
+    },
+    {
+      "en": "I used to think I couldn't save money",
+      "kr": "예전에는 내가 돈을 모을 수 없을 거라고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 쿠든트 세이브 머니",
+      "keyword": "save money 돈을 모으다"
+    },
+    {
+      "en": "I used to think I couldn't live alone",
+      "kr": "예전에는 혼자서는 살 수 없을 거라고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 쿠든트 리브 얼론",
+      "keyword": "live alone 혼자 살다"
+    },
+    {
+      "en": "I used to think this place was too far",
+      "kr": "예전에는 여기가 너무 멀다고 생각했어요",
+      "pron": "아이 유스트 띵크 디스 플레이스 워즈 투 파",
+      "keyword": "too far 너무 먼"
+    },
+    {
+      "en": "I used to think this food was unhealthy",
+      "kr": "예전에는 이 음식이 건강에 안 좋다고 생각했어요",
+      "pron": "아이 유스트 띵크 디스 푸드 워즈 언헬씨",
+      "keyword": "unhealthy 건강에 좋지 않은"
+    },
+    {
+      "en": "I used to think I wasn't good at cooking",
+      "kr": "예전에는 내가 요리를 못한다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 워즌트 굿 앳 쿠킹",
+      "keyword": "be good at ~을 잘하다"
+    },
+    {
+      "en": "I used to think I didn't have enough time",
+      "kr": "예전에는 시간이 늘 부족하다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 디든트 해브 이너프 타임",
+      "keyword": "enough 충분한"
+    },
+    {
+      "en": "I used to think I needed more friends",
+      "kr": "예전에는 친구가 더 많아야 한다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 니디드 모어 프렌즈",
+      "keyword": "friend 친구"
+    },
+    {
+      "en": "I used to think being rich meant being happy",
+      "kr": "예전에는 돈이 많으면 행복할 거라고 생각했어요",
+      "pron": "아이 유스트 띵크 빙 리치 멘트 빙 해피",
+      "keyword": "rich 부유한"
+    },
+    {
+      "en": "I used to think success was about money",
+      "kr": "예전에는 성공하려면 돈이 가장 중요하다고 생각했어요",
+      "pron": "아이 유스트 띵크 석세스 워즈 어바웃 머니",
+      "keyword": "success 성공"
+    },
+    {
+      "en": "I used to think age was very important",
+      "kr": "예전에는 나이가 정말 중요하다고 생각했어요",
+      "pron": "아이 유스트 띵크 에이지 워즈 베리 임포턴트",
+      "keyword": "age 나이"
+    },
+    {
+      "en": "I used to think I was too old to learn",
+      "kr": "예전에는 배우기에는 내가 너무 늦었다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 워즈 투 올드 투 런",
+      "keyword": "too old 너무 나이가 많은"
+    },
+    {
+      "en": "I used to think technology was confusing",
+      "kr": "예전에는 기술이 너무 복잡하고 어렵다고 생각했어요",
+      "pron": "아이 유스트 띵크 테크놀러지 워즈 컨퓨징",
+      "keyword": "confusing 복잡한"
+    },
+    {
+      "en": "I used to think smartphones were unnecessary",
+      "kr": "예전에는 스마트폰이 굳이 필요하지 않다고 생각했어요",
+      "pron": "아이 유스트 띵크 스마트폰즈 워 언네서세리",
+      "keyword": "unnecessary 불필요한"
+    },
+    {
+      "en": "I used to think online shopping was risky",
+      "kr": "예전에는 온라인 쇼핑이 위험하다고 생각했어요",
+      "pron": "아이 유스트 띵크 온라인 쇼핑 워즈 리스키",
+      "keyword": "risky 위험한"
+    },
+    {
+      "en": "I used to think working from home was impossible",
+      "kr": "예전에는 집에서 일하는 건 불가능하다고 생각했어요",
+      "pron": "아이 유스트 띵크 워킹 프럼 홈 워즈 임파서블",
+      "keyword": "work from home 재택근무하다"
+    },
+    {
+      "en": "I used to think I needed a car",
+      "kr": "예전에는 차가 꼭 있어야 한다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 니디드 어 카",
+      "keyword": "need a car 차가 필요하다"
+    },
+    {
+      "en": "I used to think public transportation was inconvenient",
+      "kr": "예전에는 대중교통이 불편하다고 생각했어요",
+      "pron": "아이 유스트 띵크 퍼블릭 트랜스포테이션 워즈 인컨비니언트",
+      "keyword": "public transportation 대중교통"
+    },
+    {
+      "en": "I used to think this neighborhood was quiet",
+      "kr": "예전에는 이 동네가 조용하기만 한 곳이라고 생각했어요",
+      "pron": "아이 유스트 띵크 디스 네이버후드 워즈 콰이엇",
+      "keyword": "neighborhood 동네"
+    },
+    {
+      "en": "I used to think I hated rainy days",
+      "kr": "예전에는 비 오는 날을 싫어한다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 헤이티드 레이니 데이즈",
+      "keyword": "rainy day 비 오는 날"
+    },
+    {
+      "en": "I used to think I wasn't a morning person",
+      "kr": "예전에는 내가 아침형 인간이 아니라고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 워즌트 어 모닝 퍼슨",
+      "keyword": "morning person 아침형 인간"
+    },
+    {
+      "en": "I used to think I didn't like vegetables",
+      "kr": "예전에는 내가 채소를 싫어한다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 디든트 라이크 베저터블즈",
+      "keyword": "vegetables 채소"
+    },
+    {
+      "en": "I used to think I couldn't speak English",
+      "kr": "예전에는 영어로 말을 못한다고 생각했어요",
+      "pron": "아이 유스트 띵크 아이 쿠든트 스피크 잉글리시",
+      "keyword": "speak English 영어로 말하다"
+    },
+    {
+      "en": "I used to think making mistakes was embarrassing",
+      "kr": "예전에는 실수하는 게 창피한 일이라고 생각했어요",
+      "pron": "아이 유스트 띵크 메이킹 미스테익스 워즈 임배러싱",
+      "keyword": "make a mistake 실수하다"
+    },
+    {
+      "en": "I used to think asking for help was weak",
+      "kr": "예전에는 도움을 요청하면 약해 보인다고 생각했어요",
+      "pron": "아이 유스트 띵크 애스킹 포 헬프 워즈 위크",
+      "keyword": "ask for help 도움을 요청하다"
+    },
+    {
+      "en": "I used to think everything had to be perfect",
+      "kr": "예전에는 모든 일이 완벽해야 한다고 생각했어요",
+      "pron": "아이 유스트 띵크 에브리씽 해드 투 비 퍼펙트",
+      "keyword": "perfect 완벽한"
+    },
+    {
+      "en": "I used to think life had to be complicated",
+      "kr": "예전에는 인생이 원래 복잡한 거라고 생각했어요",
+      "pron": "아이 유스트 띵크 라이프 해드 투 비 컴플리케이티드",
+      "keyword": "complicated 복잡한"
+    },
+    {
+      "en": "I used to think small things didn't matter",
+      "kr": "예전에는 작은 일은 별로 중요하지 않다고 생각했어요",
+      "pron": "아이 유스트 띵크 스몰 씽즈 디든트 매터",
+      "keyword": "matter 중요하다"
+    },
+    {
+      "en": "I used to think happiness was hard to find",
+      "kr": "예전에는 행복을 찾기가 어렵다고 생각했어요",
+      "pron": "아이 유스트 띵크 해피니스 워즈 하드 투 파인드",
+      "keyword": "happiness 행복"
+    }
+  ]
+}
