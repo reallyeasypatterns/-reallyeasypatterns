@@ -1,0 +1,307 @@
+{
+  "pattern_en": "Instead of ~ing",
+  "pattern_kr": "~하는 대신에",
+  "pattern_highlight": "Instead of",
+  "sentences": [
+    {
+      "en": "Instead of walking, I took a bus",
+      "kr": "걸어가는 대신에 버스를 탔어요",
+      "pron": "인스테드 오브 워킹, 아이 툭 어 버스",
+      "keyword": "walk 걷다"
+    },
+    {
+      "en": "Instead of eating out, I cooked at home",
+      "kr": "외식하는 대신에 집에서 요리했어요",
+      "pron": "인스테드 오브 이팅 아웃, 아이 쿡트 앳 홈",
+      "keyword": "eat out 외식하다"
+    },
+    {
+      "en": "Instead of driving, we took a train",
+      "kr": "차를 운전하는 대신에 기차를 탔어요",
+      "pron": "인스테드 오브 드라이빙, 위 툭 어 트레인",
+      "keyword": "drive 운전하다"
+    },
+    {
+      "en": "Instead of watching TV, I read a book",
+      "kr": "텔레비전을 보는 대신에 책을 읽었어요",
+      "pron": "인스테드 오브 와칭 티비, 아이 레드 어 북",
+      "keyword": "read 읽다"
+    },
+    {
+      "en": "Instead of buying coffee, I made some at home",
+      "kr": "커피를 사는 대신에 집에서 직접 만들었어요",
+      "pron": "인스테드 오브 바이잉 커피, 아이 메이드 썸 앳 홈",
+      "keyword": "make 만들다"
+    },
+    {
+      "en": "Instead of complaining, let's find a solution",
+      "kr": "불평하는 대신에 해결책을 찾아봐요",
+      "pron": "인스테드 오브 컴플레이닝, 렛츠 파인드 어 솔루션",
+      "keyword": "solution 해결책"
+    },
+    {
+      "en": "Instead of getting angry, take a deep breath",
+      "kr": "화내는 대신에 깊게 숨을 쉬세요",
+      "pron": "인스테드 오브 게팅 앵그리, 테이크 어 딥 브레스",
+      "keyword": "breath 숨"
+    },
+    {
+      "en": "Instead of waiting here, let's go inside",
+      "kr": "여기서 기다리는 대신에 안으로 들어가요",
+      "pron": "인스테드 오브 웨이팅 히어, 렛츠 고 인사이드",
+      "keyword": "inside 안으로"
+    },
+    {
+      "en": "Instead of calling him, I sent a text",
+      "kr": "그에게 전화하는 대신에 문자 메시지를 보냈어요",
+      "pron": "인스테드 오브 콜링 힘, 아이 센트 어 텍스트",
+      "keyword": "text 문자 메시지"
+    },
+    {
+      "en": "Instead of taking a taxi, we walked home",
+      "kr": "택시를 타는 대신에 걸어서 집에 갔어요",
+      "pron": "인스테드 오브 테이킹 어 택시, 위 웍트 홈",
+      "keyword": "taxi 택시"
+    },
+    {
+      "en": "Instead of sleeping late, I got up early",
+      "kr": "늦잠을 자는 대신에 일찍 일어났어요",
+      "pron": "인스테드 오브 슬리핑 레이트, 아이 갓 업 얼리",
+      "keyword": "early 일찍"
+    },
+    {
+      "en": "Instead of spending money, I saved it",
+      "kr": "돈을 쓰는 대신에 저축했어요",
+      "pron": "인스테드 오브 스펜딩 머니, 아이 세이브드 잇",
+      "keyword": "save 저축하다"
+    },
+    {
+      "en": "Instead of throwing it away, I fixed it",
+      "kr": "그것을 버리는 대신에 고쳤어요",
+      "pron": "인스테드 오브 쓰로잉 잇 어웨이, 아이 픽스트 잇",
+      "keyword": "fix 고치다"
+    },
+    {
+      "en": "Instead of taking the elevator, I used the stairs",
+      "kr": "엘리베이터를 타는 대신에 계단을 이용했어요",
+      "pron": "인스테드 오브 테이킹 디 엘리베이터, 아이 유즈드 더 스테어즈",
+      "keyword": "stairs 계단"
+    },
+    {
+      "en": "Instead of drinking soda, I drank water",
+      "kr": "탄산음료 대신 물을 마셨어요",
+      "pron": "인스테드 오브 드링킹 소다, 아이 드랭크 워터",
+      "keyword": "soda 탄산음료"
+    },
+    {
+      "en": "Instead of eating sweets, I had some fruit",
+      "kr": "단것을 먹는 대신에 과일을 조금 먹었어요",
+      "pron": "인스테드 오브 이팅 스위츠, 아이 해드 썸 프루트",
+      "keyword": "fruit 과일"
+    },
+    {
+      "en": "Instead of rushing, we took our time",
+      "kr": "서두르는 대신에 여유를 가지고 움직였어요",
+      "pron": "인스테드 오브 러싱, 위 툭 아워 타임",
+      "keyword": "rush 서두르다"
+    },
+    {
+      "en": "Instead of arguing, we talked calmly",
+      "kr": "말다툼하는 대신에 차분하게 대화했어요",
+      "pron": "인스테드 오브 아규잉, 위 톡트 캄리",
+      "keyword": "calmly 차분하게"
+    },
+    {
+      "en": "Instead of blaming others, look at yourself",
+      "kr": "다른 사람을 탓하는 대신에 자신을 돌아보세요",
+      "pron": "인스테드 오브 블레이밍 아더즈, 룩 앳 유어셀프",
+      "keyword": "blame 탓하다"
+    },
+    {
+      "en": "Instead of giving up, try again",
+      "kr": "포기하는 대신에 다시 도전하세요",
+      "pron": "인스테드 오브 기빙 업, 트라이 어겐",
+      "keyword": "give up 포기하다"
+    },
+    {
+      "en": "Instead of buying a new phone, I repaired mine",
+      "kr": "새 휴대전화를 사는 대신에 쓰던 것을 수리했어요",
+      "pron": "인스테드 오브 바이잉 어 뉴 폰, 아이 리페어드 마인",
+      "keyword": "repair 수리하다"
+    },
+    {
+      "en": "Instead of going to the gym, I exercised at home",
+      "kr": "헬스장에 가는 대신에 집에서 운동했어요",
+      "pron": "인스테드 오브 고잉 투 더 짐, 아이 엑서사이즈드 앳 홈",
+      "keyword": "exercise 운동하다"
+    },
+    {
+      "en": "Instead of taking a nap, I went for a walk",
+      "kr": "낮잠을 자는 대신에 산책하러 나갔어요",
+      "pron": "인스테드 오브 테이킹 어 냅, 아이 웬트 포 어 웍",
+      "keyword": "nap 낮잠"
+    },
+    {
+      "en": "Instead of staying home, we visited our friends",
+      "kr": "집에 머무르는 대신에 친구들을 만나러 갔어요",
+      "pron": "인스테드 오브 스테잉 홈, 위 비지티드 아워 프렌즈",
+      "keyword": "visit 방문하다"
+    },
+    {
+      "en": "Instead of buying lunch, I brought my own",
+      "kr": "점심을 사 먹는 대신에 도시락을 챙겨 왔어요",
+      "pron": "인스테드 오브 바이잉 런치, 아이 브롯 마이 온",
+      "keyword": "bring 가져오다"
+    },
+    {
+      "en": "Instead of working all day, take a break",
+      "kr": "하루 종일 일하는 대신에 잠깐 쉬세요",
+      "pron": "인스테드 오브 워킹 올 데이, 테이크 어 브레이크",
+      "keyword": "break 휴식"
+    },
+    {
+      "en": "Instead of buying a gift, I made one",
+      "kr": "선물을 사는 대신에 직접 만들었어요",
+      "pron": "인스테드 오브 바이잉 어 기프트, 아이 메이드 원",
+      "keyword": "gift 선물"
+    },
+    {
+      "en": "Instead of sending an email, I visited the office",
+      "kr": "이메일을 보내는 대신에 사무실을 직접 찾아갔어요",
+      "pron": "인스테드 오브 센딩 언 이메일, 아이 비지티드 디 오피스",
+      "keyword": "office 사무실"
+    },
+    {
+      "en": "Instead of asking for help, he did it alone",
+      "kr": "도움을 요청하는 대신에 그는 혼자 해냈어요",
+      "pron": "인스테드 오브 애스킹 포 헬프, 히 디드 잇 얼론",
+      "keyword": "alone 혼자"
+    },
+    {
+      "en": "Instead of talking about the past, let's plan ahead",
+      "kr": "과거 이야기를 하는 대신에 앞으로의 계획을 세워요",
+      "pron": "인스테드 오브 토킹 어바웃 더 패스트, 렛츠 플랜 어헤드",
+      "keyword": "plan 계획하다"
+    },
+    {
+      "en": "Instead of worrying about tomorrow, enjoy today",
+      "kr": "내일을 걱정하는 대신에 오늘을 즐기세요",
+      "pron": "인스테드 오브 워리잉 어바웃 투모로우, 인조이 투데이",
+      "keyword": "enjoy 즐기다"
+    },
+    {
+      "en": "Instead of watching the news, I listened to music",
+      "kr": "뉴스를 보는 대신에 음악을 들었어요",
+      "pron": "인스테드 오브 와칭 더 뉴스, 아이 리슨드 투 뮤직",
+      "keyword": "music 음악"
+    },
+    {
+      "en": "Instead of buying bottled water, I used a reusable bottle",
+      "kr": "생수를 사는 대신에 재사용 가능한 물병을 썼어요",
+      "pron": "인스테드 오브 바이잉 바틀드 워터, 아이 유즈드 어 리유저블 바틀",
+      "keyword": "reusable 재사용할 수 있는"
+    },
+    {
+      "en": "Instead of using a car, I rode my bike",
+      "kr": "자동차를 이용하는 대신에 자전거를 탔어요",
+      "pron": "인스테드 오브 유징 어 카, 아이 로우드 마이 바이크",
+      "keyword": "bike 자전거"
+    },
+    {
+      "en": "Instead of buying vegetables, I grew my own",
+      "kr": "채소를 사는 대신에 직접 재배했어요",
+      "pron": "인스테드 오브 바이잉 베지터블즈, 아이 그루 마이 온",
+      "keyword": "grow 재배하다"
+    },
+    {
+      "en": "Instead of eating alone, I invited my friend",
+      "kr": "혼자 식사하는 대신에 친구를 초대했어요",
+      "pron": "인스테드 오브 이팅 얼론, 아이 인바이티드 마이 프렌드",
+      "keyword": "invite 초대하다"
+    },
+    {
+      "en": "Instead of buying new clothes, I wore my old ones",
+      "kr": "새 옷을 사는 대신에 원래 있던 옷을 입었어요",
+      "pron": "인스테드 오브 바이잉 뉴 클로즈, 아이 워어 마이 올드 원즈",
+      "keyword": "clothes 옷"
+    },
+    {
+      "en": "Instead of watching a movie, we played a game",
+      "kr": "영화를 보는 대신에 게임을 했어요",
+      "pron": "인스테드 오브 와칭 어 무비, 위 플레이드 어 게임",
+      "keyword": "game 게임"
+    },
+    {
+      "en": "Instead of buying a newspaper, I read the news online",
+      "kr": "신문을 사는 대신에 인터넷으로 뉴스를 읽었어요",
+      "pron": "인스테드 오브 바이잉 어 뉴스페이퍼, 아이 레드 더 뉴스 온라인",
+      "keyword": "online 온라인으로"
+    },
+    {
+      "en": "Instead of memorizing every word, learn useful phrases",
+      "kr": "모든 단어를 외우는 대신에 유용한 표현을 익히세요",
+      "pron": "인스테드 오브 메머라이징 에브리 워드, 런 유스풀 프레이즈즈",
+      "keyword": "phrase 표현"
+    },
+    {
+      "en": "Instead of translating everything, try to understand the meaning",
+      "kr": "모든 문장을 번역하는 대신에 의미를 이해하려고 해 보세요",
+      "pron": "인스테드 오브 트랜슬레이팅 에브리씽, 트라이 투 언더스탠드 더 미닝",
+      "keyword": "meaning 의미"
+    },
+    {
+      "en": "Instead of studying for hours, take short breaks",
+      "kr": "몇 시간씩 공부하는 대신에 짧게 휴식을 취하세요",
+      "pron": "인스테드 오브 스터디잉 포 아워즈, 테이크 쇼트 브레이크스",
+      "keyword": "study 공부하다"
+    },
+    {
+      "en": "Instead of buying a book, I borrowed one from the library",
+      "kr": "책을 사는 대신에 도서관에서 한 권 빌렸어요",
+      "pron": "인스테드 오브 바이잉 어 북, 아이 바로우드 원 프럼 더 라이브러리",
+      "keyword": "borrow 빌리다"
+    },
+    {
+      "en": "Instead of going to bed late, I went to bed early",
+      "kr": "늦게 잠드는 대신에 평소보다 일찍 잠자리에 들었어요",
+      "pron": "인스테드 오브 고잉 투 베드 레이트, 아이 웬트 투 베드 얼리",
+      "keyword": "bed 잠자리"
+    },
+    {
+      "en": "Instead of keeping everything, I gave some things away",
+      "kr": "모든 물건을 보관하는 대신에 몇 가지를 다른 사람에게 나눠 줬어요",
+      "pron": "인스테드 오브 키핑 에브리씽, 아이 게이브 썸 씽즈 어웨이",
+      "keyword": "give away 나눠 주다"
+    },
+    {
+      "en": "Instead of buying fast food, I prepared a healthy meal",
+      "kr": "패스트푸드를 사 먹는 대신에 건강한 식사를 준비했어요",
+      "pron": "인스테드 오브 바이잉 패스트 푸드, 아이 프리페어드 어 헬시 밀",
+      "keyword": "healthy 건강한"
+    },
+    {
+      "en": "Instead of making excuses, he admitted his mistake",
+      "kr": "변명을 늘어놓는 대신에 그는 자신의 실수를 인정했어요",
+      "pron": "인스테드 오브 메이킹 익스큐지즈, 히 어드미티드 히즈 미스테이크",
+      "keyword": "admit 인정하다"
+    },
+    {
+      "en": "Instead of criticizing her, I offered to help",
+      "kr": "그녀를 비난하는 대신에 도와주겠다고 했어요",
+      "pron": "인스테드 오브 크리티사이징 허, 아이 오퍼드 투 헬프",
+      "keyword": "offer 제안하다"
+    },
+    {
+      "en": "Instead of making a phone call, I sent a message",
+      "kr": "전화를 거는 대신에 메시지를 보냈어요",
+      "pron": "인스테드 오브 메이킹 어 폰 콜, 아이 센트 어 메시지",
+      "keyword": "message 메시지"
+    },
+    {
+      "en": "Instead of taking the easy way, she worked hard",
+      "kr": "쉬운 길을 택하는 대신에 그녀는 열심히 노력했어요",
+      "pron": "인스테드 오브 테이킹 디 이지 웨이, 쉬 워크트 하드",
+      "keyword": "work hard 열심히 노력하다"
+    }
+  ]
+}
